@@ -1,0 +1,22 @@
+{
+  "name": "my-first-claude-project",
+  "version": "1.0.0",
+  "description": "A simple HTML/CSS/JavaScript static website",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=8080 --open=index.html",
+    "dev": "live-server --port=8080 --open=index.html",
+    "serve": "python -m http.server 8080"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "static-site"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}

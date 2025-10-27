@@ -3,387 +3,490 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern To-Do List</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 500px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(to right, #4b6cb7, #182848);
-            color: white;
-            padding: 25px 20px;
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .subtitle {
-            font-weight: 300;
-            opacity: 0.9;
-        }
-        
-        .input-section {
-            padding: 20px;
-            display: flex;
-            gap: 10px;
-            background-color: #f5f7ff;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        #task-input {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            outline: none;
-        }
-        
-        #add-btn {
-            background: linear-gradient(to right, #4b6cb7, #182848);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        #add-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-        }
-        
-        .filters {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 20px;
-            background-color: #f5f7ff;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .filter-btn {
-            background: none;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .filter-btn.active {
-            background: linear-gradient(to right, #4b6cb7, #182848);
-            color: white;
-        }
-        
-        .stats {
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            background-color: #f5f7ff;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        #task-list {
-            list-style-type: none;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-        
-        .task-item {
-            display: flex;
-            align-items: center;
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-            animation: fadeIn 0.3s ease;
-            transition: all 0.3s ease;
-        }
-        
-        .task-item:hover {
-            background-color: #f9f9ff;
-        }
-        
-        .task-item.completed .task-text {
-            text-decoration: line-through;
-            color: #888;
-        }
-        
-        .task-checkbox {
-            margin-right: 15px;
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-        }
-        
-        .task-text {
-            flex: 1;
-            font-size: 1.1rem;
-            word-break: break-word;
-            padding-right: 10px;
-        }
-        
-        .delete-btn {
-            background: none;
-            border: none;
-            color: #ff6b6b;
-            font-size: 1.2rem;
-            cursor: pointer;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .delete-btn:hover {
-            background-color: #ffeeee;
-            transform: rotate(90deg);
-        }
-        
-        .empty-state {
-            text-align: center;
-            padding: 40px 20px;
-            color: #888;
-        }
-        
-        .empty-state i {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            opacity: 0.3;
-        }
-        
-        .empty-state p {
-            font-size: 1.2rem;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @media (max-width: 500px) {
-            .container {
-                border-radius: 15px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .input-section {
-                padding: 15px;
-            }
-            
-            #task-input {
-                padding: 12px;
-            }
-            
-            #add-btn {
-                width: 45px;
-                height: 45px;
-            }
-        }
-    </style>
+    <meta name="description" content="4-Eyes: AI-powered chatbot solution designed exclusively for luxury spa and wellness centers. Enhance guest experience, reduce staff workload, and capture more bookings 24/7.">
+    <meta name="keywords" content="spa chatbot, wellness AI, luxury spa technology, spa management, guest experience">
+    <title>4-Eyes | AI Chatbot for Luxury Spa & Wellness Centers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-tasks"></i> Task Manager</h1>
-            <p class="subtitle">Organize your day efficiently</p>
-        </header>
-        
-        <div class="input-section">
-            <input type="text" id="task-input" placeholder="Add a new task...">
-            <button id="add-btn"><i class="fas fa-plus"></i></button>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-text">4-Eyes</span>
+                <span class="logo-tagline">AI for Wellness</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact" class="cta-nav">Contact Us</a></li>
+            </ul>
         </div>
-        
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="active">Active</button>
-            <button class="filter-btn" data-filter="completed">Completed</button>
-        </div>
-        
-        <ul id="task-list">
-            <!-- Tasks will be added here dynamically -->
-        </ul>
-        
-        <div class="stats">
-            <span id="total-tasks">Total: 0 tasks</span>
-            <span id="completed-tasks">Completed: 0</span>
-        </div>
-    </div>
+    </nav>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // DOM Elements
-            const taskInput = document.getElementById('task-input');
-            const addBtn = document.getElementById('add-btn');
-            const taskList = document.getElementById('task-list');
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const totalTasksSpan = document.getElementById('total-tasks');
-            const completedTasksSpan = document.getElementById('completed-tasks');
-            
-            // State
-            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-            let currentFilter = 'all';
-            
-            // Initialize
-            renderTasks();
-            updateStats();
-            
-            // Event Listeners
-            addBtn.addEventListener('click', addTask);
-            taskInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') addTask();
-            });
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Set current filter
-                    currentFilter = this.dataset.filter;
-                    
-                    // Re-render tasks
-                    renderTasks();
-                });
-            });
-            
-            // Functions
-            function addTask() {
-                const taskText = taskInput.value.trim();
-                if (taskText === '') return;
-                
-                const newTask = {
-                    id: Date.now(),
-                    text: taskText,
-                    completed: false
-                };
-                
-                tasks.push(newTask);
-                saveTasks();
-                renderTasks();
-                updateStats();
-                
-                // Clear input
-                taskInput.value = '';
-                taskInput.focus();
-            }
-            
-            function deleteTask(id) {
-                tasks = tasks.filter(task => task.id !== id);
-                saveTasks();
-                renderTasks();
-                updateStats();
-            }
-            
-            function toggleComplete(id) {
-                tasks = tasks.map(task => {
-                    if (task.id === id) {
-                        return {...task, completed: !task.completed};
-                    }
-                    return task;
-                });
-                
-                saveTasks();
-                renderTasks();
-                updateStats();
-            }
-            
-            function saveTasks() {
-                localStorage.setItem('tasks', JSON.stringify(tasks));
-            }
-            
-            function renderTasks() {
-                // Filter tasks based on current filter
-                let filteredTasks = [];
-                if (currentFilter === 'active') {
-                    filteredTasks = tasks.filter(task => !task.completed);
-                } else if (currentFilter === 'completed') {
-                    filteredTasks = tasks.filter(task => task.completed);
-                } else {
-                    filteredTasks = [...tasks];
-                }
-                
-                // Render tasks
-                if (filteredTasks.length === 0) {
-                    taskList.innerHTML = `
-                        <div class="empty-state">
-                            <i class="fas fa-clipboard-list"></i>
-                            <p>No tasks found. Add a new task to get started!</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                Elevate Your Spa Experience<br>
+                <span class="gradient-text">With Intelligent Conversation</span>
+            </h1>
+            <p class="hero-subtitle">
+                The dual-personality AI chatbot designed exclusively for luxury wellness centers.
+                Deliver exceptional guest service 24/7 while your team focuses on what matters most.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#contact" class="btn btn-primary btn-lg">Schedule a Consultation</a>
+                <a href="#product" class="btn btn-secondary btn-lg">Discover 4-Eyes</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Guest Support</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Staff Time Saved</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">2x</div>
+                    <div class="stat-label">Booking Conversion</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution -->
+    <section class="problem-solution">
+        <div class="container">
+            <div class="section-intro">
+                <h2 class="section-title">The Challenge Facing Luxury Wellness Centers</h2>
+                <p class="section-description">
+                    Your guests expect immediate, personalized responses. Your staff deserves to focus on delivering
+                    exceptional in-person experiences, not answering repetitive inquiries.
+                </p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>After-Hours Inquiries</h3>
+                    <p>Miss bookings when guests research services outside business hours</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💬</div>
+                    <h3>Repetitive Questions</h3>
+                    <p>Staff spend hours answering the same service and pricing questions</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🌐</div>
+                    <h3>International Guests</h3>
+                    <p>Language barriers create friction in the luxury guest experience</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📊</div>
+                    <h3>Lost Opportunities</h3>
+                    <p>No insights into what guests are asking about before they book</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="product">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">The Solution</span>
+                <h2 class="section-title">Meet 4-Eyes: Your Dual-Personality AI Assistant</h2>
+                <p class="section-description">
+                    Not just another chatbot. 4-Eyes is specifically designed for the wellness industry,
+                    with two distinct personalities that adapt to your guests' journey.
+                </p>
+            </div>
+
+            <div class="personality-showcase">
+                <div class="personality-card">
+                    <div class="personality-header">
+                        <div class="personality-badge">Pre-Sales</div>
+                        <h3>The Wellness Concierge</h3>
+                    </div>
+                    <p class="personality-description">
+                        Engages prospective guests with detailed information about your services,
+                        treatments, packages, and wellness journeys. Answers questions about pricing,
+                        availability, and helps guests discover the perfect experience.
+                    </p>
+                    <ul class="personality-features">
+                        <li>Service catalog expertise</li>
+                        <li>Treatment recommendations</li>
+                        <li>Package comparisons</li>
+                        <li>Availability inquiries</li>
+                        <li>Pricing transparency</li>
+                    </ul>
+                </div>
+
+                <div class="personality-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-text">Seamlessly Transitions</div>
+                    <div class="divider-line"></div>
+                </div>
+
+                <div class="personality-card">
+                    <div class="personality-header">
+                        <div class="personality-badge">Post-Sales</div>
+                        <h3>The Operations Officer</h3>
+                    </div>
+                    <p class="personality-description">
+                        Handles operational needs for confirmed guests. Manages appointment modifications,
+                        provides booking status updates, handles arrival notifications, and addresses
+                        service-related questions.
+                    </p>
+                    <ul class="personality-features">
+                        <li>Booking status updates</li>
+                        <li>Appointment modifications</li>
+                        <li>Arrival notifications</li>
+                        <li>Special requests handling</li>
+                        <li>Service follow-ups</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">Capabilities</span>
+                <h2 class="section-title">Built for Luxury Wellness</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Seamless Integration</h3>
+                    <p>Connects effortlessly with your existing spa management systems. No expensive overhauls, no technical headaches.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Business-Friendly Customization</h3>
+                    <p>Update services, pricing, and responses yourself. No coding required, no waiting for developers.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Serve international guests in their preferred language. Expand your reach without hiring multilingual staff.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Understand what guests ask about most. Identify trends, optimize offerings, and make data-driven decisions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy & Security</h3>
+                    <p>GDPR compliant and built with wellness industry privacy standards. Your guests' data is protected.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Responses</h3>
+                    <p>Never keep a potential guest waiting. Provide immediate, accurate answers any time of day or night.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">Value Proposition</span>
+                <h2 class="section-title">Transform Your Guest Experience & Operations</h2>
+            </div>
+
+            <div class="benefits-layout">
+                <div class="benefit-item">
+                    <div class="benefit-content">
+                        <h3>Capture More Bookings</h3>
+                        <p>Convert curious browsers into confirmed guests. 4-Eyes engages visitors instantly, answers their questions comprehensively, and guides them toward booking—even at 3 AM when your staff is offline.</p>
+                        <ul class="benefit-points">
+                            <li>24/7 availability captures after-hours opportunities</li>
+                            <li>Instant responses prevent visitors from going to competitors</li>
+                            <li>Personalized recommendations increase package upsells</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-visual">
+                        <div class="visual-placeholder">
+                            <span>📈 Conversion Rate Graph</span>
                         </div>
-                    `;
-                    return;
-                }
-                
-                taskList.innerHTML = '';
-                filteredTasks.forEach(task => {
-                    const taskItem = document.createElement('li');
-                    taskItem.className = `task-item ${task.completed ? 'completed' : ''}`;
-                    taskItem.innerHTML = `
-                        <input type="checkbox" class="task-checkbox" ${task.completed ? 'checked' : ''}>
-                        <span class="task-text">${task.text}</span>
-                        <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
-                    `;
-                    
-                    const checkbox = taskItem.querySelector('.task-checkbox');
-                    const deleteBtn = taskItem.querySelector('.delete-btn');
-                    
-                    checkbox.addEventListener('change', () => toggleComplete(task.id));
-                    deleteBtn.addEventListener('click', () => deleteTask(task.id));
-                    
-                    taskList.appendChild(taskItem);
-                });
-            }
-            
-            function updateStats() {
-                const total = tasks.length;
-                const completed = tasks.filter(task => task.completed).length;
-                
-                totalTasksSpan.textContent = `Total: ${total} ${total === 1 ? 'task' : 'tasks'}`;
-                completedTasksSpan.textContent = `Completed: ${completed}`;
-            }
-        });
-    </script>
+                    </div>
+                </div>
+
+                <div class="benefit-item reverse">
+                    <div class="benefit-content">
+                        <h3>Free Your Staff's Time</h3>
+                        <p>Let 4-Eyes handle the routine inquiries while your team focuses on delivering the exceptional in-person experiences that define luxury wellness. Reduce repetitive tasks by up to 60%.</p>
+                        <ul class="benefit-points">
+                            <li>Automate FAQs about services, pricing, and policies</li>
+                            <li>Handle booking modifications without staff intervention</li>
+                            <li>Reduce phone interruptions during treatments</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-visual">
+                        <div class="visual-placeholder">
+                            <span>⏱️ Time Savings Illustration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-content">
+                        <h3>Enhance Guest Satisfaction</h3>
+                        <p>Modern luxury means convenience. Guests expect instant, accurate information delivered seamlessly. 4-Eyes provides the immediate, personalized attention that elevates your brand.</p>
+                        <ul class="benefit-points">
+                            <li>Consistent, accurate information every time</li>
+                            <li>Multi-language support for international clientele</li>
+                            <li>Proactive updates on booking status and arrivals</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-visual">
+                        <div class="visual-placeholder">
+                            <span>⭐ Guest Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-item reverse">
+                    <div class="benefit-content">
+                        <h3>Gain Business Intelligence</h3>
+                        <p>Every conversation is a data point. Understand what guests are truly interested in, identify trending treatments, and spot opportunities to optimize your service offerings.</p>
+                        <ul class="benefit-points">
+                            <li>Track most-asked questions and popular services</li>
+                            <li>Identify gaps in your service information</li>
+                            <li>Measure conversion patterns and optimize messaging</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-visual">
+                        <div class="visual-placeholder">
+                            <span>📊 Analytics Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">Implementation</span>
+                <h2 class="section-title">From Consultation to Conversation in Weeks</h2>
+                <p class="section-description">
+                    We've streamlined the implementation process to minimize disruption
+                    while maximizing value for your wellness center.
+                </p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery & Customization</h3>
+                        <p>We learn about your services, brand voice, and unique offerings. Together, we configure 4-Eyes to reflect your spa's personality and expertise.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Seamless Integration</h3>
+                        <p>Our team connects 4-Eyes with your existing spa management system. No disruption to your operations, no technical burden on your staff.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Training & Testing</h3>
+                        <p>We train 4-Eyes on your specific services, policies, and workflows. Rigorous testing ensures accuracy before launch. You maintain full control over customization.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Launch & Optimization</h3>
+                        <p>Go live and start capturing more bookings. We monitor performance, gather insights, and continuously optimize based on real guest interactions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">Investment</span>
+                <h2 class="section-title">Custom Solutions for Your Wellness Center</h2>
+                <p class="section-description">
+                    Every luxury spa is unique. We create tailored pricing based on your specific needs,
+                    guest volume, and integration requirements.
+                </p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Let's Design Your Perfect Solution</h3>
+                <p>Our pricing considers:</p>
+                <ul class="pricing-factors">
+                    <li>Number of locations and treatment rooms</li>
+                    <li>Expected conversation volume</li>
+                    <li>Integration complexity with your existing systems</li>
+                    <li>Language support requirements</li>
+                    <li>Customization and training needs</li>
+                </ul>
+                <p class="pricing-cta-text">
+                    Schedule a consultation to discuss your needs and receive a custom proposal.
+                </p>
+                <a href="#contact" class="btn btn-primary btn-lg">Get Custom Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <span class="section-label">Get Started</span>
+                    <h2 class="section-title">Schedule Your Consultation</h2>
+                    <p class="contact-description">
+                        Discover how 4-Eyes can transform your guest experience and operations.
+                        We'll discuss your specific needs and show you exactly how our dual-personality
+                        AI can drive results for your wellness center.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <div class="contact-label">Email</div>
+                                <a href="mailto:francois-xavier.peers@4-eyes.eu">francois-xavier.peers@4-eyes.eu</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="consultation-includes">
+                        <h4>What to Expect:</h4>
+                        <ul>
+                            <li>30-minute personalized demo</li>
+                            <li>Discussion of your specific needs and challenges</li>
+                            <li>Custom pricing proposal</li>
+                            <li>Implementation timeline</li>
+                            <li>ROI analysis for your wellness center</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Jane Smith">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="business">Spa/Business Name *</label>
+                            <input type="text" id="business" name="business" required placeholder="Serenity Wellness Spa">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="jane@serenity-spa.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Needs</label>
+                            <textarea id="message" name="message" rows="5" placeholder="What challenges are you facing? What would you like to learn about 4-Eyes?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            Schedule Consultation
+                        </button>
+
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-text">4-Eyes</span>
+                        <span class="logo-tagline">AI for Wellness</span>
+                    </div>
+                    <p class="footer-description">
+                        Intelligent conversation technology designed exclusively for luxury spa and wellness centers.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#product">Features</a></li>
+                            <li><a href="#benefits">Benefits</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="#contact">Schedule Consultation</a></li>
+                            <li><a href="mailto:francois-xavier.peers@4-eyes.eu">Email Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 4-Eyes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
