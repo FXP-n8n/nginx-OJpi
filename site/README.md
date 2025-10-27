@@ -34,7 +34,7 @@ my-first-claude-project/
 - **Responsive Design**: Optimized for mobile, tablet, and desktop
 - **Smooth Animations**: Professional transitions and scroll effects
 - **Interactive Navigation**: Sticky navbar with smooth scrolling
-- **Working Contact Form**: Email integration via mailto (upgrade options available)
+- **Working Contact Form**: Sends submissions to n8n webhook for automated processing
 - **SEO Optimized**: Proper meta tags, semantic HTML, fast loading
 - **Accessibility**: ARIA labels, keyboard navigation, reduced motion support
 - **Performance**: Lazy loading, throttled scroll events, optimized animations
@@ -142,21 +142,27 @@ Upload these files via FTP/SFTP to your web server:
 
 To update:
 1. Search and replace in `index.html` (lines 394, 478)
-2. Update in `js/script.js` (line 191, 204)
+2. Update in `js/script.js` (line 176 - error message fallback)
 
-### Upgrade Form to Real Email Service
+### Contact Form Configuration
 
-The contact form currently uses `mailto:`. For production, use FormSubmit or similar:
+The contact form is **already configured** to send submissions to an n8n webhook:
 
-**Option 1: FormSubmit (Free)**
+**Webhook URL:**
+```
+https://www.n8n.4-eyes.eu/webhook/97e2b3b9-e0e4-4104-b5c7-e1689e40fb0f
+```
 
-1. Uncomment lines 161-176 in `js/script.js`
-2. Replace email address with your own
-3. Comment out lines 178-200 (mailto fallback)
+**Form Data Sent:**
+All form fields are sent as JSON: name, business, email, phone, and message.
 
-**Option 2: FormSpree, Getform, or Basin**
+**To change the webhook:**
+Edit the URL in `js/script.js` at line 159.
 
-Similar setup - register for free account and update fetch URL.
+**Alternative form services:**
+- FormSpree: https://formspree.io
+- Getform: https://getform.io
+- FormSubmit: https://formsubmit.co
 
 ### Add Images
 

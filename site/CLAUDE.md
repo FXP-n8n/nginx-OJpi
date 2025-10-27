@@ -106,7 +106,7 @@ The website is a **single-page application** with these sections in order:
 2. **Smooth Scrolling** (line 53): Scroll to sections with offset for navbar
 3. **Active Nav Tracking** (line 86): Updates nav links based on scroll position
 4. **Navbar Scroll Effect** (line 113): Adds shadow when scrolled
-5. **Contact Form** (line 134): Handles submission via mailto (upgradeable)
+5. **Contact Form** (line 134): Sends submissions to n8n webhook
 6. **Scroll Animations** (line 230): Intersection Observer for fade-in effects
 
 **When adding new features:**
@@ -160,22 +160,35 @@ Current: francois-xavier.peers@4-eyes.eu
 
 **Files to update:**
 - `index.html`: lines 394, 478
-- `js/script.js`: lines 161, 191, 204
+- `js/script.js`: line 176 (error message fallback)
 
-### 5. Upgrading Contact Form
+### 5. Contact Form Configuration
 
-Current implementation uses `mailto:` which opens user's email client.
+The contact form is configured to send data to an **n8n webhook**:
 
-**To use real email service (FormSubmit.co recommended):**
+**Current webhook URL:**
+```
+https://www.n8n.4-eyes.eu/webhook/97e2b3b9-e0e4-4104-b5c7-e1689e40fb0f
+```
 
-1. In `js/script.js`, uncomment lines 161-176
-2. Comment out lines 178-200 (mailto fallback)
-3. No backend required - FormSubmit handles everything
+**Form data sent (JSON):**
+```json
+{
+  "name": "User's Name",
+  "business": "Spa/Business Name",
+  "email": "user@example.com",
+  "phone": "Phone number or 'Not provided'",
+  "message": "User's message or 'No message provided'"
+}
+```
 
-**Alternative services:**
+**To change the webhook:**
+- Update the URL in `js/script.js` line 159
+
+**Alternative form services:**
 - FormSpree: https://formspree.io
 - Getform: https://getform.io
-- Basin: https://usebasin.com
+- FormSubmit: https://formsubmit.co
 
 ### 6. Adding Analytics
 
@@ -191,7 +204,7 @@ Add Google Analytics before `</head>` in `index.html`:
 </script>
 ```
 
-Event tracking hooks already exist in `js/script.js` (lines 310-325).
+Event tracking hooks already exist in `js/script.js` (lines 282-297).
 
 ## Design Philosophy & Constraints
 

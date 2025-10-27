@@ -155,14 +155,11 @@ function initContactForm() {
             submitButton.disabled = true;
 
             try {
-                // Method 1: Using FormSubmit.co (recommended for production)
-                // Uncomment and configure this section for real email sending
-                /*
-                const response = await fetch('https://formsubmit.co/francois-xavier.peers@4-eyes.eu', {
+                // Send form data to n8n webhook
+                const response = await fetch('https://www.n8n.4-eyes.eu/webhook/97e2b3b9-e0e4-4104-b5c7-e1689e40fb0f', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Accept': 'application/json'
                     },
                     body: JSON.stringify(formData)
                 });
@@ -173,35 +170,10 @@ function initContactForm() {
                 } else {
                     throw new Error('Form submission failed');
                 }
-                */
-
-                // Method 2: Using mailto (fallback for demo)
-                // This opens the user's email client
-                const subject = encodeURIComponent(`4-Eyes Consultation Request from ${formData.name}`);
-                const body = encodeURIComponent(`
-Name: ${formData.name}
-Business: ${formData.business}
-Email: ${formData.email}
-Phone: ${formData.phone}
-
-Message:
-${formData.message}
-                `);
-
-                const mailtoLink = `mailto:francois-xavier.peers@4-eyes.eu?subject=${subject}&body=${body}`;
-
-                // Open mailto link
-                window.location.href = mailtoLink;
-
-                // Show success message
-                setTimeout(() => {
-                    showFormStatus('success', 'Your email client has been opened. Please send the email to complete your consultation request.');
-                    contactForm.reset();
-                }, 500);
 
             } catch (error) {
                 console.error('Form submission error:', error);
-                showFormStatus('error', 'Oops! Something went wrong. Please email us directly at francois-xavier.peers@4-eyes.eu');
+                showFormStatus('error', 'Oops! Something went wrong. Please try again or email us directly at francois-xavier.peers@4-eyes.eu');
             } finally {
                 submitButton.textContent = originalButtonText;
                 submitButton.disabled = false;
