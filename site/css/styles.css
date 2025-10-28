@@ -1131,10 +1131,6 @@ section {
         padding: var(--spacing-lg) 0;
     }
 
-    .nav-container {
-        padding: 1rem var(--spacing-sm);
-    }
-
     .nav-links {
         position: fixed;
         top: 72px;
@@ -1155,8 +1151,6 @@ section {
 
     .mobile-menu-toggle {
         display: flex;
-        margin-right: 0;
-        padding: 8px;
     }
 
     .mobile-menu-toggle.active span:nth-child(1) {
@@ -1222,19 +1216,6 @@ section {
 /* ===========================
    Chatbot Widget Styles
    =========================== */
-
-/* Chatbot Widget Container */
-.chatbot-widget {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: 999;
-    pointer-events: none;
-}
-
-.chatbot-widget > * {
-    pointer-events: auto;
-}
 
 /* Chatbot Toggle Button */
 .chatbot-toggle {
@@ -1622,30 +1603,14 @@ section {
 
 /* Mobile Responsiveness for Chatbot */
 @media (max-width: 768px) {
-    .chatbot-widget {
-        display: block;
-        visibility: visible;
-        opacity: 1;
-    }
-
     .chatbot-toggle {
-        display: flex;
-        visibility: visible;
-        opacity: 1;
-        bottom: 20px;
-        right: 20px;
-        padding: 16px 22px;
-        z-index: 1001;
-        box-shadow: 0 8px 24px rgba(44, 95, 93, 0.4);
+        bottom: 16px;
+        right: 16px;
+        padding: 14px 20px;
     }
 
     .chatbot-badge {
         display: none;
-    }
-
-    .chatbot-icon {
-        font-size: 1.75rem;
-        display: block;
     }
 
     .chatbot-container {
@@ -1657,43 +1622,9 @@ section {
         height: 100%;
         max-height: 100vh;
         border-radius: 0;
-        z-index: 10001;
-    }
-
-    .chatbot-header {
-        padding: 16px 20px;
-    }
-
-    .chatbot-title {
-        font-size: 1.25rem;
-    }
-
-    .chatbot-messages {
-        padding: 16px;
     }
 
     .message-content {
         max-width: 85%;
-    }
-
-    .chatbot-input-area {
-        padding: 16px;
-    }
-
-    .quick-reply-btn {
-        font-size: 0.8125rem;
-        padding: 8px 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .chatbot-toggle {
-        bottom: 16px;
-        right: 16px;
-        padding: 14px 18px;
-    }
-
-    .chatbot-icon {
-        font-size: 1.5rem;
     }
 }
