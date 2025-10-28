@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavbarScroll();
     initContactForm();
     initScrollAnimations();
+    initChatbot();
 });
 
 // ===========================
@@ -323,6 +324,263 @@ if (prefersReducedMotion.matches) {
     document.documentElement.style.setProperty('--transition-fast', '0s');
     document.documentElement.style.setProperty('--transition-base', '0s');
     document.documentElement.style.setProperty('--transition-slow', '0s');
+}
+
+// ===========================
+// Chatbot Functionality
+// ===========================
+function initChatbot() {
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotFullscreen = document.getElementById('chatbot-fullscreen');
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    const quickReplyBtns = document.querySelectorAll('.quick-reply-btn');
+
+    // Webhook configuration
+    const WEBHOOK_URL = 'https://www.n8n.4-eyes.eu/webhook/25f18fb3-44ce-4178-bfc1-080a2edc28fc';
+    const MAX_RETRIES = 3;
+    const RETRY_DELAY = 1000; // milliseconds
+
+    // Toggle chatbot open
+    if (chatbotToggle) {
+        chatbotToggle.addEventListener('click', function() {
+            chatbotContainer.classList.add('active');
+            chatbotToggle.style.display = 'none';
+            chatbotInput.focus();
+        });
+    }
+
+    // Close chatbot
+    if (chatbotClose) {
+        chatbotClose.addEventListener('click', function() {
+            chatbotContainer.classList.remove('active');
+            chatbotContainer.classList.remove('fullscreen');
+            chatbotToggle.style.display = 'flex';
+            updateFullscreenIcon(false);
+        });
+    }
+
+    // Toggle fullscreen
+    if (chatbotFullscreen) {
+        chatbotFullscreen.addEventListener('click', function() {
+            const isFullscreen = chatbotContainer.classList.toggle('fullscreen');
+            updateFullscreenIcon(isFullscreen);
+        });
+    }
+
+    // Update fullscreen button icon
+    function updateFullscreenIcon(isFullscreen) {
+        const maximizeIcon = chatbotFullscreen.querySelector('.icon-maximize');
+        const minimizeIcon = chatbotFullscreen.querySelector('.icon-minimize');
+
+        if (isFullscreen) {
+            maximizeIcon.style.display = 'none';
+            minimizeIcon.style.display = 'block';
+            chatbotFullscreen.setAttribute('title', 'Exit fullscreen');
+        } else {
+            maximizeIcon.style.display = 'block';
+            minimizeIcon.style.display = 'none';
+            chatbotFullscreen.setAttribute('title', 'Fullscreen');
+        }
+    }
+
+    // Handle quick reply clicks
+    quickReplyBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const message = this.dataset.message;
+            sendMessage(message);
+        });
+    });
+
+    // Send message function
+    async function sendMessage(messageText) {
+        if (!messageText || !messageText.trim()) return;
+
+        // Add user message to chat
+        addUserMessage(messageText);
+
+        // Clear input
+        if (chatbotInput) {
+            chatbotInput.value = '';
+        }
+
+        // Show typing indicator
+        showTypingIndicator();
+
+        // Call webhook with retry logic
+        let response = await callWebhookWithRetry(messageText, MAX_RETRIES);
+
+        // Hide typing indicator
+        hideTypingIndicator();
+
+        // Display response
+        if (response.success) {
+            addBotMessage(response.message);
+        } else {
+            addBotMessage(response.error);
+        }
+    }
+
+    // Call webhook with automatic retry
+    async function callWebhookWithRetry(message, retriesLeft) {
+        try {
+            const response = await fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: message }),
+                timeout: 30000 // 30 second timeout
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            // Log response for debugging
+            console.log('Webhook response:', data);
+
+            // Extract text from various possible response formats
+            let responseText = '';
+
+            if (typeof data === 'string') {
+                // Response is plain text
+                responseText = data;
+            } else if (data.response) {
+                // Response has 'response' field
+                responseText = data.response;
+            } else if (data.message) {
+                // Response has 'message' field
+                responseText = data.message;
+            } else if (data.text) {
+                // Response has 'text' field
+                responseText = data.text;
+            } else if (data.output) {
+                // Response has 'output' field
+                responseText = data.output;
+            } else if (data.reply) {
+                // Response has 'reply' field
+                responseText = data.reply;
+            } else {
+                // Fallback: look for first string value in the object
+                const firstStringValue = Object.values(data).find(val => typeof val === 'string');
+                responseText = firstStringValue || 'I received your message but had trouble understanding the response format.';
+            }
+
+            return {
+                success: true,
+                message: responseText
+            };
+
+        } catch (error) {
+            console.error('Webhook error:', error);
+
+            // Retry logic
+            if (retriesLeft > 1) {
+                console.log(`Retrying... (${retriesLeft - 1} attempts left)`);
+                await sleep(RETRY_DELAY);
+                return callWebhookWithRetry(message, retriesLeft - 1);
+            } else {
+                return {
+                    success: false,
+                    error: "I'm having trouble connecting right now. Please try again in a moment, or contact us directly at francois-xavier.peers@4-eyes.eu for immediate assistance."
+                };
+            }
+        }
+    }
+
+    // Sleep utility for retry delay
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    // Add user message to chat
+    function addUserMessage(message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'chatbot-message user-message';
+        messageDiv.innerHTML = `
+            <div class="message-avatar">🧘</div>
+            <div class="message-content">
+                <p>${escapeHtml(message)}</p>
+            </div>
+        `;
+        chatbotMessages.appendChild(messageDiv);
+        scrollToBottom();
+    }
+
+    // Add bot message to chat
+    function addBotMessage(message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'chatbot-message bot-message';
+        messageDiv.innerHTML = `
+            <div class="message-avatar">👀</div>
+            <div class="message-content">
+                <p>${escapeHtml(message)}</p>
+            </div>
+        `;
+        chatbotMessages.appendChild(messageDiv);
+        scrollToBottom();
+    }
+
+    // Show typing indicator
+    function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'chatbot-message bot-message typing-indicator-message';
+        typingDiv.id = 'typing-indicator';
+        typingDiv.innerHTML = `
+            <div class="message-avatar">👀</div>
+            <div class="message-content typing-indicator">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        `;
+        chatbotMessages.appendChild(typingDiv);
+        scrollToBottom();
+    }
+
+    // Hide typing indicator
+    function hideTypingIndicator() {
+        const typingIndicator = document.getElementById('typing-indicator');
+        if (typingIndicator) {
+            typingIndicator.remove();
+        }
+    }
+
+    // Scroll to bottom of messages
+    function scrollToBottom() {
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    // Escape HTML to prevent XSS
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    // Send message on button click
+    if (chatbotSend) {
+        chatbotSend.addEventListener('click', function() {
+            const message = chatbotInput.value;
+            sendMessage(message);
+        });
+    }
+
+    // Send message on Enter key
+    if (chatbotInput) {
+        chatbotInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const message = chatbotInput.value;
+                sendMessage(message);
+            }
+        });
+    }
 }
 
 // ===========================
