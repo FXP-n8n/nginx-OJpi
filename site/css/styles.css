@@ -1617,15 +1617,15 @@ section {
 /* Mobile Responsiveness for Chatbot */
 @media (max-width: 768px) {
     .chatbot-widget {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
+        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 
     .chatbot-toggle {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
+        display: flex;
+        visibility: visible;
+        opacity: 1;
         bottom: 20px;
         right: 20px;
         padding: 16px 22px;
@@ -1634,12 +1634,12 @@ section {
     }
 
     .chatbot-badge {
-        display: none !important;
+        display: none;
     }
 
     .chatbot-icon {
         font-size: 1.75rem;
-        display: block !important;
+        display: block;
     }
 
     .chatbot-container {
