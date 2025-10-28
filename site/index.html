@@ -17,20 +17,34 @@
         <div class="container nav-container">
             <div class="logo">
                 <span class="logo-text">4-Eyes</span>
-                <span class="logo-tagline">AI for Wellness</span>
+                <span class="logo-tagline" data-translate="tagline">AI for Wellness</span>
             </div>
+            
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <button class="language-toggle" aria-label="Select language">
+                    <span class="language-current">EN</span>
+                    <span class="language-arrow">▼</span>
+                </button>
+                <ul class="language-dropdown">
+                    <li><a href="#" data-lang="en" class="language-option active">🇺🇸 English</a></li>
+                    <li><a href="#" data-lang="fr" class="language-option">🇫🇷 Français</a></li>
+                    <li><a href="#" data-lang="nl" class="language-option">🇳🇱 Nederlands</a></li>
+                </ul>
+            </div>
+            
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact" class="cta-nav">Contact Us</a></li>
+                <li><a href="#home" data-translate="nav.home">Home</a></li>
+                <li><a href="#product" data-translate="nav.product">Product</a></li>
+                <li><a href="#benefits" data-translate="nav.benefits">Benefits</a></li>
+                <li><a href="#how-it-works" data-translate="nav.howItWorks">How It Works</a></li>
+                <li><a href="#pricing" data-translate="nav.pricing">Pricing</a></li>
+                <li><a href="#contact" class="cta-nav" data-translate="nav.contact">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -40,34 +54,34 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1 class="hero-title">
-                Elevate Your Spa Experience<br>
-                <span class="gradient-text">With Intelligent Conversation</span>
+                <span data-translate="hero.title1">Elevate Your Spa Experience</span><br>
+                <span class="gradient-text" data-translate="hero.title2">With Intelligent Conversation</span>
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-translate="hero.subtitle">
                 The dual-personality AI chatbot designed exclusively for luxury wellness centers.
                 Deliver exceptional guest service 24/7 while your team focuses on what matters most.
             </p>
             <div class="hero-cta-group">
-                <a href="#contact" class="btn btn-primary btn-lg">Schedule a Consultation</a>
-                <a href="#product" class="btn btn-secondary btn-lg">Discover 4-Eyes</a>
+                <a href="#contact" class="btn btn-primary btn-lg" data-translate="hero.cta1">Schedule a Consultation</a>
+                <a href="#product" class="btn btn-secondary btn-lg" data-translate="hero.cta2">Discover 4-Eyes</a>
             </div>
             <div class="hero-stats">
                 <div class="stat">
                     <div class="stat-number">24/7</div>
-                    <div class="stat-label">Guest Support</div>
+                    <div class="stat-label" data-translate="hero.stat1">Guest Support</div>
                 </div>
                 <div class="stat">
                     <div class="stat-number">60%</div>
-                    <div class="stat-label">Staff Time Saved</div>
+                    <div class="stat-label" data-translate="hero.stat2">Staff Time Saved</div>
                 </div>
                 <div class="stat">
                     <div class="stat-number">2x</div>
-                    <div class="stat-label">Booking Conversion</div>
+                    <div class="stat-label" data-translate="hero.stat3">Booking Conversion</div>
                 </div>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll to explore</span>
+            <span data-translate="hero.scrollText">Scroll to explore</span>
             <div class="scroll-arrow"></div>
         </div>
     </section>
@@ -76,8 +90,8 @@
     <section class="problem-solution">
         <div class="container">
             <div class="section-intro">
-                <h2 class="section-title">The Challenge Facing Luxury Wellness Centers</h2>
-                <p class="section-description">
+                <h2 class="section-title" data-translate="problems.title">The Challenge Facing Luxury Wellness Centers</h2>
+                <p class="section-description" data-translate="problems.description">
                     Your guests expect immediate, personalized responses. Your staff deserves to focus on delivering
                     exceptional in-person experiences, not answering repetitive inquiries.
                 </p>
@@ -85,23 +99,23 @@
             <div class="problem-grid">
                 <div class="problem-card">
                     <div class="problem-icon">⏰</div>
-                    <h3>After-Hours Inquiries</h3>
-                    <p>Miss bookings when guests research services outside business hours</p>
+                    <h3 data-translate="problems.card1.title">After-Hours Inquiries</h3>
+                    <p data-translate="problems.card1.text">Miss bookings when guests research services outside business hours</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">💬</div>
-                    <h3>Repetitive Questions</h3>
-                    <p>Staff spend hours answering the same service and pricing questions</p>
+                    <h3 data-translate="problems.card2.title">Repetitive Questions</h3>
+                    <p data-translate="problems.card2.text">Staff spend hours answering the same service and pricing questions</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">🌐</div>
-                    <h3>International Guests</h3>
-                    <p>Language barriers create friction in the luxury guest experience</p>
+                    <h3 data-translate="problems.card3.title">International Guests</h3>
+                    <p data-translate="problems.card3.text">Language barriers create friction in the luxury guest experience</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">📊</div>
-                    <h3>Lost Opportunities</h3>
-                    <p>No insights into what guests are asking about before they book</p>
+                    <h3 data-translate="problems.card4.title">Lost Opportunities</h3>
+                    <p data-translate="problems.card4.text">No insights into what guests are asking about before they book</p>
                 </div>
             </div>
         </div>
@@ -111,9 +125,9 @@
     <section id="product" class="product">
         <div class="container">
             <div class="section-intro">
-                <span class="section-label">The Solution</span>
-                <h2 class="section-title">Meet 4-Eyes: Your Dual-Personality AI Assistant</h2>
-                <p class="section-description">
+                <span class="section-label" data-translate="product.label">The Solution</span>
+                <h2 class="section-title" data-translate="product.title">Meet 4-Eyes: Your Dual-Personality AI Assistant</h2>
+                <p class="section-description" data-translate="product.description">
                     Not just another chatbot. 4-Eyes is specifically designed for the wellness industry,
                     with two distinct personalities that adapt to your guests' journey.
                 </p>
@@ -122,45 +136,45 @@
             <div class="personality-showcase">
                 <div class="personality-card">
                     <div class="personality-header">
-                        <div class="personality-badge">Pre-Sales</div>
-                        <h3>The Wellness Concierge</h3>
+                        <div class="personality-badge" data-translate="product.preSales.badge">Pre-Sales</div>
+                        <h3 data-translate="product.preSales.title">The Wellness Concierge</h3>
                     </div>
-                    <p class="personality-description">
+                    <p class="personality-description" data-translate="product.preSales.description">
                         Engages prospective guests with detailed information about your services,
                         treatments, packages, and wellness journeys. Answers questions about pricing,
                         availability, and helps guests discover the perfect experience.
                     </p>
                     <ul class="personality-features">
-                        <li>Service catalog expertise</li>
-                        <li>Treatment recommendations</li>
-                        <li>Package comparisons</li>
-                        <li>Availability inquiries</li>
-                        <li>Pricing transparency</li>
+                        <li data-translate="product.preSales.feature1">Service catalog expertise</li>
+                        <li data-translate="product.preSales.feature2">Treatment recommendations</li>
+                        <li data-translate="product.preSales.feature3">Package comparisons</li>
+                        <li data-translate="product.preSales.feature4">Availability inquiries</li>
+                        <li data-translate="product.preSales.feature5">Pricing transparency</li>
                     </ul>
                 </div>
 
                 <div class="personality-divider">
                     <div class="divider-line"></div>
-                    <div class="divider-text">Seamlessly Transitions</div>
+                    <div class="divider-text" data-translate="product.divider">Seamlessly Transitions</div>
                     <div class="divider-line"></div>
                 </div>
 
                 <div class="personality-card">
                     <div class="personality-header">
-                        <div class="personality-badge">Post-Sales</div>
-                        <h3>The Operations Officer</h3>
+                        <div class="personality-badge" data-translate="product.postSales.badge">Post-Sales</div>
+                        <h3 data-translate="product.postSales.title">The Operations Officer</h3>
                     </div>
-                    <p class="personality-description">
+                    <p class="personality-description" data-translate="product.postSales.description">
                         Handles operational needs for confirmed guests. Manages appointment modifications,
                         provides booking status updates, handles arrival notifications, and addresses
                         service-related questions.
                     </p>
                     <ul class="personality-features">
-                        <li>Booking status updates</li>
-                        <li>Appointment modifications</li>
-                        <li>Arrival notifications</li>
-                        <li>Special requests handling</li>
-                        <li>Service follow-ups</li>
+                        <li data-translate="product.postSales.feature1">Booking status updates</li>
+                        <li data-translate="product.postSales.feature2">Appointment modifications</li>
+                        <li data-translate="product.postSales.feature3">Arrival notifications</li>
+                        <li data-translate="product.postSales.feature4">Special requests handling</li>
+                        <li data-translate="product.postSales.feature5">Service follow-ups</li>
                     </ul>
                 </div>
             </div>
@@ -171,45 +185,45 @@
     <section class="features">
         <div class="container">
             <div class="section-intro">
-                <span class="section-label">Capabilities</span>
-                <h2 class="section-title">Built for Luxury Wellness</h2>
+                <span class="section-label" data-translate="features.label">Capabilities</span>
+                <h2 class="section-title" data-translate="features.title">Built for Luxury Wellness</h2>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🔗</div>
-                    <h3>Seamless Integration</h3>
-                    <p>Connects effortlessly with your existing spa management systems. No expensive overhauls, no technical headaches.</p>
+                    <h3 data-translate="features.feature1.title">Seamless Integration</h3>
+                    <p data-translate="features.feature1.description">Connects effortlessly with your existing spa management systems. No expensive overhauls, no technical headaches.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
-                    <h3>Business-Friendly Customization</h3>
-                    <p>Update services, pricing, and responses yourself. No coding required, no waiting for developers.</p>
+                    <h3 data-translate="features.feature2.title">Business-Friendly Customization</h3>
+                    <p data-translate="features.feature2.description">Update services, pricing, and responses yourself. No coding required, no waiting for developers.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
-                    <h3>Multi-Language Support</h3>
-                    <p>Serve international guests in their preferred language. Expand your reach without hiring multilingual staff.</p>
+                    <h3 data-translate="features.feature3.title">Multi-Language Support</h3>
+                    <p data-translate="features.feature3.description">Serve international guests in their preferred language. Expand your reach without hiring multilingual staff.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📈</div>
-                    <h3>Analytics Dashboard</h3>
-                    <p>Understand what guests ask about most. Identify trends, optimize offerings, and make data-driven decisions.</p>
+                    <h3 data-translate="features.feature4.title">Analytics Dashboard</h3>
+                    <p data-translate="features.feature4.description">Understand what guests ask about most. Identify trends, optimize offerings, and make data-driven decisions.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
-                    <h3>Privacy & Security</h3>
-                    <p>GDPR compliant and built with wellness industry privacy standards. Your guests' data is protected.</p>
+                    <h3 data-translate="features.feature5.title">Privacy & Security</h3>
+                    <p data-translate="features.feature5.description">GDPR compliant and built with wellness industry privacy standards. Your guests' data is protected.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Instant Responses</h3>
-                    <p>Never keep a potential guest waiting. Provide immediate, accurate answers any time of day or night.</p>
+                    <h3 data-translate="features.feature6.title">Instant Responses</h3>
+                    <p data-translate="features.feature6.description">Never keep a potential guest waiting. Provide immediate, accurate answers any time of day or night.</p>
                 </div>
             </div>
         </div>
@@ -219,76 +233,76 @@
     <section id="benefits" class="benefits">
         <div class="container">
             <div class="section-intro">
-                <span class="section-label">Value Proposition</span>
-                <h2 class="section-title">Transform Your Guest Experience & Operations</h2>
+                <span class="section-label" data-translate="benefits.label">Value Proposition</span>
+                <h2 class="section-title" data-translate="benefits.title">Transform Your Guest Experience & Operations</h2>
             </div>
 
             <div class="benefits-layout">
                 <div class="benefit-item">
                     <div class="benefit-content">
-                        <h3>Capture More Bookings</h3>
-                        <p>Convert curious browsers into confirmed guests. 4-Eyes engages visitors instantly, answers their questions comprehensively, and guides them toward booking—even at 3 AM when your staff is offline.</p>
+                        <h3 data-translate="benefits.item1.title">Capture More Bookings</h3>
+                        <p data-translate="benefits.item1.description">Convert curious browsers into confirmed guests. 4-Eyes engages visitors instantly, answers their questions comprehensively, and guides them toward booking—even at 3 AM when your staff is offline.</p>
                         <ul class="benefit-points">
-                            <li>24/7 availability captures after-hours opportunities</li>
-                            <li>Instant responses prevent visitors from going to competitors</li>
-                            <li>Personalized recommendations increase package upsells</li>
+                            <li data-translate="benefits.item1.point1">24/7 availability captures after-hours opportunities</li>
+                            <li data-translate="benefits.item1.point2">Instant responses prevent visitors from going to competitors</li>
+                            <li data-translate="benefits.item1.point3">Personalized recommendations increase package upsells</li>
                         </ul>
                     </div>
                     <div class="benefit-visual">
-                        <div class="visual-placeholder">
-                            <span>📈 Conversion Rate Graph</span>
-                        </div>
+                        <img src="assets/images/conversion_rate.png"
+                             alt="Increased booking conversion rates with 4-Eyes AI chatbot"
+                             loading="lazy">
                     </div>
                 </div>
 
                 <div class="benefit-item reverse">
                     <div class="benefit-content">
-                        <h3>Free Your Staff's Time</h3>
-                        <p>Let 4-Eyes handle the routine inquiries while your team focuses on delivering the exceptional in-person experiences that define luxury wellness. Reduce repetitive tasks by up to 60%.</p>
+                        <h3 data-translate="benefits.item2.title">Free Your Staff's Time</h3>
+                        <p data-translate="benefits.item2.description">Let 4-Eyes handle the routine inquiries while your team focuses on delivering the exceptional in-person experiences that define luxury wellness. Reduce repetitive tasks by up to 60%.</p>
                         <ul class="benefit-points">
-                            <li>Automate FAQs about services, pricing, and policies</li>
-                            <li>Handle booking modifications without staff intervention</li>
-                            <li>Reduce phone interruptions during treatments</li>
+                            <li data-translate="benefits.item2.point1">Automate FAQs about services, pricing, and policies</li>
+                            <li data-translate="benefits.item2.point2">Handle booking modifications without staff intervention</li>
+                            <li data-translate="benefits.item2.point3">Reduce phone interruptions during treatments</li>
                         </ul>
                     </div>
                     <div class="benefit-visual">
-                        <div class="visual-placeholder">
-                            <span>⏱️ Time Savings Illustration</span>
-                        </div>
+                        <img src="assets/images/staff-time.png"
+                             alt="Spa staff freed from repetitive tasks to focus on guest experiences"
+                             loading="lazy">
                     </div>
                 </div>
 
                 <div class="benefit-item">
                     <div class="benefit-content">
-                        <h3>Enhance Guest Satisfaction</h3>
-                        <p>Modern luxury means convenience. Guests expect instant, accurate information delivered seamlessly. 4-Eyes provides the immediate, personalized attention that elevates your brand.</p>
+                        <h3 data-translate="benefits.item3.title">Enhance Guest Satisfaction</h3>
+                        <p data-translate="benefits.item3.description">Modern luxury means convenience. Guests expect instant, accurate information delivered seamlessly. 4-Eyes provides the immediate, personalized attention that elevates your brand.</p>
                         <ul class="benefit-points">
-                            <li>Consistent, accurate information every time</li>
-                            <li>Multi-language support for international clientele</li>
-                            <li>Proactive updates on booking status and arrivals</li>
+                            <li data-translate="benefits.item3.point1">Consistent, accurate information every time</li>
+                            <li data-translate="benefits.item3.point2">Multi-language support for international clientele</li>
+                            <li data-translate="benefits.item3.point3">Proactive updates on booking status and arrivals</li>
                         </ul>
                     </div>
                     <div class="benefit-visual">
-                        <div class="visual-placeholder">
-                            <span>⭐ Guest Satisfaction</span>
-                        </div>
+                        <img src="assets/images/guest satisfaction.png"
+                             alt="Enhanced guest satisfaction through instant AI-powered service"
+                             loading="lazy">
                     </div>
                 </div>
 
                 <div class="benefit-item reverse">
                     <div class="benefit-content">
-                        <h3>Gain Business Intelligence</h3>
-                        <p>Every conversation is a data point. Understand what guests are truly interested in, identify trending treatments, and spot opportunities to optimize your service offerings.</p>
+                        <h3 data-translate="benefits.item4.title">Gain Business Intelligence</h3>
+                        <p data-translate="benefits.item4.description">Every conversation is a data point. Understand what guests are truly interested in, identify trending treatments, and spot opportunities to optimize your service offerings.</p>
                         <ul class="benefit-points">
-                            <li>Track most-asked questions and popular services</li>
-                            <li>Identify gaps in your service information</li>
-                            <li>Measure conversion patterns and optimize messaging</li>
+                            <li data-translate="benefits.item4.point1">Track most-asked questions and popular services</li>
+                            <li data-translate="benefits.item4.point2">Identify gaps in your service information</li>
+                            <li data-translate="benefits.item4.point3">Measure conversion patterns and optimize messaging</li>
                         </ul>
                     </div>
                     <div class="benefit-visual">
-                        <div class="visual-placeholder">
-                            <span>📊 Analytics Dashboard</span>
-                        </div>
+                        <img src="assets/images/analytic-dashboard.png"
+                             alt="Business intelligence dashboard with actionable insights"
+                             loading="lazy">
                     </div>
                 </div>
             </div>
@@ -299,9 +313,9 @@
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-intro">
-                <span class="section-label">Implementation</span>
-                <h2 class="section-title">From Consultation to Conversation in Weeks</h2>
-                <p class="section-description">
+                <span class="section-label" data-translate="howItWorks.label">Implementation</span>
+                <h2 class="section-title" data-translate="howItWorks.title">From Consultation to Conversation in Weeks</h2>
+                <p class="section-description" data-translate="howItWorks.description">
                     We've streamlined the implementation process to minimize disruption
                     while maximizing value for your wellness center.
                 </p>
@@ -311,32 +325,32 @@
                 <div class="step">
                     <div class="step-number">01</div>
                     <div class="step-content">
-                        <h3>Discovery & Customization</h3>
-                        <p>We learn about your services, brand voice, and unique offerings. Together, we configure 4-Eyes to reflect your spa's personality and expertise.</p>
+                        <h3 data-translate="howItWorks.step1.title">Discovery & Customization</h3>
+                        <p data-translate="howItWorks.step1.description">We learn about your services, brand voice, and unique offerings. Together, we configure 4-Eyes to reflect your spa's personality and expertise.</p>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-number">02</div>
                     <div class="step-content">
-                        <h3>Seamless Integration</h3>
-                        <p>Our team connects 4-Eyes with your existing spa management system. No disruption to your operations, no technical burden on your staff.</p>
+                        <h3 data-translate="howItWorks.step2.title">Seamless Integration</h3>
+                        <p data-translate="howItWorks.step2.description">Our team connects 4-Eyes with your existing spa management system. No disruption to your operations, no technical burden on your staff.</p>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-number">03</div>
                     <div class="step-content">
-                        <h3>Training & Testing</h3>
-                        <p>We train 4-Eyes on your specific services, policies, and workflows. Rigorous testing ensures accuracy before launch. You maintain full control over customization.</p>
+                        <h3 data-translate="howItWorks.step3.title">Training & Testing</h3>
+                        <p data-translate="howItWorks.step3.description">We train 4-Eyes on your specific services, policies, and workflows. Rigorous testing ensures accuracy before launch. You maintain full control over customization.</p>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-number">04</div>
                     <div class="step-content">
-                        <h3>Launch & Optimization</h3>
-                        <p>Go live and start capturing more bookings. We monitor performance, gather insights, and continuously optimize based on real guest interactions.</p>
+                        <h3 data-translate="howItWorks.step4.title">Launch & Optimization</h3>
+                        <p data-translate="howItWorks.step4.description">Go live and start capturing more bookings. We monitor performance, gather insights, and continuously optimize based on real guest interactions.</p>
                     </div>
                 </div>
             </div>
@@ -347,28 +361,28 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-intro">
-                <span class="section-label">Investment</span>
-                <h2 class="section-title">Custom Solutions for Your Wellness Center</h2>
-                <p class="section-description">
+                <span class="section-label" data-translate="pricing.label">Investment</span>
+                <h2 class="section-title" data-translate="pricing.title">Custom Solutions for Your Wellness Center</h2>
+                <p class="section-description" data-translate="pricing.description">
                     Every luxury spa is unique. We create tailored pricing based on your specific needs,
                     guest volume, and integration requirements.
                 </p>
             </div>
 
             <div class="pricing-card">
-                <h3>Let's Design Your Perfect Solution</h3>
-                <p>Our pricing considers:</p>
+                <h3 data-translate="pricing.card.title">Let's Design Your Perfect Solution</h3>
+                <p data-translate="pricing.card.subtitle">Our pricing considers:</p>
                 <ul class="pricing-factors">
-                    <li>Number of locations and treatment rooms</li>
-                    <li>Expected conversation volume</li>
-                    <li>Integration complexity with your existing systems</li>
-                    <li>Language support requirements</li>
-                    <li>Customization and training needs</li>
+                    <li data-translate="pricing.card.factor1">Number of locations and treatment rooms</li>
+                    <li data-translate="pricing.card.factor2">Expected conversation volume</li>
+                    <li data-translate="pricing.card.factor3">Integration complexity with your existing systems</li>
+                    <li data-translate="pricing.card.factor4">Language support requirements</li>
+                    <li data-translate="pricing.card.factor5">Customization and training needs</li>
                 </ul>
-                <p class="pricing-cta-text">
+                <p class="pricing-cta-text" data-translate="pricing.card.ctaText">
                     Schedule a consultation to discuss your needs and receive a custom proposal.
                 </p>
-                <a href="#contact" class="btn btn-primary btn-lg">Get Custom Pricing</a>
+                <a href="#contact" class="btn btn-primary btn-lg" data-translate="pricing.card.ctaButton">Get Custom Pricing</a>
             </div>
         </div>
     </section>
@@ -378,9 +392,9 @@
         <div class="container">
             <div class="contact-layout">
                 <div class="contact-info">
-                    <span class="section-label">Get Started</span>
-                    <h2 class="section-title">Schedule Your Consultation</h2>
-                    <p class="contact-description">
+                    <span class="section-label" data-translate="contact.label">Get Started</span>
+                    <h2 class="section-title" data-translate="contact.title">Schedule Your Consultation</h2>
+                    <p class="contact-description" data-translate="contact.description">
                         Discover how 4-Eyes can transform your guest experience and operations.
                         We'll discuss your specific needs and show you exactly how our dual-personality
                         AI can drive results for your wellness center.
@@ -390,20 +404,20 @@
                         <div class="contact-detail-item">
                             <div class="contact-icon">📧</div>
                             <div>
-                                <div class="contact-label">Email</div>
+                                <div class="contact-label" data-translate="contact.email.label">Email</div>
                                 <a href="mailto:francois-xavier.peers@4-eyes.eu">francois-xavier.peers@4-eyes.eu</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="consultation-includes">
-                        <h4>What to Expect:</h4>
+                        <h4 data-translate="contact.expect.title">What to Expect:</h4>
                         <ul>
-                            <li>30-minute personalized demo</li>
-                            <li>Discussion of your specific needs and challenges</li>
-                            <li>Custom pricing proposal</li>
-                            <li>Implementation timeline</li>
-                            <li>ROI analysis for your wellness center</li>
+                            <li data-translate="contact.expect.item1">30-minute personalized demo</li>
+                            <li data-translate="contact.expect.item2">Discussion of your specific needs and challenges</li>
+                            <li data-translate="contact.expect.item3">Custom pricing proposal</li>
+                            <li data-translate="contact.expect.item4">Implementation timeline</li>
+                            <li data-translate="contact.expect.item5">ROI analysis for your wellness center</li>
                         </ul>
                     </div>
                 </div>
@@ -411,31 +425,31 @@
                 <div class="contact-form-wrapper">
                     <form id="contact-form" class="contact-form">
                         <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Jane Smith">
+                            <label for="name" data-translate="form.name.label">Your Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Jane Smith" data-translate-placeholder="form.name.placeholder">
                         </div>
 
                         <div class="form-group">
-                            <label for="business">Spa/Business Name *</label>
-                            <input type="text" id="business" name="business" required placeholder="Serenity Wellness Spa">
+                            <label for="business" data-translate="form.business.label">Spa/Business Name *</label>
+                            <input type="text" id="business" name="business" required placeholder="Serenity Wellness Spa" data-translate-placeholder="form.business.placeholder">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="jane@serenity-spa.com">
+                            <label for="email" data-translate="form.email.label">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="jane@serenity-spa.com" data-translate-placeholder="form.email.placeholder">
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Phone Number (Optional)</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                            <label for="phone" data-translate="form.phone.label">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" data-translate-placeholder="form.phone.placeholder">
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Tell Us About Your Needs</label>
-                            <textarea id="message" name="message" rows="5" placeholder="What challenges are you facing? What would you like to learn about 4-Eyes?"></textarea>
+                            <label for="message" data-translate="form.message.label">Tell Us About Your Needs</label>
+                            <textarea id="message" name="message" rows="5" placeholder="What challenges are you facing? What would you like to learn about 4-Eyes?" data-translate-placeholder="form.message.placeholder"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                        <button type="submit" class="btn btn-primary btn-lg btn-full" data-translate="form.submit">
                             Schedule Consultation
                         </button>
 
@@ -453,36 +467,36 @@
                 <div class="footer-brand">
                     <div class="logo">
                         <span class="logo-text">4-Eyes</span>
-                        <span class="logo-tagline">AI for Wellness</span>
+                        <span class="logo-tagline" data-translate="footer.tagline">AI for Wellness</span>
                     </div>
-                    <p class="footer-description">
+                    <p class="footer-description" data-translate="footer.description">
                         Intelligent conversation technology designed exclusively for luxury spa and wellness centers.
                     </p>
                 </div>
 
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Product</h4>
+                        <h4 data-translate="footer.productTitle">Product</h4>
                         <ul>
-                            <li><a href="#product">Features</a></li>
-                            <li><a href="#benefits">Benefits</a></li>
-                            <li><a href="#how-it-works">How It Works</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#product" data-translate="footer.features">Features</a></li>
+                            <li><a href="#benefits" data-translate="footer.benefits">Benefits</a></li>
+                            <li><a href="#how-it-works" data-translate="footer.howItWorks">How It Works</a></li>
+                            <li><a href="#pricing" data-translate="footer.pricing">Pricing</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-column">
-                        <h4>Contact</h4>
+                        <h4 data-translate="footer.contactTitle">Contact</h4>
                         <ul>
-                            <li><a href="#contact">Schedule Consultation</a></li>
-                            <li><a href="mailto:francois-xavier.peers@4-eyes.eu">Email Us</a></li>
+                            <li><a href="#contact" data-translate="footer.schedule">Schedule Consultation</a></li>
+                            <li><a href="mailto:francois-xavier.peers@4-eyes.eu" data-translate="footer.emailUs">Email Us</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 4-Eyes. All rights reserved.</p>
+                <p data-translate="footer.copyright">&copy; 2025 4-Eyes. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -491,14 +505,14 @@
     <div id="chatbot-widget" class="chatbot-widget">
         <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open chatbot">
             <span class="chatbot-icon">💬</span>
-            <span class="chatbot-badge">Try 4-Eyes</span>
+            <span class="chatbot-badge" data-translate="chatbot.toggleBadge">Try 4-Eyes</span>
         </button>
 
         <div id="chatbot-container" class="chatbot-container">
             <div class="chatbot-header">
                 <div class="chatbot-header-info">
-                    <h3 class="chatbot-title">4-Eyes AI Assistant</h3>
-                    <p class="chatbot-subtitle">AI for Wellness</p>
+                    <h3 class="chatbot-title" data-translate="chatbot.title">4-Eyes AI Assistant</h3>
+                    <p class="chatbot-subtitle" data-translate="chatbot.subtitle">AI for Wellness</p>
                 </div>
                 <div class="chatbot-header-actions">
                     <button id="chatbot-fullscreen" class="chatbot-action-btn" aria-label="Toggle fullscreen" title="Fullscreen">
@@ -515,22 +529,16 @@
                 <div class="chatbot-message bot-message">
                     <div class="message-avatar">👀</div>
                     <div class="message-content">
-                        <p>Hello! I'm your 4-Eyes AI Assistant. I'm here to help you with questions about spa services, bookings, and wellness experiences.</p>
-                        <p class="message-hint">Ask me anything about our services, pricing, or how to book an appointment!</p>
+                        <p data-translate="chatbot.welcome">Hello! I'm your 4-Eyes AI Assistant. I'm here to help you with questions about spa services, bookings, and wellness experiences.</p>
+                        <p class="message-hint" data-translate="chatbot.hint">Ask me anything about our services, pricing, or how to book an appointment!</p>
                     </div>
                 </div>
             </div>
 
             <div class="chatbot-quick-replies">
-                <button class="quick-reply-btn" data-message="What can you help me with?">
-                    What can you help me with?
-                </button>
-                <button class="quick-reply-btn" data-message="Tell me about your services">
-                    Tell me about your services
-                </button>
-                <button class="quick-reply-btn" data-message="How do I book an appointment?">
-                    How do I book an appointment?
-                </button>
+                <button class="quick-reply-btn" data-message="What can you help me with?" data-translate="chatbot.quickReply1">What can you help me with?</button>
+                <button class="quick-reply-btn" data-message="Tell me about your services" data-translate="chatbot.quickReply2">Tell me about your services</button>
+                <button class="quick-reply-btn" data-message="How do I book an appointment?" data-translate="chatbot.quickReply3">How do I book an appointment?</button>
             </div>
 
             <div class="chatbot-input-area">
@@ -540,6 +548,7 @@
                     class="chatbot-input"
                     placeholder="Type your message..."
                     aria-label="Chat message input"
+                    data-translate-placeholder="chatbot.placeholder"
                 />
                 <button id="chatbot-send" class="chatbot-send-btn" aria-label="Send message">
                     <span>→</span>
