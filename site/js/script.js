@@ -271,7 +271,7 @@ const translations = {
         
         // Hero Section
         hero: {
-            title1: "Révolueznez Votre Expérience Spa",
+            title1: "Révolutionnez Votre Expérience Spa",
             title2: "Avec une Conversation Intelligente",
             subtitle: "Le chatbot IA à double personnalité conçu exclusivement pour les centres de bien-être de luxe. Offrez un service client exceptionnel 24h/24 et 7j/7 pendant que votre équipe se concentre sur l'essentiel.",
             cta1: "Planifier une Consultation",
@@ -415,7 +415,7 @@ const translations = {
             },
             step4: {
                 title: "Lancement & Optimisation",
-                description: "Passez en direct et commencez à capturer plus de réservations. Nous surveillons les performances, rassemblons des informations et optimisons continuamente basés sur les interactions client réelles."
+                description: "Passez en direct et commencez à capturer plus de réservations. Nous surveillons les performances, rassemblons des informations et optimisons continuellement basés sur les interactions client réelles."
             }
         },
         
@@ -667,7 +667,7 @@ const translations = {
             },
             step4: {
                 title: "Lancering & Optimalisatie",
-                description: "Ga live en begin met het capturen van meer boekingen. We monitoren prestaties, verzamelen inzichten en optimaliseren continu gebaseerd op echte gasteninteracties."
+                description: "Ga live en begin met het binnenhalen van meer boekingen. We monitoren prestaties, verzamelen inzichten en optimaliseren continu gebaseerd op echte gasteninteracties."
             }
         },
         
