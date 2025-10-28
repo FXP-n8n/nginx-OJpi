@@ -1151,6 +1151,8 @@ section {
 
     .mobile-menu-toggle {
         display: flex;
+        padding: 5px 0;
+        margin-right: -5px;
     }
 
     .mobile-menu-toggle.active span:nth-child(1) {
