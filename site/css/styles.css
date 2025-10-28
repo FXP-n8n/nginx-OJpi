@@ -1217,6 +1217,19 @@ section {
    Chatbot Widget Styles
    =========================== */
 
+/* Chatbot Widget Container */
+.chatbot-widget {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.chatbot-widget > * {
+    pointer-events: auto;
+}
+
 /* Chatbot Toggle Button */
 .chatbot-toggle {
     position: fixed;
@@ -1603,7 +1616,16 @@ section {
 
 /* Mobile Responsiveness for Chatbot */
 @media (max-width: 768px) {
+    .chatbot-widget {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
     .chatbot-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
         bottom: 20px;
         right: 20px;
         padding: 16px 22px;
@@ -1612,11 +1634,12 @@ section {
     }
 
     .chatbot-badge {
-        display: none;
+        display: none !important;
     }
 
     .chatbot-icon {
         font-size: 1.75rem;
+        display: block !important;
     }
 
     .chatbot-container {
