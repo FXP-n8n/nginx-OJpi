@@ -1235,7 +1235,7 @@ section {
     cursor: pointer;
     box-shadow: var(--shadow-lg);
     transition: all var(--transition-base);
-    z-index: 999;
+    z-index: 1001;
     font-family: var(--font-sans);
     font-weight: 600;
     font-size: 1rem;
@@ -1606,13 +1606,22 @@ section {
 /* Mobile Responsiveness for Chatbot */
 @media (max-width: 768px) {
     .chatbot-toggle {
-        bottom: 16px;
-        right: 16px;
-        padding: 14px 20px;
+        bottom: 20px;
+        right: 20px;
+        padding: 16px;
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(44, 95, 93, 0.4);
     }
 
     .chatbot-badge {
         display: none;
+    }
+
+    .chatbot-icon {
+        font-size: 2rem;
     }
 
     .chatbot-container {
