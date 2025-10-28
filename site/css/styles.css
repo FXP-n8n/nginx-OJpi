@@ -1131,6 +1131,10 @@ section {
         padding: var(--spacing-lg) 0;
     }
 
+    .nav-container {
+        padding: 1rem var(--spacing-sm);
+    }
+
     .nav-links {
         position: fixed;
         top: 72px;
@@ -1151,6 +1155,8 @@ section {
 
     .mobile-menu-toggle {
         display: flex;
+        margin-right: 0;
+        padding: 8px;
     }
 
     .mobile-menu-toggle.active span:nth-child(1) {
