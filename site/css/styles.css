@@ -744,9 +744,207 @@ section {
     line-height: 1.6;
 }
 
-/* Placeholder styles for other sections */
-/* Add product, features, benefits, pricing, contact sections as needed */
-/* ... (keeping the rest of the CSS the same) ... */
+/* ===========================
+   Product Section - Personality Boxes
+   =========================== */
+.personality-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .personality-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.personality-box {
+    background: var(--color-white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: all var(--transition-base);
+    text-align: center;
+    border: 1px solid rgba(44, 95, 93, 0.08);
+}
+
+@media (max-width: 768px) {
+    .personality-box {
+        padding: 2rem 1.5rem;
+    }
+}
+
+.personality-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(44, 95, 93, 0.15);
+    border-color: rgba(44, 95, 93, 0.2);
+}
+
+.personality-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    transition: transform var(--transition-base);
+}
+
+.personality-box:hover .personality-icon {
+    transform: scale(1.1);
+}
+
+.personality-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.personality-box h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .personality-box h3 {
+        font-size: 1.2rem;
+    }
+}
+
+.personality-description {
+    color: var(--color-gray-700);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.personality-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.personality-features li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    color: var(--color-gray-700);
+    font-size: 0.95rem;
+}
+
+.personality-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* ===========================
+   Benefits Section - Value Propositions
+   =========================== */
+.benefits-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+    align-items: stretch;
+}
+
+@media (max-width: 768px) {
+    .benefits-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.benefit-item {
+    background: var(--color-white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: all var(--transition-base);
+    border: 1px solid rgba(44, 95, 93, 0.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .benefit-item {
+        padding: 2rem 1.5rem;
+    }
+}
+
+.benefit-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(44, 95, 93, 0.15);
+    border-color: rgba(44, 95, 93, 0.2);
+}
+
+.benefit-content h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.benefit-content p {
+    color: var(--color-gray-700);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-points {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-points li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    color: var(--color-gray-700);
+    font-size: 0.95rem;
+}
+
+.benefit-points li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.benefit-visual {
+    background: var(--color-gray-100);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 300px;
+    margin-top: auto;
+    padding: 1rem;
+}
+
+.benefit-visual img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+}
 
 /* ===========================
    Animations
@@ -932,15 +1130,6 @@ section {
     color: var(--color-primary);
     font-weight: bold;
     font-size: 1.25rem;
-}
-
-.benefit-visual {
-    background: var(--color-gray-100);
-    border-radius: var(--radius-lg);
-    aspect-ratio: 4/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .visual-placeholder {
@@ -1330,33 +1519,6 @@ section {
    Responsive Design
    =========================== */
 @media (max-width: 1024px) {
-    .personality-showcase {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-
-    .personality-divider {
-        flex-direction: row;
-        min-width: auto;
-        min-height: 60px;
-    }
-
-    .divider-line {
-        width: 100%;
-        height: 2px;
-    }
-
-    .divider-text {
-        writing-mode: horizontal-tb;
-        padding: 0 var(--spacing-md);
-    }
-
-    .benefit-item,
-    .benefit-item.reverse {
-        grid-template-columns: 1fr;
-        direction: ltr;
-    }
-
     .contact-layout {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
