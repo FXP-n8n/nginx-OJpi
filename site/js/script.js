@@ -858,6 +858,17 @@ function initLanguageSystem() {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('4-Eyes website loaded successfully');
 
+    // Configure marked.js for safe markdown rendering
+    if (typeof marked !== 'undefined') {
+        marked.setOptions({
+            breaks: true,        // Convert \n to <br>
+            gfm: true,          // GitHub Flavored Markdown
+            sanitize: false,    // We'll sanitize manually
+            headerIds: false,   // Don't add IDs to headers
+            mangle: false       // Don't escape email addresses
+        });
+    }
+
     // Initialize all features
     initMobileMenu();
     initSmoothScrolling();
@@ -1385,10 +1396,23 @@ function initChatbot() {
     function addBotMessage(message) {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'chatbot-message bot-message';
+
+        // Parse markdown if marked.js is available
+        let formattedMessage;
+        if (typeof marked !== 'undefined') {
+            // Use marked.js to parse markdown
+            formattedMessage = marked.parse(message);
+            // Sanitize to prevent XSS while keeping markdown formatting
+            formattedMessage = sanitizeHtml(formattedMessage);
+        } else {
+            // Fallback to plain text with HTML escaping
+            formattedMessage = `<p>${escapeHtml(message)}</p>`;
+        }
+
         messageDiv.innerHTML = `
             <div class="message-avatar">👀</div>
-            <div class="message-content">
-                <p>${escapeHtml(message)}</p>
+            <div class="message-content markdown-content">
+                ${formattedMessage}
             </div>
         `;
         chatbotMessages.appendChild(messageDiv);
@@ -1430,6 +1454,91 @@ function initChatbot() {
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
+    }
+
+    // Sanitize HTML while allowing safe markdown formatting
+    function sanitizeHtml(html) {
+        // Create a temporary div to parse HTML
+        const temp = document.createElement('div');
+        temp.innerHTML = html;
+
+        // List of allowed tags for markdown
+        const allowedTags = ['p', 'br', 'strong', 'b', 'em', 'i', 'u', 'a', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre', 'hr', 'table', 'thead', 'tbody', 'tr', 'th', 'td'];
+
+        // List of allowed attributes
+        const allowedAttributes = {
+            'a': ['href', 'title', 'target'],
+            '*': ['class']
+        };
+
+        // Recursively clean elements
+        function cleanNode(node) {
+            // Handle text nodes
+            if (node.nodeType === 3) {
+                return node.cloneNode(false);
+            }
+
+            // Handle element nodes
+            if (node.nodeType === 1) {
+                const tagName = node.tagName.toLowerCase();
+
+                // If tag is not allowed, return its content only
+                if (!allowedTags.includes(tagName)) {
+                    const fragment = document.createDocumentFragment();
+                    Array.from(node.childNodes).forEach(child => {
+                        const cleaned = cleanNode(child);
+                        if (cleaned) fragment.appendChild(cleaned);
+                    });
+                    return fragment;
+                }
+
+                // Create clean element
+                const cleaned = document.createElement(tagName);
+
+                // Copy allowed attributes
+                const allowedAttrs = allowedAttributes[tagName] || [];
+                const globalAttrs = allowedAttributes['*'] || [];
+                const allAllowed = [...allowedAttrs, ...globalAttrs];
+
+                Array.from(node.attributes).forEach(attr => {
+                    if (allAllowed.includes(attr.name)) {
+                        // Special handling for href to prevent javascript: URLs
+                        if (attr.name === 'href' && attr.value.trim().toLowerCase().startsWith('javascript:')) {
+                            return;
+                        }
+                        cleaned.setAttribute(attr.name, attr.value);
+                    }
+                });
+
+                // Make external links open in new tab
+                if (tagName === 'a' && !cleaned.hasAttribute('target')) {
+                    cleaned.setAttribute('target', '_blank');
+                    cleaned.setAttribute('rel', 'noopener noreferrer');
+                }
+
+                // Recursively clean children
+                Array.from(node.childNodes).forEach(child => {
+                    const cleanedChild = cleanNode(child);
+                    if (cleanedChild) cleaned.appendChild(cleanedChild);
+                });
+
+                return cleaned;
+            }
+
+            return null;
+        }
+
+        // Clean the entire tree
+        const cleaned = document.createDocumentFragment();
+        Array.from(temp.childNodes).forEach(child => {
+            const cleanedChild = cleanNode(child);
+            if (cleanedChild) cleaned.appendChild(cleanedChild);
+        });
+
+        // Convert back to HTML string
+        const result = document.createElement('div');
+        result.appendChild(cleaned);
+        return result.innerHTML;
     }
 
     // Send message on button click
