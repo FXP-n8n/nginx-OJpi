@@ -287,8 +287,8 @@ const translations = {
             title: "Le Défi des Centres de Bien-être de Luxe",
             description: "Vos clients attendent des réponses immédiates et personnalisées. Votre équipe mérite de se concentrer sur la création d'expériences en personne exceptionnelles, pas sur la réponse aux demandes répétitives.",
             card1: {
-                title: "Demandes en Heures Fermées",
-                text: "Manquez des réservations quand les clients recherchent des services en dehors des heures d'ouverture"
+                title: "Demandes Hors Horaires",
+                text: "Vous ratez des réservations quand les clients recherchent des services en dehors des heures d'ouverture"
             },
             card2: {
                 title: "Questions Répétitives",
@@ -311,7 +311,7 @@ const translations = {
             description: "Pas qu'un simple chatbot. 4-Eyes est spécifiquement conçu pour l'industrie du bien-être, avec deux personnalités distinctes qui s'adaptent au parcours de vos clients.",
             preSales: {
                 badge: "Pré-Vente",
-                title: "Le Concierge Bien-être",
+                title: "Le Concierge Bien-Être",
                 description: "Engage les clients potentiels avec des informations détaillées sur vos services, traitements, forfaits et parcours de bien-être. Répond aux questions sur les tarifs, la disponibilité et aide les clients à découvrir l'expérience parfaite.",
                 feature1: "Expertise du catalogue de services",
                 feature2: "Recommandations de traitements",
@@ -368,8 +368,8 @@ const translations = {
             title: "Transformez l'Expérience Client et les Opérations",
             item1: {
                 title: "Capturez Plus de Réservations",
-                description: "Convertissez les navigateurs curieux en clients confirmés. 4-Eyes engage les visiteurs instantanément, répond à leurs questions de manière exhaustive et les guide vers la réservation—even à 3h du matin quand votre équipe est hors ligne.",
-                point1: "La disponibilité 24h/24 capture les opportunités après les heures",
+                description: "Convertissez les navigateurs curieux en clients confirmés. 4-Eyes engage les visiteurs instantanément, répond à leurs questions de manière exhaustive et les guide vers la réservation—même à 3h du matin quand votre équipe est hors ligne.",
+                point1: "La disponibilité 24h/24 capture les opportunités en dehors des heures d'ouverture",
                 point2: "Les réponses instantanées empêchent les visiteurs d'aller chez les concurrents",
                 point3: "Les recommandations personnalisées augmentent les ventes de forfaits"
             },
@@ -388,7 +388,7 @@ const translations = {
                 point3: "Mises à jour proactives sur l'état des réservations et les arrivées"
             },
             item4: {
-                title: "Obtenez des Informations Métier",
+                title: "Obtenez des Données d'Affaires",
                 description: "Chaque conversation est un point de données. Comprenez ce qui intéresse vraiment les clients, identifiez les traitements tendance et repérez les opportunités d'optimiser vos offres de services.",
                 point1: "Suivez les questions les plus posées et les services populaires",
                 point2: "Identifiez les lacunes dans vos informations de service",
@@ -415,7 +415,7 @@ const translations = {
             },
             step4: {
                 title: "Lancement & Optimisation",
-                description: "Passez en direct et commencez à capturer plus de réservations. Nous surveillons les performances, rassemblons des informations et optimisons continuellement basés sur les interactions client réelles."
+                description: "Passez en ligne et commencez à capturer plus de réservations. Nous surveillons les performances, rassemblons des informations et optimisons continuellement en nous basant sur les interactions client réelles."
             }
         },
         
@@ -500,7 +500,7 @@ const translations = {
             toggleBadge: "Essayer 4-Eyes",
             title: "Assistant IA 4-Eyes",
             subtitle: "IA pour le Bien-être",
-            welcome: "Bienvenue au Serenity Spa. Je suis ici pour vous guider à travers notre sanctuaire de bien-être et vous aider à découvrir le traitement parfait pour vos besoins. Que vous recherchiez la relaxation, le rajeunissement ou une expérience spa transformatrice, je suis ravi de vous assister avec le support de réservation, les services et les recommandations personnalisées.",
+            welcome: "Bienvenue à Serenity Spa. Je suis ici pour vous guider à travers notre sanctuaire de bien-être et vous aider à découvrir le traitement parfait pour vos besoins. Que vous recherchiez la relaxation, le rajeunissement ou une expérience spa transformatrice, je suis ravi de vous assister avec le support de réservation, les services et les recommandations personnalisées.",
             hint: "Comment puis-je vous assister dans votre parcours bien-être aujourd'hui ?",
             quickReply1: "En quoi pouvez-vous m'aider ?",
             quickReply2: "Parlez-moi de vos services",
@@ -563,8 +563,8 @@ const translations = {
             description: "Niet zomaar een chatbot. 4-Eyes is specifiek ontworpen voor de wellness-industrie, met twee verschillende persoonlijkheden die zich aanpassen aan de reis van uw gasten.",
             preSales: {
                 badge: "Pre-Sales",
-                title: "De Wellness Concierge",
-                description: "Betrokt potentiële gasten met gedetailleerde informatie over uw services, behandelingen, pakketten en wellness-reizen. Beantwoordt vragen over prijzen, beschikbaarheid en helpt gasten de perfecte ervaring te ontdekken.",
+                title: "De Wellness Conciërge",
+                description: "Betrekt potentiële gasten met gedetailleerde informatie over uw services, behandelingen, pakketten en wellness-reizen. Beantwoordt vragen over prijzen, beschikbaarheid en helpt gasten de perfecte ervaring te ontdekken.",
                 feature1: "Service catalogus expertise",
                 feature2: "Behandelingsaanbevelingen",
                 feature3: "Pakketvergelijkingen",
@@ -574,7 +574,7 @@ const translations = {
             divider: "Naadloze Overgangen",
             postSales: {
                 badge: "Post-Sales",
-                title: "De Operations Officer",
+                title: "De Operationeel Manager",
                 description: "Beheert operationele behoeften voor bevestigde gasten. Beheert afspraakmodificaties, biedt boekingsstatusupdates, behandelt aankomstmeldingen en adresseert service-gerelateerde vragen.",
                 feature1: "Boekingsstatusupdates",
                 feature2: "Afspraakmodificaties",
@@ -619,11 +619,11 @@ const translations = {
             label: "Waardepropositie",
             title: "Transformeer Uw Gastenervaring & Operaties",
             item1: {
-                title: "Meer Boekingen Capture",
+                title: "Leg Meer Boekingen Vast",
                 description: "Converteer nieuwsgierige browsers naar bevestigde gasten. 4-Eyes betrekt bezoekers onmiddellijk, beantwoordt hun vragen uitgebreid en begeleidt hen naar boeking—zelfs om 3 uur 's nachts wanneer uw personeel offline is.",
-                point1: "24/7 beschikbaarheid vangt na-uren kansen",
+                point1: "24/7 beschikbaarheid vangt kansen buiten openingstijden",
                 point2: "Directe reacties voorkomen dat bezoekers naar concurrenten gaan",
-                point3: "Gepersonaliseerde aanbevelingen verhogen pakket upsells"
+                point3: "Gepersonaliseerde aanbevelingen verhogen pakketverkopen"
             },
             item2: {
                 title: "Bevrijd de Tijd van Uw Personeel",
@@ -640,11 +640,11 @@ const translations = {
                 point3: "Proactieve updates over boekingsstatus en aankomsten"
             },
             item4: {
-                title: "Verkrijg Bedrijfsinlichtingen",
+                title: "Verkrijg Bedrijfsinzichten",
                 description: "Elk gesprek is een gegevenspunt. Begrijp waar gasten echt in geïnteresseerd zijn, identificeer trending behandelingen en spot kansen om uw serviceaanbiedingen te optimaliseren.",
                 point1: "Volg meestgestelde vragen en populaire services",
                 point2: "Identificeer hiaten in uw service-informatie",
-                point3: "Meet conversiepatronen en optimaliseer messaging"
+                point3: "Meet conversiepatronen en optimaliseer communicatie"
             }
         },
         
