@@ -2343,3 +2343,203 @@ section {
         font-size: 0.65rem;
     }
 }
+
+/* ===========================
+   FAQ Section
+   =========================== */
+.faq {
+    background: var(--color-white);
+}
+
+.faq-grid {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-item {
+    background: var(--color-gray-100);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition-base);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: var(--color-white);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    transition: var(--transition-base);
+}
+
+.faq-question:hover {
+    background: var(--color-gray-100);
+}
+
+.faq-question span:first-child {
+    flex: 1;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 300;
+    transition: var(--transition-base);
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 var(--spacing-md);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.faq-answer p {
+    color: var(--color-gray-700);
+    line-height: 1.8;
+    margin: 0;
+    padding-top: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 1rem;
+        padding: var(--spacing-sm);
+    }
+
+    .faq-icon {
+        font-size: 1.25rem;
+    }
+}
+
+/* ===========================
+   Form Note
+   =========================== */
+.form-note {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background: var(--color-gray-100);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    line-height: 1.6;
+}
+
+.form-note-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* ===========================
+   Floating CTA Button
+   =========================== */
+.floating-cta {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, #E6C88C 100%);
+    color: var(--color-white);
+    padding: 14px 24px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-lg);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.floating-cta.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.floating-cta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(201, 164, 104, 0.4);
+}
+
+.floating-cta-icon {
+    font-size: 1.25rem;
+}
+
+.floating-cta-text {
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+    .floating-cta {
+        bottom: 80px;
+        right: 16px;
+        padding: 12px 20px;
+        font-size: 0.875rem;
+    }
+
+    .floating-cta-icon {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===========================
+   Demo Badge in Chatbot
+   =========================== */
+.demo-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .demo-badge {
+        display: block;
+        margin-left: 0;
+        margin-top: 4px;
+        width: fit-content;
+        font-size: 0.6rem;
+    }
+}
