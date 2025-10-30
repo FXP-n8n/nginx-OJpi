@@ -327,6 +327,7 @@ const translations = {
             product: "Produit",
             benefits: "Avantages",
             howItWorks: "Fonctionnement",
+            faq: "FAQ",
             pricing: "Tarifs",
             contact: "Nous Contacter"
         },
@@ -498,7 +499,62 @@ const translations = {
                 ctaButton: "Obtenir des Tarifs Personnalisés"
             }
         },
-        
+
+        // FAQ Section
+        faq: {
+            label: "Questions Fréquemment Posées",
+            title: "Tout Ce Que Vous Devez Savoir",
+            description: "Réponses rapides aux questions courantes sur 4-Eyes. Vous ne trouvez pas ce que vous cherchez ? Contactez-nous directement.",
+            q1: {
+                question: "Combien de temps faut-il pour mettre en place 4-Eyes ?",
+                answer: "La plupart des implémentations sont terminées en 2 à 4 semaines. Le calendrier comprend : découverte et personnalisation (1 semaine), intégration avec votre système de gestion spa (3-5 jours), formation sur vos services et politiques (3-5 jours), et tests (2-3 jours). Nous travaillons selon votre emploi du temps pour minimiser toute perturbation de vos opérations."
+            },
+            q2: {
+                question: "Avec quels systèmes de gestion spa 4-Eyes s'intègre-t-il ?",
+                answer: "4-Eyes s'intègre avec les principales plateformes de gestion spa, notamment Booker, Mindbody, Zenoti, Vagaro et SpaBooker. Nous proposons également une intégration API pour les systèmes personnalisés. Notre équipe gère la configuration technique, aucune expertise technique n'est requise de la part de votre personnel."
+            },
+            q3: {
+                question: "Comment 4-Eyes gère-t-il plusieurs langues ?",
+                answer: "4-Eyes détecte automatiquement et répond dans la langue préférée de votre client. Nous prenons en charge plus de 25 langues, dont l'anglais, le français, le néerlandais, l'allemand, l'italien, l'espagnol, le mandarin et le japonais. Vos clients peuvent changer de langue de manière transparente pendant la conversation."
+            },
+            q4: {
+                question: "Puis-je personnaliser 4-Eyes pour correspondre à la voix de ma marque ?",
+                answer: "Absolument. Pendant la phase de découverte, nous apprenons le ton, le vocabulaire et la personnalité de votre marque. Vous pouvez mettre à jour les réponses, ajouter de nouveaux services, ajuster les informations tarifaires et modifier le flux de conversation à tout moment via notre tableau de bord convivial—aucun codage requis."
+            },
+            q5: {
+                question: "Que se passe-t-il lorsque 4-Eyes ne peut pas répondre à une question ?",
+                answer: "4-Eyes est conçu pour gérer 90% des demandes clients, mais lorsqu'il rencontre une question inconnue, il escalade gracieusement vers votre équipe. Vous pouvez configurer l'escalade par email, SMS ou transfert direct à un membre du personnel. Chaque escalade aide 4-Eyes à apprendre et à s'améliorer avec le temps."
+            },
+            q6: {
+                question: "Les données des clients sont-elles sécurisées et conformes au RGPD ?",
+                answer: "Oui. 4-Eyes est entièrement conforme au RGPD et construit selon les normes de confidentialité de l'industrie du bien-être. Toutes les données sont cryptées en transit et au repos. Nous ne partageons jamais les données des clients avec des tiers. Vous conservez le contrôle total et la propriété de toutes les données de conversation et pouvez les exporter ou les supprimer à tout moment."
+            },
+            q7: {
+                question: "4-Eyes peut-il réellement réserver des rendez-vous ?",
+                answer: "Oui. Lorsqu'il est intégré à votre système de réservation, 4-Eyes peut vérifier la disponibilité, suggérer des créneaux alternatifs et effectuer des réservations directement. Les clients reçoivent une confirmation immédiate. Vous pouvez également configurer 4-Eyes pour collecter des demandes de réservation pour approbation du personnel si vous préférez."
+            },
+            q8: {
+                question: "Quel type d'analyses et d'informations 4-Eyes fournit-il ?",
+                answer: "Notre tableau de bord analytique affiche : les questions les plus posées, les services populaires, les taux de conversion, les heures de pointe des demandes, les obstacles courants à la réservation et les scores de satisfaction des clients. Vous obtiendrez des informations sur ce qui intéresse le plus vos clients, vous aidant à optimiser vos offres de services et votre marketing."
+            },
+            q9: {
+                question: "Ai-je besoin d'expertise technique pour gérer 4-Eyes ?",
+                answer: "Pas du tout. 4-Eyes est conçu pour les gestionnaires et propriétaires de spa, pas pour les professionnels de l'informatique. Notre tableau de bord intuitif vous permet de mettre à jour les services, les prix et les réponses avec une simple édition de texte. Nous fournissons une formation complète et un support continu. Si vous pouvez éditer un document, vous pouvez gérer 4-Eyes."
+            },
+            q10: {
+                question: "Et si je veux essayer 4-Eyes avant de m'engager ?",
+                answer: "Nous proposons une démonstration personnalisée où vous pouvez voir 4-Eyes configuré avec les services et scénarios réels de votre spa. Pendant votre consultation, nous démontrerons comment il gère vos cas d'utilisation spécifiques. Nous pouvons également organiser un programme pilote pour certains clients afin de tester avec de vrais clients avant le déploiement complet."
+            },
+            q11: {
+                question: "Comment fonctionne la tarification ? Y a-t-il des frais de configuration ?",
+                answer: "La tarification est personnalisée en fonction de la taille de votre spa, du volume de conversations attendu et des besoins d'intégration. Nous proposons une tarification d'abonnement mensuelle sans contrats à long terme. La configuration et l'intégration sont incluses dans votre premier mois. Nous fournirons une proposition de tarification détaillée lors de votre consultation."
+            },
+            q12: {
+                question: "4-Eyes peut-il fonctionner avec plusieurs emplacements ?",
+                answer: "Oui. 4-Eyes peut gérer plusieurs emplacements, acheminant automatiquement les demandes vers le spa approprié en fonction des questions des clients. Vous pouvez maintenir une voix de marque cohérente dans tous les emplacements tout en personnalisant les services, les tarifs et la disponibilité pour chaque emplacement spécifique."
+            }
+        },
+
         // Contact Section
         contact: {
             label: "Commencer",
@@ -539,9 +595,15 @@ const translations = {
                 label: "Parlez-nous de Vos Besoins",
                 placeholder: "Quels défis rencontrez-vous ? Que souhaitez-vous apprendre sur 4-Eyes ?"
             },
-            submit: "Planifier une Consultation"
+            submit: "Planifier une Consultation",
+            note: "Nous respectons votre vie privée. Nous répondrons dans les 24 heures pour planifier votre démonstration personnalisée."
         },
-        
+
+        // Floating CTA
+        floatingCta: {
+            text: "Planifier Démo"
+        },
+
         // Footer Section
         footer: {
             tagline: "IA pour le Bien-être",
@@ -559,9 +621,9 @@ const translations = {
         
         // Chatbot Section
         chatbot: {
-            toggleBadge: "Essayer 4-Eyes",
+            toggleBadge: "Essayer Notre Démo IA",
             title: "Assistant IA 4-Eyes",
-            subtitle: "IA pour le Bien-être",
+            subtitle: "Découvrez notre IA en action",
             welcome: "Bienvenue à Serenity Spa. Je suis ici pour vous guider à travers notre sanctuaire de bien-être et vous aider à découvrir le traitement parfait pour vos besoins. Que vous recherchiez la relaxation, le rajeunissement ou une expérience spa transformatrice, je suis ravi de vous assister avec le support de réservation, les services et les recommandations personnalisées.",
             hint: "Comment puis-je vous assister dans votre parcours bien-être aujourd'hui ?",
             quickReply1: "En quoi pouvez-vous m'aider ?",
@@ -579,6 +641,7 @@ const translations = {
             product: "Product",
             benefits: "Voordelen",
             howItWorks: "Hoe het Werkt",
+            faq: "Veelgestelde Vragen",
             pricing: "Prijzen",
             contact: "Contact Opnemen"
         },
@@ -750,7 +813,62 @@ const translations = {
                 ctaButton: "Krijg Aangepaste Prijzen"
             }
         },
-        
+
+        // FAQ Section
+        faq: {
+            label: "Veelgestelde Vragen",
+            title: "Alles Wat U Moet Weten",
+            description: "Snelle antwoorden op veelgestelde vragen over 4-Eyes. Kunt u niet vinden wat u zoekt? Neem direct contact met ons op.",
+            q1: {
+                question: "Hoe snel kan 4-Eyes worden geïmplementeerd?",
+                answer: "De meeste implementaties zijn voltooid binnen 2-4 weken. De tijdlijn omvat: ontdekking en aanpassing (1 week), integratie met uw spa-beheersysteem (3-5 dagen), training over uw diensten en beleid (3-5 dagen), en testen (2-3 dagen). We werken volgens uw schema om verstoringen van uw operaties te minimaliseren."
+            },
+            q2: {
+                question: "Met welke spa-beheersystemen integreert 4-Eyes?",
+                answer: "4-Eyes integreert met belangrijke spa-beheerplatforms, waaronder Booker, Mindbody, Zenoti, Vagaro en SpaBooker. We bieden ook API-integratie voor aangepaste systemen. Ons team handelt de technische setup af, dus er is geen technische expertise vereist van uw personeel."
+            },
+            q3: {
+                question: "Hoe gaat 4-Eyes om met meerdere talen?",
+                answer: "4-Eyes detecteert automatisch en reageert in de voorkeurstaal van uw gast. We ondersteunen 25+ talen, waaronder Engels, Frans, Nederlands, Duits, Italiaans, Spaans, Mandarijn en Japans. Uw gasten kunnen naadloos van taal wisselen tijdens het gesprek."
+            },
+            q4: {
+                question: "Kan ik 4-Eyes aanpassen aan de merkstem van mijn spa?",
+                answer: "Absoluut. Tijdens de ontdekkingsfase leren we de toon, woordenschat en persoonlijkheid van uw merk. U kunt reacties bijwerken, nieuwe diensten toevoegen, prijsinformatie aanpassen en de gespreksflow op elk moment wijzigen via ons gebruiksvriendelijke dashboard—geen codering vereist."
+            },
+            q5: {
+                question: "Wat gebeurt er als 4-Eyes een vraag niet kan beantwoorden?",
+                answer: "4-Eyes is ontworpen om 90% van de gastvragen te behandelen, maar wanneer het een onbekende vraag tegenkomt, escaleert het netjes naar uw team. U kunt escalatie configureren naar email, SMS of directe overdracht aan een personeelslid. Elke escalatie helpt 4-Eyes te leren en in de loop van de tijd te verbeteren."
+            },
+            q6: {
+                question: "Zijn gastgegevens veilig en AVG-compliant?",
+                answer: "Ja. 4-Eyes is volledig AVG-compliant en gebouwd met privacy-normen van de wellness-industrie. Alle gegevens worden versleuteld tijdens transport en in rust. We delen nooit gastgegevens met derden. U behoudt volledige controle en eigendom van alle gespreksgegevens en kunt deze op elk moment exporteren of verwijderen."
+            },
+            q7: {
+                question: "Kan 4-Eyes daadwerkelijk afspraken boeken?",
+                answer: "Ja. Wanneer geïntegreerd met uw boekingssysteem, kan 4-Eyes beschikbaarheid controleren, alternatieve tijden voorstellen en rechtstreeks boekingen voltooien. Gasten ontvangen onmiddellijke bevestiging. U kunt 4-Eyes ook configureren om boekingsverzoeken te verzamelen voor goedkeuring door personeel als u dat liever hebt."
+            },
+            q8: {
+                question: "Wat voor soort analyses en inzichten biedt 4-Eyes?",
+                answer: "Ons analytics dashboard toont: meest gestelde vragen, populaire diensten, conversiepercentages, piekuren voor vragen, veelvoorkomende boekingsobstakels en gastentevredenheidsscores. U krijgt inzicht in waar uw gasten het meest in geïnteresseerd zijn, waardoor u uw dienstaanbod en marketing kunt optimaliseren."
+            },
+            q9: {
+                question: "Heb ik technische expertise nodig om 4-Eyes te beheren?",
+                answer: "Helemaal niet. 4-Eyes is ontworpen voor spa-managers en eigenaren, niet voor IT-professionals. Ons intuïtieve dashboard stelt u in staat om diensten, prijzen en reacties bij te werken met eenvoudige tekstbewerking. We bieden uitgebreide training en doorlopende ondersteuning. Als u een document kunt bewerken, kunt u 4-Eyes beheren."
+            },
+            q10: {
+                question: "Wat als ik 4-Eyes wil proberen voordat ik me verbind?",
+                answer: "We bieden een gepersonaliseerde demo waarin u 4-Eyes kunt zien geconfigureerd met de daadwerkelijke diensten en scenario's van uw spa. Tijdens uw consultatie demonstreren we hoe het uw specifieke use cases behandelt. We kunnen ook een pilotprogramma regelen voor geselecteerde klanten om te testen met echte gasten voordat volledige uitrol."
+            },
+            q11: {
+                question: "Hoe werkt de prijsstelling? Zijn er setup-kosten?",
+                answer: "Prijzen zijn aangepast op basis van de grootte van uw spa, verwacht gespreksvolume en integratiebeh oeften. We bieden maandelijkse abonnementsprijzen zonder langetermijncontracten. Setup en integratie zijn inbegrepen in uw eerste maand. We zullen een gedetailleerd prijsvoorstel geven tijdens uw consultatie."
+            },
+            q12: {
+                question: "Kan 4-Eyes werken met meerdere locaties?",
+                answer: "Ja. 4-Eyes kan meerdere locaties beheren en stuurt vragen automatisch door naar de juiste spa op basis van gastvragen. U kunt een consistente merkstem over locaties behouden terwijl u diensten, prijzen en beschikbaarheid voor elke specifieke locatie aanpast."
+            }
+        },
+
         // Contact Section
         contact: {
             label: "Aan de Slag",
@@ -791,9 +909,15 @@ const translations = {
                 label: "Vertel Over Uw Behoeften",
                 placeholder: "Welke uitdagingen ondervindt u? Wat wilt u leren over 4-Eyes?"
             },
-            submit: "Plan Consultatie"
+            submit: "Plan Consultatie",
+            note: "We respecteren uw privacy. We reageren binnen 24 uur om uw gepersonaliseerde demo te plannen."
         },
-        
+
+        // Floating CTA
+        floatingCta: {
+            text: "Plan Demo"
+        },
+
         // Footer Section
         footer: {
             tagline: "AI voor Welzijn",
@@ -811,9 +935,9 @@ const translations = {
         
         // Chatbot Section
         chatbot: {
-            toggleBadge: "Probeer 4-Eyes",
+            toggleBadge: "Probeer Onze AI Demo",
             title: "4-Eyes AI Assistent",
-            subtitle: "AI voor Welzijn",
+            subtitle: "Ervaar onze AI in actie",
             welcome: "Welkom bij Serenity Spa. Ik ben hier om u te begeleiden door ons wellness-heiligdom en u te helpen de perfecte behandeling voor uw behoeften te ontdekken. Of u nu op zoek bent naar ontspanning, verjonging of een transformerende spa-ervaring, ik help u graag met boekingsondersteuning, diensten en gepersonaliseerde aanbevelingen.",
             hint: "Hoe kan ik u vandaag assisteren met uw wellnessreis?",
             quickReply1: "Waarmee kunt u me helpen?",
