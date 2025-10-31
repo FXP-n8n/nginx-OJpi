@@ -1065,6 +1065,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initLanguageSystem();
     initFAQ();
     initFloatingCTA();
+    initGoogleAnalytics();
 });
 
 // ===========================
@@ -1829,6 +1830,228 @@ function initFloatingCTA() {
 
     // Initial check
     handleFloatingCTA();
+}
+
+// ===========================
+// Google Analytics Event Tracking
+// ===========================
+function initGoogleAnalytics() {
+    // Check if gtag is available
+    if (typeof gtag === 'undefined') {
+        console.warn('Google Analytics not loaded');
+        return;
+    }
+
+    // FAQ Tracking
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((item, index) => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', function() {
+                const questionText = this.querySelector('span').textContent.trim();
+                gtag('event', 'faq_question_clicked', {
+                    'event_category': 'FAQ',
+                    'event_label': questionText,
+                    'question_number': index + 1
+                });
+            });
+        }
+    });
+
+    // Contact Form Tracking
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        let formStarted = false;
+
+        // Track form start (when user focuses on first field)
+        const nameInput = contactForm.querySelector('#name');
+        if (nameInput) {
+            nameInput.addEventListener('focus', function() {
+                if (!formStarted) {
+                    gtag('event', 'form_started', {
+                        'event_category': 'Contact Form',
+                        'event_label': 'User started filling form'
+                    });
+                    formStarted = true;
+                }
+            });
+        }
+
+        // Track form submission
+        contactForm.addEventListener('submit', function() {
+            gtag('event', 'form_submission', {
+                'event_category': 'Contact Form',
+                'event_label': 'Form submitted successfully'
+            });
+            // This is a conversion event
+            gtag('event', 'conversion', {
+                'send_to': 'G-XT17SQ4RRL',
+                'event_category': 'Lead Generation',
+                'event_label': 'Contact Form Submission'
+            });
+        });
+    }
+
+    // Chatbot Tracking
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotSend = document.getElementById('chatbot-send');
+    let chatbotMessageCount = 0;
+    let chatbotOpened = false;
+
+    if (chatbotToggle) {
+        chatbotToggle.addEventListener('click', function() {
+            if (!chatbotOpened) {
+                gtag('event', 'chatbot_opened', {
+                    'event_category': 'Chatbot',
+                    'event_label': 'User opened chatbot'
+                });
+                chatbotOpened = true;
+                chatbotMessageCount = 0;
+            }
+        });
+    }
+
+    if (chatbotClose) {
+        chatbotClose.addEventListener('click', function() {
+            gtag('event', 'chatbot_closed', {
+                'event_category': 'Chatbot',
+                'event_label': 'User closed chatbot',
+                'value': chatbotMessageCount
+            });
+            chatbotOpened = false;
+        });
+    }
+
+    if (chatbotSend) {
+        chatbotSend.addEventListener('click', function() {
+            const chatbotInput = document.getElementById('chatbot-input');
+            if (chatbotInput && chatbotInput.value.trim()) {
+                chatbotMessageCount++;
+                gtag('event', 'chatbot_message_sent', {
+                    'event_category': 'Chatbot',
+                    'event_label': 'Message sent',
+                    'value': chatbotMessageCount
+                });
+            }
+        });
+    }
+
+    // Quick reply button tracking
+    const quickReplyButtons = document.querySelectorAll('.quick-reply-btn');
+    quickReplyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const message = this.getAttribute('data-message');
+            gtag('event', 'chatbot_quick_reply', {
+                'event_category': 'Chatbot',
+                'event_label': message
+            });
+        });
+    });
+
+    // Floating CTA Tracking
+    const floatingCTA = document.getElementById('floating-cta');
+    if (floatingCTA) {
+        floatingCTA.addEventListener('click', function() {
+            gtag('event', 'floating_cta_clicked', {
+                'event_category': 'CTA',
+                'event_label': 'Floating CTA button clicked'
+            });
+        });
+    }
+
+    // Language Change Tracking
+    const languageOptions = document.querySelectorAll('.language-option');
+    languageOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const language = this.getAttribute('data-lang');
+            gtag('event', 'language_changed', {
+                'event_category': 'User Preference',
+                'event_label': language.toUpperCase()
+            });
+        });
+    });
+
+    // Email Link Tracking
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const email = this.getAttribute('href').replace('mailto:', '');
+            gtag('event', 'email_link_clicked', {
+                'event_category': 'Contact',
+                'event_label': email
+            });
+        });
+    });
+
+    // Scroll Depth Tracking
+    let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+
+    function trackScrollDepth() {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollPercent = Math.round((scrollTop / (documentHeight - windowHeight)) * 100);
+
+        Object.keys(scrollTracked).forEach(threshold => {
+            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                gtag('event', 'scroll_depth', {
+                    'event_category': 'Engagement',
+                    'event_label': threshold + '% scrolled',
+                    'value': parseInt(threshold)
+                });
+                scrollTracked[threshold] = true;
+            }
+        });
+    }
+
+    // Throttle scroll tracking
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+        scrollTimeout = setTimeout(trackScrollDepth, 100);
+    });
+
+    // CTA Button Tracking (main buttons)
+    const ctaButtons = document.querySelectorAll('.btn-primary');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonText = this.textContent.trim();
+            const buttonHref = this.getAttribute('href');
+            gtag('event', 'cta_button_clicked', {
+                'event_category': 'CTA',
+                'event_label': buttonText,
+                'button_location': buttonHref || 'form'
+            });
+        });
+    });
+
+    // Navigation Link Tracking
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const linkText = this.textContent.trim();
+            const linkHref = this.getAttribute('href');
+            gtag('event', 'navigation_clicked', {
+                'event_category': 'Navigation',
+                'event_label': linkText,
+                'link_destination': linkHref
+            });
+        });
+    });
+
+    // Logo Click Tracking
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('click', function() {
+            gtag('event', 'logo_clicked', {
+                'event_category': 'Navigation',
+                'event_label': 'Logo clicked to return home'
+            });
+        });
+    }
 }
 
 // ===========================
