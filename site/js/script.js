@@ -1848,7 +1848,9 @@ function initGoogleAnalytics() {
         const question = item.querySelector('.faq-question');
         if (question) {
             question.addEventListener('click', function() {
-                const questionText = this.querySelector('span').textContent.trim();
+                // Get the first span (question text), not the icon span
+                const questionSpan = question.querySelector('span:not(.faq-icon)');
+                const questionText = questionSpan ? questionSpan.textContent.trim() : 'Unknown question';
                 gtag('event', 'faq_question_clicked', {
                     'event_category': 'FAQ',
                     'event_label': questionText,
