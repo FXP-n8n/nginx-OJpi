@@ -1747,6 +1747,101 @@ function initChatbot() {
             }
         });
     }
+
+    // ===========================
+    // Proactive Chatbot Popup
+    // ===========================
+    function initProactiveChatbot() {
+        // Check if user has already seen or interacted with chatbot
+        const hasSeenProactive = localStorage.getItem('chatbot-proactive-shown');
+        const hasInteracted = localStorage.getItem('chatbot-user-interacted');
+
+        // Don't show proactive popup if user has already seen it or interacted
+        if (hasSeenProactive || hasInteracted) {
+            return;
+        }
+
+        // Random delay between 7-10 seconds
+        const delay = 7000 + Math.random() * 3000; // 7000ms + random 0-3000ms
+
+        setTimeout(() => {
+            // Double-check user hasn't manually opened chatbot in the meantime
+            if (chatbotContainer.classList.contains('active')) {
+                return;
+            }
+
+            // Open the chatbot
+            chatbotContainer.classList.add('active');
+            chatbotToggle.style.display = 'none';
+
+            // Mark as shown
+            localStorage.setItem('chatbot-proactive-shown', 'true');
+
+            // Clear existing welcome message
+            const existingWelcome = chatbotMessages.querySelector('.bot-message');
+            if (existingWelcome) {
+                existingWelcome.remove();
+            }
+
+            // Add proactive welcome message with compelling copy
+            const proactiveMessage = document.createElement('div');
+            proactiveMessage.className = 'chatbot-message bot-message proactive-welcome';
+            proactiveMessage.innerHTML = `
+                <div class="message-avatar">👀</div>
+                <div class="message-content">
+                    <p><strong>Hello! I'm a demo of the 4-Eyes AI.</strong></p>
+                    <p>Want to see how I can answer guest questions and handle bookings for a luxury spa like yours?</p>
+                    <p>Try asking me:</p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                        <li>"What types of massages do you offer?"</li>
+                        <li>"How do I book an appointment?"</li>
+                        <li>"Do you support multiple languages?"</li>
+                    </ul>
+                </div>
+            `;
+            chatbotMessages.appendChild(proactiveMessage);
+            scrollToBottom();
+
+            // Focus input for easy typing
+            setTimeout(() => {
+                chatbotInput.focus();
+            }, 500);
+
+            // Track proactive chatbot open in Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'chatbot_proactive_open', {
+                    'event_category': 'Chatbot',
+                    'event_label': 'Proactive popup shown after delay',
+                    'delay_seconds': Math.round(delay / 1000)
+                });
+            }
+        }, delay);
+    }
+
+    // Track when user interacts with chatbot (to prevent future proactive popups)
+    function markChatbotInteraction() {
+        localStorage.setItem('chatbot-user-interacted', 'true');
+    }
+
+    // Add interaction tracking to existing event listeners
+    if (chatbotToggle) {
+        chatbotToggle.addEventListener('click', markChatbotInteraction);
+    }
+
+    if (chatbotSend) {
+        chatbotSend.addEventListener('click', markChatbotInteraction);
+    }
+
+    if (chatbotInput) {
+        chatbotInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                markChatbotInteraction();
+            }
+        });
+    }
+
+    // Initialize proactive chatbot popup
+    initProactiveChatbot();
 }
 
 // ===========================
