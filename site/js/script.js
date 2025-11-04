@@ -312,8 +312,8 @@ const translations = {
             subtitle: "Experience our AI in action",
             welcome: "Welcome to Serenity Spa. I'm here to guide you through our wellness sanctuary and help you discover the perfect treatment for your needs. Whether you're seeking relaxation, rejuvenation, or a transformative spa experience, I'm delighted to assist you with booking support, services, and personalized recommendations.",
             hint: "How may I assist you with your wellness journey today?",
-            quickReply1: "What can you help me with?",
-            quickReply2: "Tell me about your services",
+            quickReply1: "What types of massages do you offer?",
+            quickReply2: "Do you support multiple languages?",
             quickReply3: "How do I book an appointment?",
             placeholder: "Type your message..."
         }
@@ -626,8 +626,8 @@ const translations = {
             subtitle: "Découvrez notre IA en action",
             welcome: "Bienvenue à Serenity Spa. Je suis ici pour vous guider à travers notre sanctuaire de bien-être et vous aider à découvrir le traitement parfait pour vos besoins. Que vous recherchiez la relaxation, le rajeunissement ou une expérience spa transformatrice, je suis ravi de vous assister avec le support de réservation, les services et les recommandations personnalisées.",
             hint: "Comment puis-je vous assister dans votre parcours bien-être aujourd'hui ?",
-            quickReply1: "En quoi pouvez-vous m'aider ?",
-            quickReply2: "Parlez-moi de vos services",
+            quickReply1: "Quels types de massages proposez-vous ?",
+            quickReply2: "Supportez-vous plusieurs langues ?",
             quickReply3: "Comment prendre un rendez-vous ?",
             placeholder: "Tapez votre message..."
         }
@@ -940,8 +940,8 @@ const translations = {
             subtitle: "Ervaar onze AI in actie",
             welcome: "Welkom bij Serenity Spa. Ik ben hier om u te begeleiden door ons wellness-heiligdom en u te helpen de perfecte behandeling voor uw behoeften te ontdekken. Of u nu op zoek bent naar ontspanning, verjonging of een transformerende spa-ervaring, ik help u graag met boekingsondersteuning, diensten en gepersonaliseerde aanbevelingen.",
             hint: "Hoe kan ik u vandaag assisteren met uw wellnessreis?",
-            quickReply1: "Waarmee kunt u me helpen?",
-            quickReply2: "Vertel over uw services",
+            quickReply1: "Welke soorten massages biedt u aan?",
+            quickReply2: "Ondersteunt u meerdere talen?",
             quickReply3: "Hoe boek ik een afspraak?",
             placeholder: "Typ uw bericht..."
         }
