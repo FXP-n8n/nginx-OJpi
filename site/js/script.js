@@ -1212,7 +1212,7 @@ function initContactForm() {
 
             try {
                 // Send form data to n8n webhook
-                const response = await fetch('https://www.n8n.4-eyes.eu/webhook/97e2b3b9-e0e4-4104-b5c7-e1689e40fb0f', {
+                const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -1395,7 +1395,7 @@ function initChatbot() {
     const quickReplyBtns = document.querySelectorAll('.quick-reply-btn');
 
     // Webhook configuration
-    const WEBHOOK_URL = 'https://www.n8n.4-eyes.eu/webhook/25f18fb3-44ce-4178-bfc1-080a2edc28fc';
+    const WEBHOOK_URL = '/api/chat';
     const MAX_RETRIES = 3;
     const RETRY_DELAY = 1000; // milliseconds
 

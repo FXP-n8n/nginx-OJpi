@@ -267,7 +267,7 @@ For questions or consultation requests:
 
 ## License
 
-Proprietary - © 2025 4-Eyes. All rights reserved.
+MIT
 
 ---
 
