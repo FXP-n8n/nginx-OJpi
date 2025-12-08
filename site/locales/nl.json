@@ -1,0 +1,228 @@
+{
+  "tagline": "AI voor Welzijn",
+  "nav": {
+    "home": "Home",
+    "product": "Product",
+    "benefits": "Voordelen",
+    "howItWorks": "Hoe het Werkt",
+    "pricing": "Prijzen",
+    "contact": "Contact Opnemen"
+  },
+  "hero": {
+    "title1": "Verhoog Uw Spa Ervaring",
+    "title2": "Met Intelligente Conversatie",
+    "subtitle": "De dual-persoonlijkheid AI-chatbot ontworpen exclusief voor luxe wellnesscentra. Bied uitzonderlijke gastenservice 24/7 terwijl uw team zich richt op wat het meest telt.",
+    "cta1": "Plan een Consultatie",
+    "cta2": "Ontdek 4-Eyes",
+    "stat1": "Gastenondersteuning",
+    "stat2": "Tijd Bespaard",
+    "stat3": "Boeking Conversie",
+    "scrollText": "Scroll om te verkennen"
+  },
+  "problems": {
+    "title": "De Uitdaging voor Luxe Wellnesscentra",
+    "description": "Uw gasten verwachten onmiddellijke, gepersonaliseerde reacties. Uw personeel verdient het om zich te richten op het leveren van uitzonderlijke persoonlijke ervaringen, niet op het beantwoorden van repetitieve vragen.",
+    "card1": {
+      "title": "Vragen Buiten Openingstijden",
+      "text": "Mis boekingen wanneer gasten services onderzoeken buiten openingstijden"
+    },
+    "card2": {
+      "title": "Herhalende Vragen",
+      "text": "Personeel besteedt uren aan het beantwoorden van dezelfde service- en prijsvragen"
+    },
+    "card3": {
+      "title": "Internationale Gasten",
+      "text": "Taalbarrières creëren wrijving in de luxe gastenervaring"
+    },
+    "card4": {
+      "title": "Gemiste Kansen",
+      "text": "Geen inzicht in wat gasten vragen voordat ze boeken"
+    }
+  },
+  "product": {
+    "label": "De Oplossing",
+    "title": "Maak Kennis met 4-Eyes: Uw Dual-Persoonlijkheid AI Assistent",
+    "description": "Niet zomaar een chatbot. 4-Eyes is specifiek ontworpen voor de wellness-industrie, met twee verschillende persoonlijkheden die zich aanpassen aan de reis van uw gasten.",
+    "preSales": {
+      "badge": "Pre-Sales",
+      "title": "De Wellness Conciërge",
+      "description": "Betrekt potentiële gasten met gedetailleerde informatie over uw services, behandelingen, pakketten en wellness-reizen. Beantwoordt vragen over prijzen, beschikbaarheid en helpt gasten de perfecte ervaring te ontdekken.",
+      "feature1": "Service catalogus expertise",
+      "feature2": "Behandelingsaanbevelingen",
+      "feature3": "Pakketvergelijkingen",
+      "feature4": "Beschikbaarheidsvragen",
+      "feature5": "Prijstransparantie"
+    },
+    "divider": "Naadloze Overgangen",
+    "postSales": {
+      "badge": "Post-Sales",
+      "title": "De Operationeel Manager",
+      "description": "Beheert operationele behoeften voor bevestigde gasten. Beheert afspraakmodificaties, biedt boekingsstatusupdates, behandelt aankomstmeldingen en adresseert service-gerelateerde vragen.",
+      "feature1": "Boekingsstatusupdates",
+      "feature2": "Afspraakmodificaties",
+      "feature3": "Aankomstmeldingen",
+      "feature4": "Speciale verzoeken afhandeling",
+      "feature5": "Service follow-ups"
+    }
+  },
+  "features": {
+    "label": "Mogelijkheden",
+    "title": "Gebouwd voor Luxe Wellness",
+    "feature1": {
+      "title": "Naadloze Integratie",
+      "description": "Koppelt moeiteloos aan uw bestaande spa-beheersystemen. Geen dure herstructureringen, geen technische hoofdpijn."
+    },
+    "feature2": {
+      "title": "Zakelijk-Vriendelijke Aanpassing",
+      "description": "Update services, prijzen en reacties zelf. Geen codering vereist, geen wachten op ontwikkelaars."
+    },
+    "feature3": {
+      "title": "Meertalige Ondersteuning",
+      "description": "Bedien internationale gasten in hun voorkeurstaal. Vergroot uw bereik zonder meertalig personeel in te huren."
+    },
+    "feature4": {
+      "title": "Analytics Dashboard",
+      "description": "Begrijp waar gasten het meest naar vragen. Identificeer trends, optimaliseer aanbiedingen en neem datagestuurde beslissingen."
+    },
+    "feature5": {
+      "title": "Privacy & Beveiliging",
+      "description": "GDPR-conform en gebouwd met privacy-standaarden van de wellness-industrie. De gegevens van uw gasten zijn beschermd."
+    },
+    "feature6": {
+      "title": "Directe Reacties",
+      "description": "Laat nooit een potentiële gast wachten. Bied onmiddellijke, nauwkeurige antwoorden op elk moment van de dag of nacht."
+    }
+  },
+  "benefits": {
+    "label": "Waardepropositie",
+    "title": "Transformeer Uw Gastenervaring & Operaties",
+    "item1": {
+      "title": "Leg Meer Boekingen Vast",
+      "description": "Converteer nieuwsgierige browsers naar bevestigde gasten. 4-Eyes betrekt bezoekers onmiddellijk, beantwoordt hun vragen uitgebreid en begeleidt hen naar boeking—zelfs om 3 uur 's nachts wanneer uw personeel offline is.",
+      "point1": "24/7 beschikbaarheid vangt kansen buiten openingstijden",
+      "point2": "Directe reacties voorkomen dat bezoekers naar concurrenten gaan",
+      "point3": "Gepersonaliseerde aanbevelingen verhogen pakketverkopen"
+    },
+    "item2": {
+      "title": "Bevrijd de Tijd van Uw Personeel",
+      "description": "Laat 4-Eyes de routine-vragen afhandelen terwijl uw team zich richt op het leveren van de uitzonderlijke persoonlijke ervaringen die luxe wellness definiëren. Verminder repetitieve taken tot 60%.",
+      "point1": "Automatiseer FAQ's over services, prijzen en beleid",
+      "point2": "Behandel boekingsmodificaties zonder personeelsinterventie",
+      "point3": "Verminder telefoononderbrekingen tijdens behandelingen"
+    },
+    "item3": {
+      "title": "Verbeter Gastentevredenheid",
+      "description": "Moderne luxe betekent gemak. Gasten verwachten directe, nauwkeurige informatie naadloos geleverd. 4-Eyes biedt de onmiddellijke, gepersonaliseerde aandacht die uw merk verheft.",
+      "point1": "Consistente, nauwkeurige informatie elke keer",
+      "point2": "Meertalige ondersteuning voor internationale klanten",
+      "point3": "Proactieve updates over boekingsstatus en aankomsten"
+    },
+    "item4": {
+      "title": "Verkrijg Bedrijfsinzichten",
+      "description": "Elk gesprek is een gegevenspunt. Begrijp waar gasten echt in geïnteresseerd zijn, identificeer trending behandelingen en spot kansen om uw serviceaanbiedingen te optimaliseren.",
+      "point1": "Volg meestgestelde vragen en populaire services",
+      "point2": "Identificeer hiaten in uw service-informatie",
+      "point3": "Meet conversiepatronen en optimaliseer communicatie"
+    }
+  },
+  "howItWorks": {
+    "label": "Implementatie",
+    "title": "Van Consultatie naar Conversatie in Weken",
+    "description": "We hebben het implementatieproces gestroomlijnd om verstoringen te minimaliseren terwijl we waarde maximaliseren voor uw wellnesscentrum.",
+    "step1": {
+      "title": "Ontdekking & Aanpassing",
+      "description": "We leren over uw services, merkstem en unieke aanbiedingen. Samen configureren we 4-Eyes om de persoonlijkheid en expertise van uw spa weer te geven."
+    },
+    "step2": {
+      "title": "Naadloze Integratie",
+      "description": "Ons team verbindt 4-Eyes met uw bestaande spa-beheersysteem. Geen verstoring van uw operaties, geen technische last voor uw personeel."
+    },
+    "step3": {
+      "title": "Training & Testen",
+      "description": "We trainen 4-Eyes op uw specifieke services, beleid en workflows. Rigoureuze testen zorgt voor nauwkeurigheid voor lancering. U behoudt volledige controle over aanpassing."
+    },
+    "step4": {
+      "title": "Lancering & Optimalisatie",
+      "description": "Ga live en begin met het binnenhalen van meer boekingen. We monitoren prestaties, verzamelen inzichten en optimaliseren continu gebaseerd op echte gasteninteracties."
+    }
+  },
+  "pricing": {
+    "label": "Investering",
+    "title": "Aangepaste Oplossingen voor Uw Wellnesscentrum",
+    "description": "Elke luxe spa is uniek. We creëren aangepaste prijzen gebaseerd op uw specifieke behoeften, gastenvolume en integratie-eisen.",
+    "card": {
+      "title": "Laten We Uw Perfecte Oplossing Ontwerpen",
+      "subtitle": "Onze prijzen houden rekening met:",
+      "factor1": "Aantal locaties en behandelkamers",
+      "factor2": "Verwacht conversatievolume",
+      "factor3": "Integratiecomplexiteit met uw bestaande systemen",
+      "factor4": "Taalondersteuning eisen",
+      "factor5": "Aanpassings- en trainingsbehoeften",
+      "ctaText": "Plan een consultatie om uw behoeften te bespreken en een aangepast voorstel te ontvangen.",
+      "ctaButton": "Krijg Aangepaste Prijzen"
+    }
+  },
+  "contact": {
+    "label": "Aan de Slag",
+    "title": "Plan Uw Consultatie",
+    "description": "Ontdek hoe 4-Eyes uw gastenervaring en operaties kan transformeren. We bespreken uw specifieke behoeften en laten u precies zien hoe onze dual-persoonlijkheid AI resultaten kan drijven voor uw wellnesscentrum.",
+    "email": {
+      "label": "Email"
+    },
+    "expect": {
+      "title": "Wat te Verwachten:",
+      "item1": "30-minuten gepersonaliseerde demo",
+      "item2": "Bespreking van uw specifieke behoeften en uitdagingen",
+      "item3": "Aangepast prijsvoorstel",
+      "item4": "Implementatietijdlijn",
+      "item5": "ROI-analyse voor uw wellnesscentrum"
+    }
+  },
+  "form": {
+    "name": {
+      "label": "Uw Naam *",
+      "placeholder": "Jan de Vries"
+    },
+    "business": {
+      "label": "Spa/Bedrijfsnaam *",
+      "placeholder": "Sereniteit Wellness Spa"
+    },
+    "email": {
+      "label": "Email Adres *",
+      "placeholder": "jan@sereniteit-spa.com"
+    },
+    "phone": {
+      "label": "Telefoonnummer (Optioneel)",
+      "placeholder": "+31 6 12 34 56 78"
+    },
+    "message": {
+      "label": "Vertel Over Uw Behoeften",
+      "placeholder": "Welke uitdagingen ondervindt u? Wat wilt u leren over 4-Eyes?"
+    },
+    "submit": "Plan Consultatie"
+  },
+  "footer": {
+    "tagline": "AI voor Welzijn",
+    "description": "Intelligente conversatietechnologie ontworpen exclusief voor luxe spa en wellnesscentra.",
+    "productTitle": "Product",
+    "features": "Functies",
+    "benefits": "Voordelen",
+    "howItWorks": "Hoe het Werkt",
+    "pricing": "Prijzen",
+    "contactTitle": "Contact",
+    "schedule": "Plan Consultatie",
+    "emailUs": "Email Ons",
+    "copyright": "© 2025 4-Eyes. Alle rechten voorbehouden."
+  },
+  "chatbot": {
+    "toggleBadge": "Probeer 4-Eyes",
+    "title": "4-Eyes AI Assistent",
+    "subtitle": "AI voor Welzijn",
+    "welcome": "Welkom bij Serenity Spa. Ik ben hier om u te begeleiden door ons wellness-heiligdom en u te helpen de perfecte behandeling voor uw behoeften te ontdekken. Of u nu op zoek bent naar ontspanning, verjonging of een transformerende spa-ervaring, ik help u graag met boekingsondersteuning, diensten en gepersonaliseerde aanbevelingen.",
+    "hint": "Hoe kan ik u vandaag assisteren met uw wellnessreis?",
+    "quickReply1": "Waarmee kunt u me helpen?",
+    "quickReply2": "Vertel over uw services",
+    "quickReply3": "Hoe boek ik een afspraak?",
+    "placeholder": "Typ uw bericht..."
+  }
+}

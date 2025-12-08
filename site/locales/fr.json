@@ -1,0 +1,228 @@
+{
+  "tagline": "IA pour le Bien-\u00eatre",
+  "nav": {
+    "home": "Accueil",
+    "product": "Produit",
+    "benefits": "Avantages",
+    "howItWorks": "Fonctionnement",
+    "pricing": "Tarifs",
+    "contact": "Nous Contacter"
+  },
+  "hero": {
+    "title1": "R\u00e9volutionnez Votre Exp\u00e9rience Spa",
+    "title2": "Avec une Conversation Intelligente",
+    "subtitle": "Le chatbot IA \u00e0 double personnalit\u00e9 con\u00e7u exclusivement pour les centres de bien-\u00eatre de luxe. Offrez un service client exceptionnel 24h/24 et 7j/7 pendant que votre \u00e9quipe se concentre sur l'essentiel.",
+    "cta1": "Planifier une Consultation",
+    "cta2": "D\u00e9couvrir 4-Eyes",
+    "stat1": "Support Client",
+    "stat2": "Temps \u00c9conomis\u00e9",
+    "stat3": "Conversion R\u00e9servations",
+    "scrollText": "Faire d\u00e9filer pour explorer"
+  },
+  "problems": {
+    "title": "Le D\u00e9fi des Centres de Bien-\u00eatre de Luxe",
+    "description": "Vos clients attendent des r\u00e9ponses imm\u00e9diates et personnalis\u00e9es. Votre \u00e9quipe m\u00e9rite de se concentrer sur la cr\u00e9ation d'exp\u00e9riences en personne exceptionnelles, pas sur la r\u00e9ponse aux demandes r\u00e9p\u00e9titives.",
+    "card1": {
+      "title": "Demandes Hors Horaires",
+      "text": "Vous ratez des r\u00e9servations quand les clients recherchent des services en dehors des heures d'ouverture"
+    },
+    "card2": {
+      "title": "Questions R\u00e9p\u00e9titives",
+      "text": "L'\u00e9quipe passe des heures \u00e0 r\u00e9pondre aux m\u00eames questions sur les services et les tarifs"
+    },
+    "card3": {
+      "title": "Clients Internationaux",
+      "text": "Les barri\u00e8res linguistiques cr\u00e9ent des frictions dans l'exp\u00e9rience client de luxe"
+    },
+    "card4": {
+      "title": "Opportunit\u00e9s Manqu\u00e9es",
+      "text": "Aucune visibilit\u00e9 sur ce que les clients demandent avant de r\u00e9server"
+    }
+  },
+  "product": {
+    "label": "La Solution",
+    "title": "Rencontrez 4-Eyes : Votre Assistant IA \u00e0 Double Personnalit\u00e9",
+    "description": "Pas qu'un simple chatbot. 4-Eyes est sp\u00e9cifiquement con\u00e7u pour l'industrie du bien-\u00eatre, avec deux personnalit\u00e9s distinctes qui s'adaptent au parcours de vos clients.",
+    "preSales": {
+      "badge": "Pr\u00e9-Vente",
+      "title": "Le Concierge Bien-\u00catre",
+      "description": "Engage les clients potentiels avec des informations d\u00e9taill\u00e9es sur vos services, traitements, forfaits et parcours de bien-\u00eatre. R\u00e9pond aux questions sur les tarifs, la disponibilit\u00e9 et aide les clients \u00e0 d\u00e9couvrir l'exp\u00e9rience parfaite.",
+      "feature1": "Expertise du catalogue de services",
+      "feature2": "Recommandations de traitements",
+      "feature3": "Comparaisons de forfaits",
+      "feature4": "Demandes de disponibilit\u00e9",
+      "feature5": "Transparence tarifaire"
+    },
+    "divider": "Transitions Fluides",
+    "postSales": {
+      "badge": "Post-Vente",
+      "title": "L'Officier Op\u00e9rationnel",
+      "description": "G\u00e8re les besoins op\u00e9rationnels des clients confirm\u00e9s. G\u00e8re les modifications de rendez-vous, fournit des mises \u00e0 jour sur l'\u00e9tat des r\u00e9servations, g\u00e8re les notifications d'arriv\u00e9e et r\u00e9pond aux questions relatives aux services.",
+      "feature1": "Mises \u00e0 jour de l'\u00e9tat des r\u00e9servations",
+      "feature2": "Modifications de rendez-vous",
+      "feature3": "Notifications d'arriv\u00e9e",
+      "feature4": "Gestion des demandes sp\u00e9ciales",
+      "feature5": "Suivis de services"
+    }
+  },
+  "features": {
+    "label": "Capacit\u00e9s",
+    "title": "Con\u00e7u pour le Bien-\u00eatre de Luxe",
+    "feature1": {
+      "title": "Int\u00e9gration Transparente",
+      "description": "Se connecte sans effort \u00e0 vos syst\u00e8mes de gestion spa existants. Pas de refontes co\u00fbteuses, pas de maux de t\u00eate techniques."
+    },
+    "feature2": {
+      "title": "Personnalisation Adapt\u00e9e aux Entreprises",
+      "description": "Mettez \u00e0 jour vos services, tarifs et r\u00e9ponses vous-m\u00eame. Aucun codage requis, pas besoin d'attendre les d\u00e9veloppeurs."
+    },
+    "feature3": {
+      "title": "Support Multilingue",
+      "description": "Servez les clients internationaux dans leur langue pr\u00e9f\u00e9r\u00e9e. \u00c9largissez votre port\u00e9e sans embaucher de personnel multilingue."
+    },
+    "feature4": {
+      "title": "Tableau de Bord Analytique",
+      "description": "Comprenez ce que les clients demandent le plus. Identifiez les tendances, optimisez vos offres et prenez des d\u00e9cisions bas\u00e9es sur les donn\u00e9es."
+    },
+    "feature5": {
+      "title": "Vie Priv\u00e9e & S\u00e9curit\u00e9",
+      "description": "Conforme RGPD et construit selon les normes de confidentialit\u00e9 de l'industrie du bien-\u00eatre. Les donn\u00e9es de vos clients sont prot\u00e9g\u00e9es."
+    },
+    "feature6": {
+      "title": "R\u00e9ponses Instantan\u00e9es",
+      "description": "Ne laissez jamais attendre un client potentiel. Fournissez des r\u00e9ponses imm\u00e9diates et pr\u00e9cises \u00e0 toute heure du jour ou de la nuit."
+    }
+  },
+  "benefits": {
+    "label": "Proposition de Valeur",
+    "title": "Transformez l'Exp\u00e9rience Client et les Op\u00e9rations",
+    "item1": {
+      "title": "Capturez Plus de R\u00e9servations",
+      "description": "Convertissez les navigateurs curieux en clients confirm\u00e9s. 4-Eyes engage les visiteurs instantan\u00e9ment, r\u00e9pond \u00e0 leurs questions de mani\u00e8re exhaustive et les guide vers la r\u00e9servation\u2014m\u00eame \u00e0 3h du matin quand votre \u00e9quipe est hors ligne.",
+      "point1": "La disponibilit\u00e9 24h/24 capture les opportunit\u00e9s en dehors des heures d'ouverture",
+      "point2": "Les r\u00e9ponses instantan\u00e9es emp\u00eachent les visiteurs d'aller chez les concurrents",
+      "point3": "Les recommandations personnalis\u00e9es augmentent les ventes de forfaits"
+    },
+    "item2": {
+      "title": "Lib\u00e9rez le Temps de Votre \u00c9quipe",
+      "description": "Laissez 4-Eyes g\u00e9rer les demandes routini\u00e8res pendant que votre \u00e9quipe se concentre sur la livraison d'exp\u00e9riences en personne exceptionnelles qui d\u00e9finissent le bien-\u00eatre de luxe. R\u00e9duisez les t\u00e2ches r\u00e9p\u00e9titives jusqu'\u00e0 60%.",
+      "point1": "Automatisez les FAQ sur les services, tarifs et politiques",
+      "point2": "G\u00e9rez les modifications de r\u00e9servation sans intervention du personnel",
+      "point3": "R\u00e9duisez les interruptions t\u00e9l\u00e9phoniques pendant les traitements"
+    },
+    "item3": {
+      "title": "Am\u00e9liorez la Satisfaction Client",
+      "description": "Le luxe moderne signifie commodit\u00e9. Les clients attendent des informations instantan\u00e9es et pr\u00e9cises livr\u00e9es de mani\u00e8re transparente. 4-Eyes fournit l'attention imm\u00e9diate et personnalis\u00e9e qui \u00e9l\u00e8ve votre marque.",
+      "point1": "Informations coh\u00e9rentes et pr\u00e9cises \u00e0 chaque fois",
+      "point2": "Support multilingue pour la client\u00e8le internationale",
+      "point3": "Mises \u00e0 jour proactives sur l'\u00e9tat des r\u00e9servations et les arriv\u00e9es"
+    },
+    "item4": {
+      "title": "Obtenez des Donn\u00e9es d'Affaires",
+      "description": "Chaque conversation est un point de donn\u00e9es. Comprenez ce qui int\u00e9resse vraiment les clients, identifiez les traitements tendance et rep\u00e9rez les opportunit\u00e9s d'optimiser vos offres de services.",
+      "point1": "Suivez les questions les plus pos\u00e9es et les services populaires",
+      "point2": "Identifiez les lacunes dans vos informations de service",
+      "point3": "Mesurez les mod\u00e8les de conversion et optimisez les messages"
+    }
+  },
+  "howItWorks": {
+    "label": "Impl\u00e9mentation",
+    "title": "De la Consultation \u00e0 la Conversation en Semaines",
+    "description": "Nous avons rationalis\u00e9 le processus d'impl\u00e9mentation pour minimiser les perturbations tout en maximisant la valeur pour votre centre de bien-\u00eatre.",
+    "step1": {
+      "title": "D\u00e9couverte & Personnalisation",
+      "description": "Nous apprenons vos services, votre voix de marque et vos offres uniques. Ensemble, nous configurons 4-Eyes pour refl\u00e9ter la personnalit\u00e9 et l'expertise de votre spa."
+    },
+    "step2": {
+      "title": "Int\u00e9gration Transparente",
+      "description": "Notre \u00e9quipe connecte 4-Eyes \u00e0 votre syst\u00e8me de gestion spa existant. Aucune perturbation de vos op\u00e9rations, aucune charge technique sur votre personnel."
+    },
+    "step3": {
+      "title": "Formation & Test",
+      "description": "Nous formons 4-Eyes sur vos services, politiques et flux de travail sp\u00e9cifiques. Des tests rigoureux garantissent la pr\u00e9cision avant le lancement. Vous maintenez un contr\u00f4le total sur la personnalisation."
+    },
+    "step4": {
+      "title": "Lancement & Optimisation",
+      "description": "Passez en ligne et commencez \u00e0 capturer plus de r\u00e9servations. Nous surveillons les performances, rassemblons des informations et optimisons continuellement en nous basant sur les interactions client r\u00e9elles."
+    }
+  },
+  "pricing": {
+    "label": "Investissement",
+    "title": "Solutions Personnalis\u00e9es pour Votre Centre de Bien-\u00eatre",
+    "description": "Chaque spa de luxe est unique. Nous cr\u00e9ons des tarifs personnalis\u00e9s bas\u00e9s sur vos besoins sp\u00e9cifiques, le volume de clients et les exigences d'int\u00e9gration.",
+    "card": {
+      "title": "Concevons Votre Solution Parfaite",
+      "subtitle": "Nos tarifs prennent en compte :",
+      "factor1": "Nombre de locaux et salles de traitement",
+      "factor2": "Volume de conversations attendu",
+      "factor3": "Complexit\u00e9 d'int\u00e9gration avec vos syst\u00e8mes existants",
+      "factor4": "Exigences de support multilingue",
+      "factor5": "Besoins de personnalisation et formation",
+      "ctaText": "Planifiez une consultation pour discuter de vos besoins et recevoir une proposition personnalis\u00e9e.",
+      "ctaButton": "Obtenir des Tarifs Personnalis\u00e9s"
+    }
+  },
+  "contact": {
+    "label": "Commencer",
+    "title": "Planifiez Votre Consultation",
+    "description": "D\u00e9couvrez comment 4-Eyes peut transformer votre exp\u00e9rience client et vos op\u00e9rations. Nous discuterons de vos besoins sp\u00e9cifiques et vous montrerons exactement comment notre IA \u00e0 double personnalit\u00e9 peut g\u00e9n\u00e9rer des r\u00e9sultats pour votre centre de bien-\u00eatre.",
+    "email": {
+      "label": "Email"
+    },
+    "expect": {
+      "title": "\u00c0 quoi s'attendre :",
+      "item1": "D\u00e9monstration personnalis\u00e9e de 30 minutes",
+      "item2": "Discussion de vos besoins et d\u00e9fis sp\u00e9cifiques",
+      "item3": "Proposition de tarifs personnalis\u00e9e",
+      "item4": "Calendrier de mise en \u0153uvre",
+      "item5": "Analyse ROI pour votre centre de bien-\u00eatre"
+    }
+  },
+  "form": {
+    "name": {
+      "label": "Votre Nom *",
+      "placeholder": "Jean Dupont"
+    },
+    "business": {
+      "label": "Nom du Spa/Entreprise *",
+      "placeholder": "Spa S\u00e9r\u00e9nit\u00e9 Bien-\u00eatre"
+    },
+    "email": {
+      "label": "Adresse Email *",
+      "placeholder": "jean@spa-serenite.com"
+    },
+    "phone": {
+      "label": "Num\u00e9ro de T\u00e9l\u00e9phone (Optionnel)",
+      "placeholder": "+33 6 12 34 56 78"
+    },
+    "message": {
+      "label": "Parlez-nous de Vos Besoins",
+      "placeholder": "Quels d\u00e9fis rencontrez-vous ? Que souhaitez-vous apprendre sur 4-Eyes ?"
+    },
+    "submit": "Planifier une Consultation"
+  },
+  "footer": {
+    "tagline": "IA pour le Bien-\u00eatre",
+    "description": "Technologie de conversation intelligente con\u00e7ue exclusivement pour les centres de spa et de bien-\u00eatre de luxe.",
+    "productTitle": "Produit",
+    "features": "Fonctionnalit\u00e9s",
+    "benefits": "Avantages",
+    "howItWorks": "Fonctionnement",
+    "pricing": "Tarifs",
+    "contactTitle": "Contact",
+    "schedule": "Planifier une Consultation",
+    "emailUs": "Envoyez-nous un Email",
+    "copyright": "\u00a9 2025 4-Eyes. Tous droits r\u00e9serv\u00e9s."
+  },
+  "chatbot": {
+    "toggleBadge": "Essayer 4-Eyes",
+    "title": "Assistant IA 4-Eyes",
+    "subtitle": "IA pour le Bien-\u00eatre",
+    "welcome": "Bienvenue \u00e0 Serenity Spa. Je suis ici pour vous guider \u00e0 travers notre sanctuaire de bien-\u00eatre et vous aider \u00e0 d\u00e9couvrir le traitement parfait pour vos besoins. Que vous recherchiez la relaxation, le rajeunissement ou une exp\u00e9rience spa transformatrice, je suis ravi de vous assister avec le support de r\u00e9servation, les services et les recommandations personnalis\u00e9es.",
+    "hint": "Comment puis-je vous assister dans votre parcours bien-\u00eatre aujourd'hui ?",
+    "quickReply1": "En quoi pouvez-vous m'aider ?",
+    "quickReply2": "Parlez-moi de vos services",
+    "quickReply3": "Comment prendre un rendez-vous ?",
+    "placeholder": "Tapez votre message..."
+  }
+}
