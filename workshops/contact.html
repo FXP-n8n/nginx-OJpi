@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact 4-Eyes — Book a workshop or schedule a discovery call for your lobbying association.">
+  <title>Contact — 4-Eyes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">4-Eyes</a>
+      <div class="nav-links">
+        <a href="/workshops">Workshops</a>
+        <a href="/about">About</a>
+        <a href="/resources">Resources</a>
+        <a href="/contact" class="btn btn-primary">Book a Workshop</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <p>Book a workshop, schedule a discovery call, or ask a question. We respond within 2 business days.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Let's start a conversation</h2>
+          <p>Whether you're exploring AI literacy training for your team or evaluating multi-agent infrastructure, we're here to help you find the right fit.</p>
+          <p>All discovery calls are no-pressure conversations. We'll ask about your needs, share relevant experience, and recommend next steps — even if that means waiting or exploring other options.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:contact@4-eyes.eu">contact@4-eyes.eu</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h3>Location</h3>
+                <p>Brussels, Belgium<br>Available for in-person workshops across Europe</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">💼</div>
+              <div>
+                <h3>LinkedIn</h3>
+                <p><a href="https://linkedin.com/in/fxpeers" target="_blank" rel="noopener">Francois-Xavier Peers</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <h2>Send a message</h2>
+          <p>Fill out the form below and we'll get back to you within 2 business days.</p>
+          
+          <!-- Form action: Using n8n webhook for form handling -->
+          <form action="https://www.n8n.4-eyes.eu/webhook/website_form" method="GET" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Work email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="organization">Organization *</label>
+              <input type="text" id="organization" name="organization" required>
+            </div>
+
+            <div class="form-group">
+              <label for="orgType">Organization type *</label>
+              <select id="orgType" name="orgType" required>
+                <option value="">Select one...</option>
+                <option value="trade-association">Trade Association</option>
+                <option value="industry-federation">Industry Federation</option>
+                <option value="professional-association">Professional Association</option>
+                <option value="advocacy-org">Advocacy Organization</option>
+                <option value="lobby-consultancy">Lobby Consultancy</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="staffSize">Staff size</label>
+              <select id="staffSize" name="staffSize">
+                <option value="">Select one...</option>
+                <option value="1-10">1-10</option>
+                <option value="11-50">11-50</option>
+                <option value="51-200">51-200</option>
+                <option value="201-500">201-500</option>
+                <option value="500+">500+</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="interest">I'm interested in *</label>
+              <select id="interest" name="interest" required>
+                <option value="">Select one...</option>
+                <option value="essentials">AI Literacy Essentials Workshop</option>
+                <option value="advanced">Advanced Prompt Engineering Workshop</option>
+                <option value="architecture">AI Systems Architecture Workshop</option>
+                <option value="custom">Custom Workshop</option>
+                <option value="consultation">General Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="timeline">Preferred timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select one...</option>
+                <option value="asap">ASAP</option>
+                <option value="this-quarter">This Quarter</option>
+                <option value="next-quarter">Next Quarter</option>
+                <option value="researching">Just Researching</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message (optional)</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your needs, specific challenges, or questions..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">I agree to the <a href="/privacy">Privacy Policy</a> and consent to being contacted about my inquiry. *</label>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+            </div>
+
+            <p class="form-note">We respect your privacy. Your information is never shared with third parties.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" style="background: var(--bg-offwhite);">
+    <div class="container">
+      <h2>Prefer to schedule directly?</h2>
+      <p>Book a 30-minute discovery call on our calendar.</p>
+      <div class="cta-buttons">
+        <a href="https://cal.com/4eyes/discovery" class="btn btn-primary btn-large">Schedule Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">4-Eyes</div>
+          <p>AI infrastructure for European lobbying associations and advocacy organizations. Workshops, multi-agent architecture, and systems engineering.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Workshops</h4>
+          <a href="/workshops#essentials">AI Literacy Essentials</a>
+          <a href="/workshops#advanced">Advanced Prompt Engineering</a>
+          <a href="/workshops#architecture">AI Systems Architecture</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/resources">Briefings</a>
+          <a href="/resources">AI Adoption Guide</a>
+          <a href="/resources">Case Studies</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 4-Eyes. All rights reserved. · <a href="/privacy">Privacy Policy</a> · <a href="/imprint">Imprint</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

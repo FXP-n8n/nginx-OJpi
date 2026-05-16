@@ -1,0 +1,742 @@
+/* ============================================
+   4-Eyes Website — Page-Specific Styles
+   Workshops, About, Contact, Resources
+   ============================================ */
+
+/* Page Hero (for interior pages)
+   --------------------------------------------- */
+.page-hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-offwhite) 100%);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.page-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+}
+
+.page-hero .hero-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 60px 0 40px;
+  }
+  
+  .page-hero h1 {
+    font-size: 36px;
+  }
+}
+
+/* Workshop Details
+   --------------------------------------------- */
+.workshop-details {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.workshop-detail-card {
+  background: white;
+  border: 1px solid var(--border-whisper);
+  border-radius: 12px;
+  padding: 48px;
+  box-shadow: var(--shadow-card);
+}
+
+.workshop-detail-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.workshop-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--blue-light);
+  color: var(--blue-primary);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.workshop-badge-intermediate {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.workshop-badge-leadership {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.workshop-detail-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.workshop-meta {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.workshop-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+}
+
+.workshop-description h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 32px 0 16px;
+}
+
+.workshop-description p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.learning-list,
+.outcomes-list {
+  list-style: none;
+  margin: 24px 0;
+}
+
+.learning-list li,
+.outcomes-list li {
+  font-size: 15px;
+  color: var(--text-secondary);
+  padding: 12px 0 12px 32px;
+  position: relative;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.learning-list li:last-child,
+.outcomes-list li:last-child {
+  border-bottom: none;
+}
+
+.learning-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--blue-primary);
+  font-weight: 600;
+}
+
+.outcomes-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.learning-list strong {
+  color: var(--text-black);
+}
+
+.workshop-outcome-highlight {
+  margin-top: 32px;
+  padding: 20px 24px;
+  background: var(--bg-offwhite);
+  border-radius: 8px;
+  border-left: 4px solid var(--blue-primary);
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.workshop-cta-sidebar {
+  background: var(--bg-offwhite);
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.workshop-cta-sidebar h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.workshop-cta-sidebar p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.sidebar-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 16px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .workshop-detail-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .workshop-cta-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .workshop-detail-card {
+    padding: 32px 24px;
+  }
+  
+  .workshop-detail-header h2 {
+    font-size: 28px;
+  }
+}
+
+/* Custom Workshops
+   --------------------------------------------- */
+.custom-workshops {
+  padding: 100px 0;
+  background: var(--bg-offwhite);
+}
+
+.custom-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.custom-content > p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.custom-list {
+  list-style: none;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.custom-list li {
+  font-size: 15px;
+  color: var(--text-secondary);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+  line-height: 1.6;
+}
+
+.custom-list li:last-child {
+  border-bottom: none;
+}
+
+.custom-list strong {
+  color: var(--text-black);
+}
+
+/* Booking Process
+   --------------------------------------------- */
+.booking-process {
+  padding: 100px 0;
+  background: var(--bg-white);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.process-step {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--bg-offwhite);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  background: var(--blue-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.process-step h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.process-step p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About Page
+   --------------------------------------------- */
+.about-hero {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-offwhite) 100%);
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 20px;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-section {
+  padding: 100px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-principles {
+  margin-top: 40px;
+}
+
+.about-principles h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.principle-list {
+  list-style: none;
+}
+
+.principle-list li {
+  font-size: 15px;
+  color: var(--text-secondary);
+  padding: 12px 0;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.principle-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--blue-primary);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.about-image {
+  background: var(--bg-offwhite);
+  border-radius: 12px;
+  padding: 48px;
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+.about-image-placeholder {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Page
+   --------------------------------------------- */
+.contact-hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-offwhite) 100%);
+}
+
+.contact-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  padding: 100px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 48px;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.contact-details {
+  margin-top: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--blue-light);
+  color: var(--blue-primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.contact-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.contact-item p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.contact-form-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-whisper);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-form-container h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contact-form-container > p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-black);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-whisper);
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 3px rgba(0, 117, 222, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.form-submit {
+  margin-top: 32px;
+}
+
+.form-submit .btn {
+  width: 100%;
+}
+
+.form-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form-container {
+    padding: 24px;
+  }
+}
+
+/* Resources Page
+   --------------------------------------------- */
+.resources-hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-offwhite) 100%);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.resource-card {
+  background: white;
+  border: 1px solid var(--border-whisper);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.resource-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.resource-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.resource-card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.resource-link {
+  color: var(--blue-primary);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.resource-link:hover {
+  text-decoration: underline;
+}
+
+.resource-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--bg-warm);
+  border-radius: 100px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lead Magnet Section
+   --------------------------------------------- */
+.lead-magnet {
+  padding: 100px 0;
+  background: var(--blue-light);
+  margin: 80px 0;
+}
+
+.lead-magnet-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lead-magnet h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.lead-magnet p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.lead-magnet-form {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.lead-magnet-form input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid var(--border-whisper);
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.lead-magnet-form input:focus {
+  outline: none;
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 3px rgba(0, 117, 222, 0.1);
+}
+
+@media (max-width: 600px) {
+  .lead-magnet-form {
+    flex-direction: column;
+  }
+}
