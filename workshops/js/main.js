@@ -126,7 +126,7 @@ function initContactForm() {
       });
 
       if (res.ok || res.status === 200) {
-        showContactSuccess(form);
+        showContactSuccess();
       } else {
         throw new Error(`status ${res.status}`);
       }
@@ -173,16 +173,8 @@ function initGuideForms() {
   });
 }
 
-function showContactSuccess(form) {
-  const container = form.closest('.contact-form-container') || form.parentElement;
-  container.innerHTML = `
-    <div class="form-success">
-      <div class="success-icon">✓</div>
-      <h3>Message received</h3>
-      <p>Thank you for reaching out. We’ll be in touch within 2 business days.</p>
-      <p>In the meantime, you can also <a href="mailto:contact@4-eyes.eu">email us directly</a>.</p>
-    </div>
-  `;
+function showContactSuccess() {
+  window.location.href = ‘/thank-you’;
 }
 
 function showFormError(form, message) {
