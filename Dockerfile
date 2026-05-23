@@ -8,3 +8,6 @@ COPY workshops /usr/share/nginx/workshops
 
 # Copy hardened nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
+
+# Start nginx in foreground
+CMD ["nginx", "-g", "daemon off;"]
