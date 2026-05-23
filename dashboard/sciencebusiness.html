@@ -68,9 +68,11 @@
         .article-title:hover {
             color: var(--accent);
         }
-        .article-date {
+        .article-desc {
             color: #8b95a3;
-            font-size: 0.75rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0;
         }
         .refresh-btn {
             background: var(--surface);
@@ -86,91 +88,88 @@
         .refresh-btn:hover {
             background: #1c2128;
         }
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #8b95a3;
+        }
     </style>
 </head>
 <body>
     <h1>🔬 ScienceBusiness.net Tracker</h1>
-    <p class="timestamp">Last updated: 2026-05-23 12:03 CET</p>
+    <p class="timestamp">Last updated: 2026-05-23 17:34 CET</p>
     
     <div class="articles">
         
         <div class="article">
             <div class="article-number">1</div>
             <div class="article-content">
-                <a href="https://sciencebusiness.net/news#mm-2" class="article-title" target="_blank">Open submenu</a>
-                <div class="article-date">Recent</div>
+                <a href="https://sciencebusiness.net/news/eu-budget/five-things-we-know-about-eus-new-eu5b-scaleup-europe-fund" class="article-title" target="_blank">Five things we know about the EU’s new €5B Scaleup Europe Fund</a>
+                
             </div>
         </div>
         
         <div class="article">
             <div class="article-number">2</div>
             <div class="article-content">
-                <a href="https://sciencebusiness.net/news#mm-3" class="article-title" target="_blank">Open submenu</a>
-                <div class="article-date">Recent</div>
+                <a href="https://sciencebusiness.net/news/horizon-europe/rumoured-overhaul-commission-research-directorate-gets-mixed-response" class="article-title" target="_blank">Rumoured overhaul of Commission research directorate gets mixed response</a>
+                
             </div>
         </div>
         
         <div class="article">
             <div class="article-number">3</div>
             <div class="article-content">
-                <a href="https://sciencebusiness.net/reports" class="article-title" target="_blank">Reports</a>
-                <div class="article-date">Recent</div>
+                <a href="https://sciencebusiness.net/news/ai/five-top-tech-policy-ideas-eu" class="article-title" target="_blank">Five top tech policy ideas for the EU</a>
+                
             </div>
         </div>
         
         <div class="article">
             <div class="article-number">4</div>
             <div class="article-content">
-                <a href="https://sciencebusiness.net/events" class="article-title" target="_blank">Events</a>
-                <div class="article-date">Recent</div>
+                <a href="https://sciencebusiness.net/news/research-and-innovation-gap/slovakia-revises-rd-approach-increase-focus-competitiveness" class="article-title" target="_blank">Slovakia revises R&D approach to increase focus on competitiveness</a>
+                
             </div>
         </div>
         
         <div class="article">
             <div class="article-number">5</div>
             <div class="article-content">
-                <a href="https://sciencebusiness.net/news#mm-4" class="article-title" target="_blank">Open submenu</a>
-                <div class="article-date">Recent</div>
+                <a href="https://sciencebusiness.net/news/r-d-funding/careers/germany-funds-joint-research-poland-and-france" class="article-title" target="_blank">Strategic thinking: Germany funds joint research with Poland and France</a>
+                
             </div>
         </div>
         
         <div class="article">
             <div class="article-number">6</div>
             <div class="article-content">
-                <a href="https://sciencebusiness.net/news#mm-5" class="article-title" target="_blank">Open submenu</a>
-                <div class="article-date">Recent</div>
+                <a href="https://sciencebusiness.net/news/r-d-funding/technology-transfer/small-fast-co-creation-projects-could-steer-tech-transfer-policy" class="article-title" target="_blank">Small, fast co-creation projects could steer tech transfer to policy priorities</a>
+                
             </div>
         </div>
         
         <div class="article">
             <div class="article-number">7</div>
             <div class="article-content">
-                <a href="https://sciencebusiness.net/news#mm-6" class="article-title" target="_blank">Open submenu</a>
-                <div class="article-date">Recent</div>
+                <a href="https://sciencebusiness.net/news/r-d-funding/eu-budget/eu-prepares-launch-bioeconomy-investment-group-tackle-funding-gap" class="article-title" target="_blank">EU prepares to launch bioeconomy investment group to tackle funding gap</a>
+                
             </div>
         </div>
         
         <div class="article">
             <div class="article-number">8</div>
             <div class="article-content">
-                <a href="https://sciencebusiness.net/news#mm-1" class="article-title" target="_blank">News</a>
-                <div class="article-date">Recent</div>
+                <a href="https://sciencebusiness.net/news/r-d-funding/ai/funding-radar-japan-calls-international-research-ai-science" class="article-title" target="_blank">Funding Radar: Japan calls for international research on AI in science</a>
+                
             </div>
         </div>
         
         <div class="article">
             <div class="article-number">9</div>
             <div class="article-content">
-                <a href="https://sciencebusiness.net/paid-content "The latest funding insights "" class="article-title" target="_blank">Funding Newswire</a>
-                <div class="article-date">Recent</div>
-            </div>
-        </div>
-        
-        <div class="article">
-            <div class="article-number">10</div>
-            <div class="article-content">
-                <a href="https://sciencebusiness.net/the-rd-express" class="article-title" target="_blank">R&D Express</a>
-                <div class="article-date">Recent</div>
+                <a href="https://sciencebusiness.net/news/r-d-funding/data-corner-france-tops-research-infectious-diseases" class="article-title" target="_blank">Data Corner: France tops research on infectious diseases</a>
+                
             </div>
         </div>
         
@@ -179,7 +178,6 @@
     <button class="refresh-btn" onclick="location.reload()">↻ Refresh Now</button>
     
     <script>
-        // Auto-refresh every hour
         setTimeout(() => location.reload(), 3600000);
     </script>
 </body>
