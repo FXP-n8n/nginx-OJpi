@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3600">
+    <title>ScienceBusiness.net Tracker</title>
+    <style>
+        :root {
+            --bg: #0b0e11;
+            --surface: #15191f;
+            --text: #e4e6ea;
+            --accent: #4f9cf7;
+            --green: #34d399;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        .timestamp {
+            color: #8b95a3;
+            font-size: 0.75rem;
+            margin-bottom: 24px;
+        }
+        .article {
+            background: var(--surface);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .article-number {
+            background: var(--accent);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .article-content {
+            flex: 1;
+        }
+        .article-title {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.4;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .article-title:hover {
+            color: var(--accent);
+        }
+        .article-desc {
+            color: #8b95a3;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .refresh-btn {
+            background: var(--surface);
+            border: 1px solid #252b33;
+            color: var(--accent);
+            font-family: monospace;
+            font-size: 0.75rem;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+        .refresh-btn:hover {
+            background: #1c2128;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #8b95a3;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔬 ScienceBusiness.net Tracker</h1>
+    <p class="timestamp">Last updated: 2026-05-23 12:03 CET</p>
+    
+    <div class="articles">
+        
+        <div class="article">
+            <div class="article-number">1</div>
+            <div class="article-content">
+                <a href="https://sciencebusiness.net/news/eu-budget/five-things-we-know-about-eus-new-eu5b-scaleup-europe-fund" class="article-title" target="_blank">Five things we know about the EU’s new €5B Scaleup Europe Fund</a>
+                
+            </div>
+        </div>
+        
+        <div class="article">
+            <div class="article-number">2</div>
+            <div class="article-content">
+                <a href="https://sciencebusiness.net/news/horizon-europe/rumoured-overhaul-commission-research-directorate-gets-mixed-response" class="article-title" target="_blank">Rumoured overhaul of Commission research directorate gets mixed response</a>
+                
+            </div>
+        </div>
+        
+        <div class="article">
+            <div class="article-number">3</div>
+            <div class="article-content">
+                <a href="https://sciencebusiness.net/news/ai/five-top-tech-policy-ideas-eu" class="article-title" target="_blank">Five top tech policy ideas for the EU</a>
+                
+            </div>
+        </div>
+        
+        <div class="article">
+            <div class="article-number">4</div>
+            <div class="article-content">
+                <a href="https://sciencebusiness.net/news/research-and-innovation-gap/slovakia-revises-rd-approach-increase-focus-competitiveness" class="article-title" target="_blank">Slovakia revises R&D approach to increase focus on competitiveness</a>
+                
+            </div>
+        </div>
+        
+        <div class="article">
+            <div class="article-number">5</div>
+            <div class="article-content">
+                <a href="https://sciencebusiness.net/news/r-d-funding/careers/germany-funds-joint-research-poland-and-france" class="article-title" target="_blank">Strategic thinking: Germany funds joint research with Poland and France</a>
+                
+            </div>
+        </div>
+        
+        <div class="article">
+            <div class="article-number">6</div>
+            <div class="article-content">
+                <a href="https://sciencebusiness.net/news/r-d-funding/technology-transfer/small-fast-co-creation-projects-could-steer-tech-transfer-policy" class="article-title" target="_blank">Small, fast co-creation projects could steer tech transfer to policy priorities</a>
+                
+            </div>
+        </div>
+        
+        <div class="article">
+            <div class="article-number">7</div>
+            <div class="article-content">
+                <a href="https://sciencebusiness.net/news/r-d-funding/eu-budget/eu-prepares-launch-bioeconomy-investment-group-tackle-funding-gap" class="article-title" target="_blank">EU prepares to launch bioeconomy investment group to tackle funding gap</a>
+                
+            </div>
+        </div>
+        
+        <div class="article">
+            <div class="article-number">8</div>
+            <div class="article-content">
+                <a href="https://sciencebusiness.net/news/r-d-funding/ai/funding-radar-japan-calls-international-research-ai-science" class="article-title" target="_blank">Funding Radar: Japan calls for international research on AI in science</a>
+                
+            </div>
+        </div>
+        
+        <div class="article">
+            <div class="article-number">9</div>
+            <div class="article-content">
+                <a href="https://sciencebusiness.net/news/r-d-funding/data-corner-france-tops-research-infectious-diseases" class="article-title" target="_blank">Data Corner: France tops research on infectious diseases</a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <button class="refresh-btn" onclick="location.reload()">↻ Refresh Now</button>
+    
+    <script>
+        setTimeout(() => location.reload(), 3600000);
+    </script>
+</body>
+</html>
