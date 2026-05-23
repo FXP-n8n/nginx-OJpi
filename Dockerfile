@@ -6,6 +6,9 @@ COPY site /usr/share/nginx/html
 # Copy workshop site files (www.4-eyes.eu)
 COPY workshops /usr/share/nginx/workshops
 
+# Copy dashboard site files (dashboard.4-eyes.eu)
+COPY dashboard /usr/share/nginx/dashboard
+
 # Copy hardened nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
