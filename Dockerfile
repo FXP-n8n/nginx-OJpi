@@ -15,5 +15,11 @@ COPY site/sciencebusiness.html /usr/share/nginx/html/sciencebusiness.html
 # Copy hardened nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
+# Set proper read permissions for nginx user (UID 101 in nginx alpine)
+RUN chmod -R 755 /usr/share/nginx/html \
+    && chmod -R 755 /usr/share/nginx/workshops \
+    && chmod -R 755 /usr/share/nginx/dashboard \
+    && chown -R nginx:nginx /usr/share/nginx/
+
 # Start nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]
