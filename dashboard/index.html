@@ -15,53 +15,36 @@
   .green { color: var(--green); }
   .amber { color: var(--amber); }
   .red { color: var(--red); }
-  .refresh-btn { background: var(--surface); border: 1px solid #252b33; color: var(--accent); font-family: monospace; font-size: 0.72rem; padding: 6px 14px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-  .refresh-btn:active { background: #1c2128; }
-  .spin { animation: spin 0.6s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .url-link { color: var(--accent); text-decoration: none; font-size: 0.85rem; word-break: break-all; }
-  .url-link:hover { text-decoration: underline; }
-  .dashboard-url { background: var(--surface); border-radius: 6px; padding: 12px; margin-bottom: 16px; border: 1px solid #252b33; }
 </style>
 </head>
 <body>
   <h1>4-Eyes Fleet Dashboard</h1>
-  <p style="color: #8b95a3; font-size: 0.72rem;">Last updated: 2026-05-23 17:41 CET</p>
-  
-  <div class="dashboard-url">
-    <div class="label">Dashboard URL</div>
-    <a href="https://4eyes-dashboard.example.com" class="url-link" target="_blank">https://4eyes-dashboard.example.com</a>
-  </div>
-  
+  <p style="color: #8b95a3; font-size: 0.72rem;">Last updated: 2026-05-25 16:25 CET</p>
+
   <div class="section">
     <div class="label">Cron Jobs</div>
-    <div class="value green">0</div>
+    <div class="value green">15</div>
+    <div style="font-size: 0.72rem; color: #8b95a3; margin-top: 8px;">
+      Healthy: 13 | Failed: 0 | Stale: 2
+    </div>
   </div>
-  
+
   <div class="section">
     <div class="label">Eval Scenarios</div>
     <div class="value green">0</div>
   </div>
-  
+
   <div class="section">
     <div class="label">Agent Freshness</div>
-    <div class="value green">0 fresh</div>
+    <div class="value green">5 fresh</div>
     <div style="font-size: 0.72rem; color: #8b95a3; margin-top: 8px;">
       Stale: 0 | Critical: 0
     </div>
   </div>
-  
-  <button class="refresh-btn" id="refreshBtn" onclick="doRefresh()">
-    <span class="spin-icon">↻</span> Refresh Now
-  </button>
-  
-  <script>
-    function doRefresh() {
-      const btn = document.getElementById('refreshBtn');
-      btn.classList.add('spin');
-      btn.disabled = true;
-      location.reload();
-    }
-  </script>
+
+  <div class="section">
+    <div class="label">Dashboard URL</div>
+    <a href="https://dashboard.4-eyes.eu" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; word-break: break-all;">https://dashboard.4-eyes.eu</a>
+  </div>
 </body>
 </html>
