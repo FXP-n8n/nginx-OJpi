@@ -19,39 +19,32 @@
 </head>
 <body>
   <h1>4-Eyes Fleet Dashboard</h1>
-  <p style="color: #8b95a3; font-size: 0.72rem;">Last updated: 2026-05-27 06:15 CET</p>
+  <p style="color: #8b95a3; font-size: 0.72rem;">Last updated: 2026-05-27 08:00 CET</p>
 
   <div class="section">
     <div class="label">Cron Jobs</div>
-    <div class="value green">17</div>
+    <div class="value green">19</div>
     <div style="font-size: 0.72rem; color: #8b95a3; margin-top: 8px;">
-      Healthy: 15 | Stale: 2 | Critical: 0
+      Healthy: 16 | Failed: 0 | Stale: 3
     </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Eval Scenarios</div>
+    <div class="value green">0</div>
   </div>
 
   <div class="section">
     <div class="label">Agent Freshness</div>
-    <div class="value amber">3 fresh / 2 stale</div>
+    <div class="value green">4 fresh</div>
     <div style="font-size: 0.72rem; color: #8b95a3; margin-top: 8px;">
-      Sales: 16h overdue (12h exp) · Systems-engineer: 45h overdue (24h exp)
+      Stale: 1 | Critical: 0
     </div>
   </div>
 
   <div class="section">
-    <div class="label">Log Schema (Dual Writer)</div>
-    <div style="font-size: 0.85rem; color: var(--text);">
-      <span class="green">agent_memory.py: 105 rows</span> (rich schema)<br>
-      <span class="green">log_agent_run.py: 48 rows</span> (minimal schema)
-    </div>
-    <div style="font-size: 0.72rem; color: #8b95a3; margin-top: 8px;">
-      Phase 1 fix: canonical IDs enforced · freshness alerts active · backups daily
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">Links</div>
-    <a href="https://dashboard.4-eyes.eu" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; word-break: break-all;">dashboard.4-eyes.eu</a><br>
-    <a href="https://dashboard.4-eyes.eu/sciencebusiness.html" style="color: var(--accent); text-decoration: none; font-size: 0.85rem;">ScienceBusiness Tracker</a>
+    <div class="label">Dashboard URL</div>
+    <a href="https://dashboard.4-eyes.eu" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; word-break: break-all;">https://dashboard.4-eyes.eu</a>
   </div>
 </body>
 </html>
