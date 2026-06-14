@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initSmoothScroll();
   initActiveNav();
   initNavScroll();
-  initScrollAnimations();
   initContactForm();
   initGuideForms();
 });
@@ -174,7 +173,7 @@ function initGuideForms() {
 }
 
 function showContactSuccess() {
-  window.location.href = ‘/thank-you’;
+  window.location.href = '/thank-you';
 }
 
 function showFormError(form, message) {

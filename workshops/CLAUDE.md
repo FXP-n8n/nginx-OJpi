@@ -64,8 +64,21 @@ git push origin main
 # Railway auto-deploys
 ```
 
+## Animation layer
+
+- **Library:** GSAP 3.12.2 (core + ScrollTrigger only) loaded from cdnjs on `index.html`, `workshops.html`, `about.html`, `resources.html`, and `contact.html`.
+- **Entry point:** `js/animations.js`
+- **Progressive enhancement:** if GSAP/ScrollTrigger fail to load or the user prefers reduced motion, all `.animate-on-scroll` elements remain visible; content is never hidden in a way that breaks the page.
+- **CSS rule:** `.animate-on-scroll` starts with `opacity: 0; transform: translateY(20px)`; GSAP animates to `opacity: 1; transform: translateY(0)`. `prefers-reduced-motion` overrides this to visible immediately.
+- **Mobile:** animations use shorter durations and smaller distances on viewports ≤768 px.
+- **What is animated:** hero sequence, trust-number count-ups, section headers, problem cards, workshop cards, why items, testimonial cards, and CTA elements.
+- **What is NOT animated:** legal pages (`privacy.html`, `imprint.html`, `thank-you.html`) do not load GSAP.
+- **Do not:** add scroll-jacking, smooth-scroll libraries, pinning, or parallax without explicit approval. Keep motion subtle and readable.
+
 ## Common mistakes
 
 - Don't hardcode hex colors in HTML/JS — use the CSS variables.
 - Don't forget to update the nav in all 8 HTML files when adding a page.
 - Don't test form endpoints locally without an n8n mock — they will 404.
+- Don't add `.animate-on-scroll` to elements that must be visible above the fold (e.g., nav) — it starts with `opacity: 0`.
+- Don't forget to test with `prefers-reduced-motion: reduce` enabled.
