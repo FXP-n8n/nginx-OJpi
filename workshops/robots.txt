@@ -27,3 +27,7 @@ Disallow: /
 
 User-agent: PetalBot
 Disallow: /
+
+# Sitemap submitted to Google Search Console and Bing Webmaster Tools
+# https://search.google.com/search-console
+# https://www.bing.com/webmasters
