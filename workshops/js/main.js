@@ -132,7 +132,7 @@ function initContactForm() {
     } catch {
       btn.disabled = false;
       btn.textContent = originalText;
-      showFormError(form, 'Something went wrong. Please email us at <a href="mailto:contact@4-eyes.eu">contact@4-eyes.eu</a>.');
+      showFormError(form, 'Something went wrong. Please email us at <a href="mailto:francois-xavier.peers@4-eyes.eu">francois-xavier.peers@4-eyes.eu</a>.');
     }
   });
 }
