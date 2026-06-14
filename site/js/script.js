@@ -13,6 +13,7 @@ const translations = {
             product: "Product",
             benefits: "Benefits",
             howItWorks: "How It Works",
+            faq: "FAQ",
             pricing: "Pricing",
             contact: "Contact Us"
         },
@@ -33,7 +34,7 @@ const translations = {
         // Problems Section
         problems: {
             title: "The Challenge Facing Luxury Wellness Centers",
-            description: "Your guests expect immediate, personalized responses. Your staff deserves to focus on delivering exceptional in-person experiences, not answering repetitive inquiries.",
+            description: "Guests expect immediate, personalised responses at any hour. Staff should focus on delivering exceptional in-person wellness experiences, not answering repetitive booking questions.",
             card1: {
                 title: "After-Hours Inquiries",
                 text: "Miss bookings when guests research services outside business hours"
@@ -55,8 +56,8 @@ const translations = {
         // Product Section
         product: {
             label: "The Solution",
-            title: "Meet 4-Eyes: Your Dual-Personality AI Assistant",
-            description: "Not just another chatbot. 4-Eyes is specifically designed for the wellness industry, with two distinct personalities that adapt to your guests' journey.",
+            title: "Two AI Personalities, One Guest Journey",
+            description: "4-Eyes switches between a pre-sales wellness concierge and a post-sales operations officer, depending on where the guest is in their journey.",
             preSales: {
                 badge: "Pre-Sales",
                 title: "The Wellness Concierge",
@@ -83,7 +84,7 @@ const translations = {
         // Features Section
         features: {
             label: "Capabilities",
-            title: "Built for Luxury Wellness",
+            title: "Capabilities",
             feature1: {
                 title: "Seamless Integration",
                 description: "Connects effortlessly with your existing spa management systems. No expensive overhauls, no technical headaches."
@@ -113,7 +114,7 @@ const translations = {
         // Benefits Section
         benefits: {
             label: "Value Proposition",
-            title: "Transform Your Guest Experience & Operations",
+            title: "What 4-Eyes Delivers",
             item1: {
                 title: "Capture More Bookings",
                 description: "Convert curious browsers into confirmed guests. 4-Eyes engages visitors instantly, answers their questions comprehensively, and guides them toward booking—even at 3 AM when your staff is offline.",
@@ -147,7 +148,7 @@ const translations = {
         // How It Works Section
         howItWorks: {
             label: "Implementation",
-            title: "From Consultation to Conversation in Weeks",
+            title: "Implementation in Four Weeks",
             description: "We've streamlined the implementation process to minimize disruption while maximizing value for your wellness center.",
             step1: {
                 title: "Discovery & Customization",
@@ -170,7 +171,7 @@ const translations = {
         // Pricing Section
         pricing: {
             label: "Investment",
-            title: "Custom Solutions for Your Wellness Center",
+            title: "Tailored Pricing",
             description: "Every luxury spa is unique. We create tailored pricing based on your specific needs, guest volume, and integration requirements.",
             card: {
                 title: "Let's Design Your Perfect Solution",
@@ -184,12 +185,67 @@ const translations = {
                 ctaButton: "Get Custom Pricing"
             }
         },
-        
+
+        // FAQ Section
+        faq: {
+            label: "Frequently Asked Questions",
+            title: "Frequently Asked Questions",
+            description: "Quick answers to common questions about 4-Eyes. Can't find what you're looking for? Contact us directly.",
+            q1: {
+                question: "How quickly can 4-Eyes be implemented?",
+                answer: "Most implementations are completed within 2-4 weeks. The timeline includes: discovery and customization (1 week), integration with your spa management system (3-5 days), training on your services and policies (3-5 days), and testing (2-3 days). We work around your schedule to minimize any disruption to your operations."
+            },
+            q2: {
+                question: "Which spa management systems does 4-Eyes integrate with?",
+                answer: "4-Eyes integrates with major spa management platforms including Booker, Mindbody, Zenoti, Vagaro, and SpaBooker. We also offer API integration for custom systems. Our team handles the technical setup, so no technical expertise is required from your staff."
+            },
+            q3: {
+                question: "How does 4-Eyes handle multiple languages?",
+                answer: "4-Eyes automatically detects and responds in your guest's preferred language. We support 25+ languages including English, French, Dutch, German, Italian, Spanish, Mandarin, and Japanese. Your guests can seamlessly switch languages during the conversation."
+            },
+            q4: {
+                question: "Can I customize 4-Eyes to match my spa's brand voice?",
+                answer: "Absolutely. During the discovery phase, we learn your brand's tone, vocabulary, and personality. You can update responses, add new services, adjust pricing information, and modify the conversation flow at any time through our user-friendly dashboard—no coding required."
+            },
+            q5: {
+                question: "What happens when 4-Eyes can't answer a question?",
+                answer: "4-Eyes is designed to handle 90% of guest inquiries, but when it encounters an unfamiliar question, it gracefully escalates to your team. You can configure escalation to email, SMS, or direct handoff to a staff member. Every escalation helps 4-Eyes learn and improve over time."
+            },
+            q6: {
+                question: "Is guest data secure and GDPR compliant?",
+                answer: "Yes. 4-Eyes is fully GDPR compliant and built with wellness industry privacy standards. All data is encrypted in transit and at rest. We never share guest data with third parties. You maintain full control and ownership of all conversation data and can export or delete it at any time."
+            },
+            q7: {
+                question: "Can 4-Eyes actually book appointments?",
+                answer: "Yes. When integrated with your booking system, 4-Eyes can check availability, suggest alternative times, and complete bookings directly. Guests receive immediate confirmation. You can also configure 4-Eyes to collect booking requests for staff approval if you prefer."
+            },
+            q8: {
+                question: "What kind of analytics and insights does 4-Eyes provide?",
+                answer: "Our analytics dashboard shows: most-asked questions, popular services, conversion rates, peak inquiry times, common booking obstacles, and guest satisfaction scores. You'll gain insights into what your guests care about most, helping you optimize your service offerings and marketing."
+            },
+            q9: {
+                question: "Do I need technical expertise to manage 4-Eyes?",
+                answer: "Not at all. 4-Eyes is designed for spa managers and owners, not IT professionals. Our intuitive dashboard lets you update services, pricing, and responses with simple text editing. We provide comprehensive training and ongoing support. If you can edit a document, you can manage 4-Eyes."
+            },
+            q10: {
+                question: "What if I want to try 4-Eyes before committing?",
+                answer: "We offer a personalized demo where you can see 4-Eyes configured with your spa's actual services and scenarios. During your consultation, we'll demonstrate how it handles your specific use cases. We can also arrange a pilot program for select clients to test with real guests before full deployment."
+            },
+            q11: {
+                question: "How does pricing work? Are there setup fees?",
+                answer: "Pricing is customized based on your spa's size, expected conversation volume, and integration needs. We offer monthly subscription pricing with no long-term contracts. Setup and integration are included in your first month. We'll provide a detailed pricing proposal during your consultation."
+            },
+            q12: {
+                question: "Can 4-Eyes work with multiple locations?",
+                answer: "Yes. 4-Eyes can manage multiple locations, automatically routing inquiries to the correct spa based on guest questions. You can maintain consistent brand voice across locations while customizing services, pricing, and availability for each specific location."
+            }
+        },
+
         // Contact Section
         contact: {
             label: "Get Started",
-            title: "Schedule Your Consultation",
-            description: "Discover how 4-Eyes can transform your guest experience and operations. We'll discuss your specific needs and show you exactly how our dual-personality AI can drive results for your wellness center.",
+            title: "Book a Consultation",
+            description: "We will discuss your specific needs and show how our dual-personality AI drives results for your wellness center.",
             email: {
                 label: "Email"
             },
@@ -225,13 +281,19 @@ const translations = {
                 label: "Tell Us About Your Needs",
                 placeholder: "What challenges are you facing? What would you like to learn about 4-Eyes?"
             },
-            submit: "Schedule Consultation"
+            submit: "Schedule Consultation",
+            note: "We respect your privacy. We'll respond within 24 hours to schedule your personalized demo."
         },
-        
+
+        // Floating CTA
+        floatingCta: {
+            text: "Schedule Demo"
+        },
+
         // Footer Section
         footer: {
             tagline: "AI for Wellness",
-            description: "Intelligent conversation technology designed exclusively for luxury spa and wellness centers.",
+            description: "Intelligent conversation technology for luxury spa and wellness centers.",
             productTitle: "Product",
             features: "Features",
             benefits: "Benefits",
@@ -245,13 +307,17 @@ const translations = {
         
         // Chatbot Section
         chatbot: {
-            toggleBadge: "Try 4-Eyes",
+            toggleBadge: "Try Our AI Demo",
             title: "4-Eyes AI Assistant",
-            subtitle: "AI for Wellness",
-            welcome: "Welcome to Serenity Spa. I'm here to guide you through our wellness sanctuary and help you discover the perfect treatment for your needs. Whether you're seeking relaxation, rejuvenation, or a transformative spa experience, I'm delighted to assist you with booking support, services, and personalized recommendations.",
-            hint: "How may I assist you with your wellness journey today?",
-            quickReply1: "What can you help me with?",
-            quickReply2: "Tell me about your services",
+            subtitle: "Experience our AI in action",
+            welcome: "Hello! I'm a demo of the 4-Eyes AI.",
+            hint: "Want to see how I can answer guest questions and handle bookings for a luxury spa like yours?",
+            tryAsking: "Try asking me:",
+            example1: "\"What types of massages do you offer?\"",
+            example2: "\"How do I book an appointment?\"",
+            example3: "\"Do you support multiple languages?\"",
+            quickReply1: "What types of massages do you offer?",
+            quickReply2: "Do you support multiple languages?",
             quickReply3: "How do I book an appointment?",
             placeholder: "Type your message..."
         }
@@ -265,6 +331,7 @@ const translations = {
             product: "Produit",
             benefits: "Avantages",
             howItWorks: "Fonctionnement",
+            faq: "FAQ",
             pricing: "Tarifs",
             contact: "Nous Contacter"
         },
@@ -436,7 +503,62 @@ const translations = {
                 ctaButton: "Obtenir des Tarifs Personnalisés"
             }
         },
-        
+
+        // FAQ Section
+        faq: {
+            label: "Questions Fréquemment Posées",
+            title: "Tout Ce Que Vous Devez Savoir",
+            description: "Réponses rapides aux questions courantes sur 4-Eyes. Vous ne trouvez pas ce que vous cherchez ? Contactez-nous directement.",
+            q1: {
+                question: "Combien de temps faut-il pour mettre en place 4-Eyes ?",
+                answer: "La plupart des implémentations sont terminées en 2 à 4 semaines. Le calendrier comprend : découverte et personnalisation (1 semaine), intégration avec votre système de gestion spa (3-5 jours), formation sur vos services et politiques (3-5 jours), et tests (2-3 jours). Nous travaillons selon votre emploi du temps pour minimiser toute perturbation de vos opérations."
+            },
+            q2: {
+                question: "Avec quels systèmes de gestion spa 4-Eyes s'intègre-t-il ?",
+                answer: "4-Eyes s'intègre avec les principales plateformes de gestion spa, notamment Booker, Mindbody, Zenoti, Vagaro et SpaBooker. Nous proposons également une intégration API pour les systèmes personnalisés. Notre équipe gère la configuration technique, aucune expertise technique n'est requise de la part de votre personnel."
+            },
+            q3: {
+                question: "Comment 4-Eyes gère-t-il plusieurs langues ?",
+                answer: "4-Eyes détecte automatiquement et répond dans la langue préférée de votre client. Nous prenons en charge plus de 25 langues, dont l'anglais, le français, le néerlandais, l'allemand, l'italien, l'espagnol, le mandarin et le japonais. Vos clients peuvent changer de langue de manière transparente pendant la conversation."
+            },
+            q4: {
+                question: "Puis-je personnaliser 4-Eyes pour correspondre à la voix de ma marque ?",
+                answer: "Absolument. Pendant la phase de découverte, nous apprenons le ton, le vocabulaire et la personnalité de votre marque. Vous pouvez mettre à jour les réponses, ajouter de nouveaux services, ajuster les informations tarifaires et modifier le flux de conversation à tout moment via notre tableau de bord convivial—aucun codage requis."
+            },
+            q5: {
+                question: "Que se passe-t-il lorsque 4-Eyes ne peut pas répondre à une question ?",
+                answer: "4-Eyes est conçu pour gérer 90% des demandes clients, mais lorsqu'il rencontre une question inconnue, il escalade gracieusement vers votre équipe. Vous pouvez configurer l'escalade par email, SMS ou transfert direct à un membre du personnel. Chaque escalade aide 4-Eyes à apprendre et à s'améliorer avec le temps."
+            },
+            q6: {
+                question: "Les données des clients sont-elles sécurisées et conformes au RGPD ?",
+                answer: "Oui. 4-Eyes est entièrement conforme au RGPD et construit selon les normes de confidentialité de l'industrie du bien-être. Toutes les données sont cryptées en transit et au repos. Nous ne partageons jamais les données des clients avec des tiers. Vous conservez le contrôle total et la propriété de toutes les données de conversation et pouvez les exporter ou les supprimer à tout moment."
+            },
+            q7: {
+                question: "4-Eyes peut-il réellement réserver des rendez-vous ?",
+                answer: "Oui. Lorsqu'il est intégré à votre système de réservation, 4-Eyes peut vérifier la disponibilité, suggérer des créneaux alternatifs et effectuer des réservations directement. Les clients reçoivent une confirmation immédiate. Vous pouvez également configurer 4-Eyes pour collecter des demandes de réservation pour approbation du personnel si vous préférez."
+            },
+            q8: {
+                question: "Quel type d'analyses et d'informations 4-Eyes fournit-il ?",
+                answer: "Notre tableau de bord analytique affiche : les questions les plus posées, les services populaires, les taux de conversion, les heures de pointe des demandes, les obstacles courants à la réservation et les scores de satisfaction des clients. Vous obtiendrez des informations sur ce qui intéresse le plus vos clients, vous aidant à optimiser vos offres de services et votre marketing."
+            },
+            q9: {
+                question: "Ai-je besoin d'expertise technique pour gérer 4-Eyes ?",
+                answer: "Pas du tout. 4-Eyes est conçu pour les gestionnaires et propriétaires de spa, pas pour les professionnels de l'informatique. Notre tableau de bord intuitif vous permet de mettre à jour les services, les prix et les réponses avec une simple édition de texte. Nous fournissons une formation complète et un support continu. Si vous pouvez éditer un document, vous pouvez gérer 4-Eyes."
+            },
+            q10: {
+                question: "Et si je veux essayer 4-Eyes avant de m'engager ?",
+                answer: "Nous proposons une démonstration personnalisée où vous pouvez voir 4-Eyes configuré avec les services et scénarios réels de votre spa. Pendant votre consultation, nous démontrerons comment il gère vos cas d'utilisation spécifiques. Nous pouvons également organiser un programme pilote pour certains clients afin de tester avec de vrais clients avant le déploiement complet."
+            },
+            q11: {
+                question: "Comment fonctionne la tarification ? Y a-t-il des frais de configuration ?",
+                answer: "La tarification est personnalisée en fonction de la taille de votre spa, du volume de conversations attendu et des besoins d'intégration. Nous proposons une tarification d'abonnement mensuelle sans contrats à long terme. La configuration et l'intégration sont incluses dans votre premier mois. Nous fournirons une proposition de tarification détaillée lors de votre consultation."
+            },
+            q12: {
+                question: "4-Eyes peut-il fonctionner avec plusieurs emplacements ?",
+                answer: "Oui. 4-Eyes peut gérer plusieurs emplacements, acheminant automatiquement les demandes vers le spa approprié en fonction des questions des clients. Vous pouvez maintenir une voix de marque cohérente dans tous les emplacements tout en personnalisant les services, les tarifs et la disponibilité pour chaque emplacement spécifique."
+            }
+        },
+
         // Contact Section
         contact: {
             label: "Commencer",
@@ -477,9 +599,15 @@ const translations = {
                 label: "Parlez-nous de Vos Besoins",
                 placeholder: "Quels défis rencontrez-vous ? Que souhaitez-vous apprendre sur 4-Eyes ?"
             },
-            submit: "Planifier une Consultation"
+            submit: "Planifier une Consultation",
+            note: "Nous respectons votre vie privée. Nous répondrons dans les 24 heures pour planifier votre démonstration personnalisée."
         },
-        
+
+        // Floating CTA
+        floatingCta: {
+            text: "Planifier Démo"
+        },
+
         // Footer Section
         footer: {
             tagline: "IA pour le Bien-être",
@@ -497,13 +625,17 @@ const translations = {
         
         // Chatbot Section
         chatbot: {
-            toggleBadge: "Essayer 4-Eyes",
+            toggleBadge: "Essayer Notre Démo IA",
             title: "Assistant IA 4-Eyes",
-            subtitle: "IA pour le Bien-être",
-            welcome: "Bienvenue à Serenity Spa. Je suis ici pour vous guider à travers notre sanctuaire de bien-être et vous aider à découvrir le traitement parfait pour vos besoins. Que vous recherchiez la relaxation, le rajeunissement ou une expérience spa transformatrice, je suis ravi de vous assister avec le support de réservation, les services et les recommandations personnalisées.",
-            hint: "Comment puis-je vous assister dans votre parcours bien-être aujourd'hui ?",
-            quickReply1: "En quoi pouvez-vous m'aider ?",
-            quickReply2: "Parlez-moi de vos services",
+            subtitle: "Découvrez notre IA en action",
+            welcome: "Bonjour ! Je suis une démo de l'IA 4-Eyes.",
+            hint: "Voulez-vous voir comment je peux répondre aux questions des clients et gérer les réservations pour un spa de luxe comme le vôtre ?",
+            tryAsking: "Essayez de me demander :",
+            example1: "\"Quels types de massages proposez-vous ?\"",
+            example2: "\"Comment prendre un rendez-vous ?\"",
+            example3: "\"Supportez-vous plusieurs langues ?\"",
+            quickReply1: "Quels types de massages proposez-vous ?",
+            quickReply2: "Supportez-vous plusieurs langues ?",
             quickReply3: "Comment prendre un rendez-vous ?",
             placeholder: "Tapez votre message..."
         }
@@ -517,6 +649,7 @@ const translations = {
             product: "Product",
             benefits: "Voordelen",
             howItWorks: "Hoe het Werkt",
+            faq: "Veelgestelde Vragen",
             pricing: "Prijzen",
             contact: "Contact Opnemen"
         },
@@ -688,7 +821,62 @@ const translations = {
                 ctaButton: "Krijg Aangepaste Prijzen"
             }
         },
-        
+
+        // FAQ Section
+        faq: {
+            label: "Veelgestelde Vragen",
+            title: "Alles Wat U Moet Weten",
+            description: "Snelle antwoorden op veelgestelde vragen over 4-Eyes. Kunt u niet vinden wat u zoekt? Neem direct contact met ons op.",
+            q1: {
+                question: "Hoe snel kan 4-Eyes worden geïmplementeerd?",
+                answer: "De meeste implementaties zijn voltooid binnen 2-4 weken. De tijdlijn omvat: ontdekking en aanpassing (1 week), integratie met uw spa-beheersysteem (3-5 dagen), training over uw diensten en beleid (3-5 dagen), en testen (2-3 dagen). We werken volgens uw schema om verstoringen van uw operaties te minimaliseren."
+            },
+            q2: {
+                question: "Met welke spa-beheersystemen integreert 4-Eyes?",
+                answer: "4-Eyes integreert met belangrijke spa-beheerplatforms, waaronder Booker, Mindbody, Zenoti, Vagaro en SpaBooker. We bieden ook API-integratie voor aangepaste systemen. Ons team handelt de technische setup af, dus er is geen technische expertise vereist van uw personeel."
+            },
+            q3: {
+                question: "Hoe gaat 4-Eyes om met meerdere talen?",
+                answer: "4-Eyes detecteert automatisch en reageert in de voorkeurstaal van uw gast. We ondersteunen 25+ talen, waaronder Engels, Frans, Nederlands, Duits, Italiaans, Spaans, Mandarijn en Japans. Uw gasten kunnen naadloos van taal wisselen tijdens het gesprek."
+            },
+            q4: {
+                question: "Kan ik 4-Eyes aanpassen aan de merkstem van mijn spa?",
+                answer: "Absoluut. Tijdens de ontdekkingsfase leren we de toon, woordenschat en persoonlijkheid van uw merk. U kunt reacties bijwerken, nieuwe diensten toevoegen, prijsinformatie aanpassen en de gespreksflow op elk moment wijzigen via ons gebruiksvriendelijke dashboard—geen codering vereist."
+            },
+            q5: {
+                question: "Wat gebeurt er als 4-Eyes een vraag niet kan beantwoorden?",
+                answer: "4-Eyes is ontworpen om 90% van de gastvragen te behandelen, maar wanneer het een onbekende vraag tegenkomt, escaleert het netjes naar uw team. U kunt escalatie configureren naar email, SMS of directe overdracht aan een personeelslid. Elke escalatie helpt 4-Eyes te leren en in de loop van de tijd te verbeteren."
+            },
+            q6: {
+                question: "Zijn gastgegevens veilig en AVG-compliant?",
+                answer: "Ja. 4-Eyes is volledig AVG-compliant en gebouwd met privacy-normen van de wellness-industrie. Alle gegevens worden versleuteld tijdens transport en in rust. We delen nooit gastgegevens met derden. U behoudt volledige controle en eigendom van alle gespreksgegevens en kunt deze op elk moment exporteren of verwijderen."
+            },
+            q7: {
+                question: "Kan 4-Eyes daadwerkelijk afspraken boeken?",
+                answer: "Ja. Wanneer geïntegreerd met uw boekingssysteem, kan 4-Eyes beschikbaarheid controleren, alternatieve tijden voorstellen en rechtstreeks boekingen voltooien. Gasten ontvangen onmiddellijke bevestiging. U kunt 4-Eyes ook configureren om boekingsverzoeken te verzamelen voor goedkeuring door personeel als u dat liever hebt."
+            },
+            q8: {
+                question: "Wat voor soort analyses en inzichten biedt 4-Eyes?",
+                answer: "Ons analytics dashboard toont: meest gestelde vragen, populaire diensten, conversiepercentages, piekuren voor vragen, veelvoorkomende boekingsobstakels en gastentevredenheidsscores. U krijgt inzicht in waar uw gasten het meest in geïnteresseerd zijn, waardoor u uw dienstaanbod en marketing kunt optimaliseren."
+            },
+            q9: {
+                question: "Heb ik technische expertise nodig om 4-Eyes te beheren?",
+                answer: "Helemaal niet. 4-Eyes is ontworpen voor spa-managers en eigenaren, niet voor IT-professionals. Ons intuïtieve dashboard stelt u in staat om diensten, prijzen en reacties bij te werken met eenvoudige tekstbewerking. We bieden uitgebreide training en doorlopende ondersteuning. Als u een document kunt bewerken, kunt u 4-Eyes beheren."
+            },
+            q10: {
+                question: "Wat als ik 4-Eyes wil proberen voordat ik me verbind?",
+                answer: "We bieden een gepersonaliseerde demo waarin u 4-Eyes kunt zien geconfigureerd met de daadwerkelijke diensten en scenario's van uw spa. Tijdens uw consultatie demonstreren we hoe het uw specifieke use cases behandelt. We kunnen ook een pilotprogramma regelen voor geselecteerde klanten om te testen met echte gasten voordat volledige uitrol."
+            },
+            q11: {
+                question: "Hoe werkt de prijsstelling? Zijn er setup-kosten?",
+                answer: "Prijzen zijn aangepast op basis van de grootte van uw spa, verwacht gespreksvolume en integratiebeh oeften. We bieden maandelijkse abonnementsprijzen zonder langetermijncontracten. Setup en integratie zijn inbegrepen in uw eerste maand. We zullen een gedetailleerd prijsvoorstel geven tijdens uw consultatie."
+            },
+            q12: {
+                question: "Kan 4-Eyes werken met meerdere locaties?",
+                answer: "Ja. 4-Eyes kan meerdere locaties beheren en stuurt vragen automatisch door naar de juiste spa op basis van gastvragen. U kunt een consistente merkstem over locaties behouden terwijl u diensten, prijzen en beschikbaarheid voor elke specifieke locatie aanpast."
+            }
+        },
+
         // Contact Section
         contact: {
             label: "Aan de Slag",
@@ -729,9 +917,15 @@ const translations = {
                 label: "Vertel Over Uw Behoeften",
                 placeholder: "Welke uitdagingen ondervindt u? Wat wilt u leren over 4-Eyes?"
             },
-            submit: "Plan Consultatie"
+            submit: "Plan Consultatie",
+            note: "We respecteren uw privacy. We reageren binnen 24 uur om uw gepersonaliseerde demo te plannen."
         },
-        
+
+        // Floating CTA
+        floatingCta: {
+            text: "Plan Demo"
+        },
+
         // Footer Section
         footer: {
             tagline: "AI voor Welzijn",
@@ -749,13 +943,17 @@ const translations = {
         
         // Chatbot Section
         chatbot: {
-            toggleBadge: "Probeer 4-Eyes",
+            toggleBadge: "Probeer Onze AI Demo",
             title: "4-Eyes AI Assistent",
-            subtitle: "AI voor Welzijn",
-            welcome: "Welkom bij Serenity Spa. Ik ben hier om u te begeleiden door ons wellness-heiligdom en u te helpen de perfecte behandeling voor uw behoeften te ontdekken. Of u nu op zoek bent naar ontspanning, verjonging of een transformerende spa-ervaring, ik help u graag met boekingsondersteuning, diensten en gepersonaliseerde aanbevelingen.",
-            hint: "Hoe kan ik u vandaag assisteren met uw wellnessreis?",
-            quickReply1: "Waarmee kunt u me helpen?",
-            quickReply2: "Vertel over uw services",
+            subtitle: "Ervaar onze AI in actie",
+            welcome: "Hallo! Ik ben een demo van de 4-Eyes AI.",
+            hint: "Wilt u zien hoe ik vragen van gasten kan beantwoorden en reserveringen kan afhandelen voor een luxe spa zoals de uwe?",
+            tryAsking: "Probeer me te vragen:",
+            example1: "\"Welke soorten massages biedt u aan?\"",
+            example2: "\"Hoe boek ik een afspraak?\"",
+            example3: "\"Ondersteunt u meerdere talen?\"",
+            quickReply1: "Welke soorten massages biedt u aan?",
+            quickReply2: "Ondersteunt u meerdere talen?",
             quickReply3: "Hoe boek ik een afspraak?",
             placeholder: "Typ uw bericht..."
         }
@@ -877,6 +1075,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initChatbot();
     initLanguageSystem();
+    initFAQ();
+    initFloatingCTA();
+    initGoogleAnalytics();
 });
 
 // ===========================
@@ -1558,11 +1759,413 @@ function initChatbot() {
             }
         });
     }
+
+    // ===========================
+    // Proactive Chatbot Popup
+    // ===========================
+    function initProactiveChatbot() {
+        // Check if user has already seen or interacted with chatbot
+        const hasSeenProactive = localStorage.getItem('chatbot-proactive-shown');
+        const hasInteracted = localStorage.getItem('chatbot-user-interacted');
+
+        // Don't show proactive popup if user has already seen it or interacted
+        if (hasSeenProactive || hasInteracted) {
+            return;
+        }
+
+        // Random delay between 7-10 seconds
+        const delay = 7000 + Math.random() * 3000; // 7000ms + random 0-3000ms
+
+        setTimeout(() => {
+            // Double-check user hasn't manually opened chatbot in the meantime
+            if (chatbotContainer.classList.contains('active')) {
+                return;
+            }
+
+            // Open the chatbot
+            chatbotContainer.classList.add('active');
+            chatbotToggle.style.display = 'none';
+
+            // Mark as shown
+            localStorage.setItem('chatbot-proactive-shown', 'true');
+
+            // Clear existing welcome message
+            const existingWelcome = chatbotMessages.querySelector('.bot-message');
+            if (existingWelcome) {
+                existingWelcome.remove();
+            }
+
+            // Add proactive welcome message with compelling copy
+            const proactiveMessage = document.createElement('div');
+            proactiveMessage.className = 'chatbot-message bot-message proactive-welcome';
+            proactiveMessage.innerHTML = `
+                <div class="message-avatar">👀</div>
+                <div class="message-content">
+                    <p><strong>Hello! I'm a demo of the 4-Eyes AI.</strong></p>
+                    <p>Want to see how I can answer guest questions and handle bookings for a luxury spa like yours?</p>
+                    <p>Try asking me:</p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                        <li>"What types of massages do you offer?"</li>
+                        <li>"How do I book an appointment?"</li>
+                        <li>"Do you support multiple languages?"</li>
+                    </ul>
+                </div>
+            `;
+            chatbotMessages.appendChild(proactiveMessage);
+            scrollToBottom();
+
+            // Focus input for easy typing
+            setTimeout(() => {
+                chatbotInput.focus();
+            }, 500);
+
+            // Track proactive chatbot open in Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'chatbot_proactive_open', {
+                    'event_category': 'Chatbot',
+                    'event_label': 'Proactive popup shown after delay',
+                    'delay_seconds': Math.round(delay / 1000)
+                });
+            }
+        }, delay);
+    }
+
+    // Track when user interacts with chatbot (to prevent future proactive popups)
+    function markChatbotInteraction() {
+        localStorage.setItem('chatbot-user-interacted', 'true');
+    }
+
+    // Add interaction tracking to existing event listeners
+    if (chatbotToggle) {
+        chatbotToggle.addEventListener('click', markChatbotInteraction);
+    }
+
+    if (chatbotSend) {
+        chatbotSend.addEventListener('click', markChatbotInteraction);
+    }
+
+    if (chatbotInput) {
+        chatbotInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                markChatbotInteraction();
+            }
+        });
+    }
+
+    // Initialize proactive chatbot popup
+    initProactiveChatbot();
+}
+
+// ===========================
+// FAQ Accordion
+// ===========================
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    if (faqItems.length === 0) return;
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        if (question) {
+            question.addEventListener('click', function() {
+                // Toggle current item
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+}
+
+// ===========================
+// Floating CTA Button
+// ===========================
+function initFloatingCTA() {
+    const floatingCTA = document.getElementById('floating-cta');
+
+    if (!floatingCTA) return;
+
+    let lastScroll = 0;
+    const showAfterScroll = 500; // Show after scrolling 500px
+
+    function handleFloatingCTA() {
+        const currentScroll = window.scrollY;
+        const contactSection = document.getElementById('contact');
+
+        // Don't show if we're at the contact section
+        if (contactSection) {
+            const contactTop = contactSection.offsetTop;
+            const windowHeight = window.innerHeight;
+
+            // Hide when contact section is visible
+            if (currentScroll + windowHeight >= contactTop) {
+                floatingCTA.classList.remove('visible');
+                return;
+            }
+        }
+
+        // Show after scrolling down past threshold
+        if (currentScroll > showAfterScroll) {
+            floatingCTA.classList.add('visible');
+        } else {
+            floatingCTA.classList.remove('visible');
+        }
+
+        lastScroll = currentScroll;
+    }
+
+    // Throttle scroll event
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                handleFloatingCTA();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // Initial check
+    handleFloatingCTA();
+}
+
+// ===========================
+// Google Analytics Event Tracking
+// ===========================
+function initGoogleAnalytics() {
+    // Check if gtag is available
+    if (typeof gtag === 'undefined') {
+        console.warn('Google Analytics not loaded');
+        return;
+    }
+
+    // FAQ Tracking
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((item, index) => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', function() {
+                // Get the first span (question text), not the icon span
+                const questionSpan = question.querySelector('span:not(.faq-icon)');
+                const questionText = questionSpan ? questionSpan.textContent.trim() : 'Unknown question';
+                gtag('event', 'faq_question_clicked', {
+                    'event_category': 'FAQ',
+                    'event_label': questionText,
+                    'question_number': index + 1
+                });
+            });
+        }
+    });
+
+    // Contact Form Tracking
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        let formStarted = false;
+
+        // Track form start (when user focuses on first field)
+        const nameInput = contactForm.querySelector('#name');
+        if (nameInput) {
+            nameInput.addEventListener('focus', function() {
+                if (!formStarted) {
+                    gtag('event', 'form_started', {
+                        'event_category': 'Contact Form',
+                        'event_label': 'User started filling form'
+                    });
+                    formStarted = true;
+                }
+            });
+        }
+
+        // Track form submission
+        contactForm.addEventListener('submit', function() {
+            gtag('event', 'form_submission', {
+                'event_category': 'Contact Form',
+                'event_label': 'Form submitted successfully'
+            });
+            // This is a conversion event
+            gtag('event', 'conversion', {
+                'send_to': 'G-XT17SQ4RRL',
+                'event_category': 'Lead Generation',
+                'event_label': 'Contact Form Submission'
+            });
+        });
+    }
+
+    // Chatbot Tracking
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotSend = document.getElementById('chatbot-send');
+    let chatbotMessageCount = 0;
+    let chatbotOpened = false;
+
+    if (chatbotToggle) {
+        chatbotToggle.addEventListener('click', function() {
+            if (!chatbotOpened) {
+                gtag('event', 'chatbot_opened', {
+                    'event_category': 'Chatbot',
+                    'event_label': 'User opened chatbot'
+                });
+                chatbotOpened = true;
+                chatbotMessageCount = 0;
+            }
+        });
+    }
+
+    if (chatbotClose) {
+        chatbotClose.addEventListener('click', function() {
+            gtag('event', 'chatbot_closed', {
+                'event_category': 'Chatbot',
+                'event_label': 'User closed chatbot',
+                'value': chatbotMessageCount
+            });
+            chatbotOpened = false;
+        });
+    }
+
+    if (chatbotSend) {
+        chatbotSend.addEventListener('click', function() {
+            const chatbotInput = document.getElementById('chatbot-input');
+            if (chatbotInput && chatbotInput.value.trim()) {
+                chatbotMessageCount++;
+                gtag('event', 'chatbot_message_sent', {
+                    'event_category': 'Chatbot',
+                    'event_label': 'Message sent',
+                    'value': chatbotMessageCount
+                });
+            }
+        });
+    }
+
+    // Quick reply button tracking
+    const quickReplyButtons = document.querySelectorAll('.quick-reply-btn');
+    quickReplyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const message = this.getAttribute('data-message');
+            gtag('event', 'chatbot_quick_reply', {
+                'event_category': 'Chatbot',
+                'event_label': message
+            });
+        });
+    });
+
+    // Floating CTA Tracking
+    const floatingCTA = document.getElementById('floating-cta');
+    if (floatingCTA) {
+        floatingCTA.addEventListener('click', function() {
+            gtag('event', 'floating_cta_clicked', {
+                'event_category': 'CTA',
+                'event_label': 'Floating CTA button clicked'
+            });
+        });
+    }
+
+    // Language Change Tracking
+    const languageOptions = document.querySelectorAll('.language-option');
+    languageOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const language = this.getAttribute('data-lang');
+            gtag('event', 'language_changed', {
+                'event_category': 'User Preference',
+                'event_label': language.toUpperCase()
+            });
+        });
+    });
+
+    // Email Link Tracking
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const email = this.getAttribute('href').replace('mailto:', '');
+            gtag('event', 'email_link_clicked', {
+                'event_category': 'Contact',
+                'event_label': email
+            });
+        });
+    });
+
+    // Scroll Depth Tracking
+    let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+
+    function trackScrollDepth() {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollPercent = Math.round((scrollTop / (documentHeight - windowHeight)) * 100);
+
+        Object.keys(scrollTracked).forEach(threshold => {
+            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                gtag('event', 'scroll_depth', {
+                    'event_category': 'Engagement',
+                    'event_label': threshold + '% scrolled',
+                    'value': parseInt(threshold)
+                });
+                scrollTracked[threshold] = true;
+            }
+        });
+    }
+
+    // Throttle scroll tracking
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+        scrollTimeout = setTimeout(trackScrollDepth, 100);
+    });
+
+    // CTA Button Tracking (main buttons)
+    const ctaButtons = document.querySelectorAll('.btn-primary');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonText = this.textContent.trim();
+            const buttonHref = this.getAttribute('href');
+            gtag('event', 'cta_button_clicked', {
+                'event_category': 'CTA',
+                'event_label': buttonText,
+                'button_location': buttonHref || 'form'
+            });
+        });
+    });
+
+    // Navigation Link Tracking
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const linkText = this.textContent.trim();
+            const linkHref = this.getAttribute('href');
+            gtag('event', 'navigation_clicked', {
+                'event_category': 'Navigation',
+                'event_label': linkText,
+                'link_destination': linkHref
+            });
+        });
+    });
+
+    // Logo Click Tracking
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('click', function() {
+            gtag('event', 'logo_clicked', {
+                'event_category': 'Navigation',
+                'event_label': 'Logo clicked to return home'
+            });
+        });
+    }
 }
 
 // ===========================
 // Console Easter Egg (Optional)
 // ===========================
-console.log('%c👀 4-Eyes - AI for Wellness', 'font-size: 20px; font-weight: bold; color: #2C5F5D;');
+console.log('%c👀 4-Eyes - AI for Wellness', 'font-size: 20px; font-weight: bold; color: #1B2D4F;');
 console.log('%cInterested in how this website works? We\'d love to chat about AI solutions for your spa!', 'color: #8A8A8A;');
-console.log('%cEmail: francois-xavier.peers@4-eyes.eu', 'color: #C9A468;');
+console.log('%cEmail: francois-xavier.peers@4-eyes.eu', 'color: #E8A020;');

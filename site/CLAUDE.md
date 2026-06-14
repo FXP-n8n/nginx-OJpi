@@ -80,9 +80,13 @@ The website is a **single-page application** with these sections in order:
 **Key CSS Patterns:**
 
 - **CSS Variables** for all colors, spacing, and transitions
-  - Primary color: `#2C5F5D` (Deep Teal)
-  - Secondary: `#C9A468` (Gold)
-  - Accent: `#8B9F8E` (Sage Green)
+  - Primary color: `#1B2D4F` (Deep Ink)
+  - Accent: `#E8A020` (Signal Amber)
+  - Slate: `#4A5568`
+  - Mist: `#F4F6F9`
+  - Paper: `#FFFFFF`
+  - Coral: `#D95F4B`
+  - These tokens are defined in `design.md` at the repo root and are canonical across all three 4-Eyes sites.
 
 - **Responsive approach**: Mobile-first with breakpoints at 768px, 1024px
 - **Grid layouts**: Used extensively for cards, features, benefits
@@ -212,13 +216,13 @@ Event tracking hooks already exist in `js/script.js` (lines 282-297).
 
 **Do:**
 - Maintain spacious, clean layouts with generous white space
-- Use the established color palette (teal, gold, sage, grays)
-- Keep typography hierarchy (Cormorant Garamond for headings, Inter for body)
+- Use the established 4-Eyes design language (Deep Ink, Signal Amber, Slate, Mist, Paper, Coral)
+- Keep typography hierarchy (Inter headings, Inter body, JetBrains Mono for data)
 - Ensure professional, sophisticated aesthetic appropriate for luxury spa industry
 - Use smooth, subtle animations (not flashy or distracting)
 
 **Don't:**
-- Add bright, loud colors that clash with the spa aesthetic
+- Add bright, loud colors that clash with the 4-Eyes design language (Deep Ink/Signal Amber)
 - Use aggressive animations or rapid transitions
 - Clutter the layout with too many elements
 - Use casual or unprofessional language

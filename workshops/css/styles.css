@@ -1,3 +1,15 @@
+
+.document-tag {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
 /* ============================================
    4-Eyes Website — Stylesheet
    Design: Warm Consultancy (Notion-inspired)
@@ -12,28 +24,39 @@
 }
 
 :root {
-  /* Colors */
-  --bg-white: #ffffff;
-  --bg-warm: #f6f5f4;
-  --bg-offwhite: #faf9f8;
+  /* Brand — Deep Ink / Signal Amber / Slate / Mist / Paper / Coral */
+  --color-primary: #1B2D4F;
+  --color-primary-hover: #14223B;
+  --color-accent: #E8A020;
+  --color-accent-hover: #C98616;
+  --color-slate: #4A5568;
+  --color-mist: #F4F6F9;
+  --color-paper: #FFFFFF;
+  --color-coral: #D95F4B;
+  --color-success: #34D399;
+
+  /* Aliases for the workshops layout */
+  --bg-white: var(--color-paper);
+  --bg-warm: var(--color-mist);
+  --bg-offwhite: var(--color-mist);
   
-  --text-black: rgba(0, 0, 0, 0.95);
-  --text-secondary: #615d59;
-  --text-muted: #a39e98;
-  --text-light: #8a8782;
+  --text-black: var(--color-primary);
+  --text-secondary: var(--color-slate);
+  --text-muted: #6B7280;
+  --text-light: #9CA3AF;
   
-  --blue-primary: #0075de;
-  --blue-hover: #005bab;
-  --blue-light: #e8f4fd;
+  --blue-primary: var(--color-accent);
+  --blue-hover: var(--color-accent-hover);
+  --blue-light: #FDF4E3;
   
-  --border-whisper: rgba(0, 0, 0, 0.1);
-  --border-light: rgba(0, 0, 0, 0.06);
+  --border-whisper: rgba(27, 45, 79, 0.10);
+  --border-light: rgba(27, 45, 79, 0.06);
   
-  --shadow-card: 0 4px 18px rgba(0, 0, 0, 0.04),
-                 0 2px 8px rgba(0, 0, 0, 0.027),
-                 0 1px 3px rgba(0, 0, 0, 0.02);
-  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.06),
-                       0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 4px 18px rgba(27, 45, 79, 0.04),
+                 0 2px 8px rgba(27, 45, 79, 0.027),
+                 0 1px 3px rgba(27, 45, 79, 0.02);
+  --shadow-card-hover: 0 8px 24px rgba(27, 45, 79, 0.06),
+                       0 4px 12px rgba(27, 45, 79, 0.04);
   
   /* Spacing */
   --section-padding: 100px;
@@ -41,6 +64,7 @@
   
   /* Typography */
   --font-primary: 'Inter', -apple-system, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, var(--font-mono);
 }
 
 html {
@@ -105,7 +129,7 @@ a {
 .btn-primary:hover {
   background: var(--blue-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 117, 222, 0.3);
+  box-shadow: 0 4px 12px rgba(232, 160, 32, 0.3);
 }
 
 .btn-secondary {
@@ -146,7 +170,7 @@ a {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  color: var(--text-black);
+  color: var(--color-primary);
 }
 
 .nav-links {
@@ -162,7 +186,7 @@ a {
 }
 
 .nav-links a:not(.btn):hover {
-  color: var(--blue-primary);
+  color: var(--color-accent);
 }
 
 .mobile-menu-toggle {
@@ -208,9 +232,10 @@ a {
 /* Hero Section
    --------------------------------------------- */
 .hero {
-  padding: 120px 0 100px;
-  text-align: center;
-  background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-offwhite) 100%);
+  padding: 140px 0 120px;
+  text-align: left;
+  background: var(--color-primary);
+  color: var(--color-paper);
 }
 
 .hero h1 {
@@ -220,30 +245,28 @@ a {
   line-height: 1.05;
   margin-bottom: 24px;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--text-black);
+  color: var(--color-paper);
 }
 
 .hero-subtitle {
   font-size: 20px;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.82);
   max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 0 40px;
   line-height: 1.6;
 }
 
 .hero-cta {
   display: flex;
   gap: 16px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .hero-trust {
   margin-top: 40px;
   font-size: 14px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.62);
 }
 
 @media (max-width: 768px) {
@@ -275,7 +298,7 @@ a {
    --------------------------------------------- */
 .trust-bar {
   padding: 48px 0;
-  background: var(--bg-warm);
+  background: var(--color-primary);
   border-top: 1px solid var(--border-whisper);
   border-bottom: 1px solid var(--border-whisper);
 }
@@ -294,13 +317,13 @@ a {
 .trust-number {
   font-size: 36px;
   font-weight: 700;
-  color: var(--blue-primary);
+  color: var(--color-accent);
   letter-spacing: -1px;
 }
 
 .trust-label {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.75);
   margin-top: 8px;
 }
 
@@ -317,7 +340,7 @@ a {
 /* Section Headers
    --------------------------------------------- */
 .section-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 64px;
 }
 
@@ -332,7 +355,7 @@ a {
   font-size: 18px;
   color: var(--text-secondary);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.6;
 }
 
@@ -357,15 +380,13 @@ a {
   font-size: 36px;
   font-weight: 600;
   letter-spacing: -1px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 64px;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .problem-content em {
-  color: var(--blue-primary);
+  color: var(--color-accent);
   font-style: normal;
   border-bottom: 2px solid var(--blue-light);
 }
@@ -379,7 +400,8 @@ a {
 .problem-item {
   text-align: center;
   padding: 32px;
-  background: var(--bg-offwhite);
+  background: var(--color-paper);
+  border-left: 4px solid var(--color-accent);
   border-radius: 12px;
   border: 1px solid var(--border-light);
 }
@@ -444,9 +466,9 @@ a {
 .workshop-number {
   font-size: 13px;
   font-weight: 600;
-  color: var(--blue-primary);
+  color: var(--color-accent);
   margin-bottom: 16px;
-  font-family: 'Inter', monospace;
+  font-family: 'Inter', var(--font-mono);
 }
 
 .workshop-card h3 {
@@ -492,7 +514,7 @@ a {
 }
 
 .workshop-link {
-  color: var(--blue-primary);
+  color: var(--color-accent);
   font-weight: 600;
   font-size: 15px;
   margin-top: auto;
@@ -687,7 +709,7 @@ a {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: var(--text-black);
+  color: var(--color-paper);
 }
 
 .footer-col a {
@@ -777,7 +799,7 @@ a {
 .success-icon {
   width: 64px;
   height: 64px;
-  background: #10b981;
+  background: var(--color-success);
   color: white;
   border-radius: 50%;
   font-size: 28px;
@@ -808,23 +830,23 @@ a {
 /* Form error */
 .form-error {
   padding: 12px 16px;
-  background: #fef2f2;
-  border: 1px solid #fecaca;
+  background: #FDF6F5;
+  border: 1px solid #FBD9D3;
   border-radius: 6px;
   font-size: 14px;
-  color: #b91c1c;
+  color: var(--color-coral);
   margin-top: 16px;
   line-height: 1.5;
 }
 
 .form-error a {
-  color: #b91c1c;
+  color: var(--color-coral);
   text-decoration: underline;
 }
 
 /* Guide download success */
 .guide-success {
-  color: #10b981;
+  color: var(--color-success);
   font-weight: 600;
   font-size: 15px;
   padding: 8px 0;
@@ -854,7 +876,7 @@ a {
 .thank-you-icon {
   width: 72px;
   height: 72px;
-  background: #10b981;
+  background: var(--color-success);
   color: white;
   border-radius: 50%;
   font-size: 32px;
