@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="4-Eyes website monitoring dashboard — uptime, SEO, and brand checks for www.4-eyes.eu, chatbot.4-eyes.eu, and dashboard.4-eyes.eu.">
+  <title>4-Eyes Website Monitor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1><span id="overall-dot" class="status-dot"></span> 4-Eyes Website Monitor</h1>
+        <p class="subtitle">Uptime, SEO smoke tests, and brand-consistency checks for public 4-Eyes properties.</p>
+      </div>
+      <div class="actions">
+        <button id="run-btn">Run checks now</button>
+      </div>
+    </header>
+
+    <p class="last-run" id="last-run">Last run: never</p>
+
+    <div class="summary-cards">
+      <div class="card">
+        <div class="label">Healthy</div>
+        <div id="total-up" class="value ok">–</div>
+      </div>
+      <div class="card">
+        <div class="label">Warnings</div>
+        <div id="total-warn" class="value warn">–</div>
+      </div>
+      <div class="card">
+        <div class="label">Down / Fail</div>
+        <div id="total-down" class="value down">–</div>
+      </div>
+    </div>
+
+    <table class="checks-table">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Page</th>
+          <th>URL</th>
+          <th>HTTP</th>
+          <th>Latency</th>
+          <th>Checks</th>
+        </tr>
+      </thead>
+      <tbody id="checks-body">
+        <tr><td colspan="6">Loading checks...</td></tr>
+      </tbody>
+    </table>
+
+    <footer>
+      <p>Monitored from the browser against live public endpoints. Checks run on load and every 5 minutes.</p>
+    </footer>
+  </div>
+
+  <script src="monitor.js"></script>
+</body>
+</html>

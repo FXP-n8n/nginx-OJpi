@@ -9,6 +9,9 @@ COPY workshops /usr/share/nginx/workshops
 # Copy dashboard site files (dashboard.4-eyes.eu)
 COPY dashboard /usr/share/nginx/dashboard
 
+# Copy website monitor (dashboard.4-eyes.eu/monitor/)
+COPY website-monitor /usr/share/nginx/dashboard/monitor
+
 # Copy ScienceBusiness tracker to html directory (served from dashboard.4-eyes.eu/sciencebusiness.html)
 COPY site/sciencebusiness.html /usr/share/nginx/html/sciencebusiness.html
 
