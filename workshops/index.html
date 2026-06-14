@@ -57,12 +57,16 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231B2D4F'/><text x='16' y='22' font-family='Inter,sans-serif' font-size='14' font-weight='700' fill='white' text-anchor='middle'>4E</text></svg>">
 
-  <!-- Privacy-first analytics: Plausible (EU-hosted, cookieless, GDPR-compliant) -->
-  <script defer data-domain="www.4-eyes.eu" src="https://plausible.io/js/script.outbound-links.js"></script>
   <!-- Search Console verification: add your verification string from https://search.google.com/search-console -->
   <meta name="google-site-verification" content="GOOGLE_SITE_VERIFICATION_STRING_PLACEHOLDER">
   <!-- Bing Webmaster Tools verification: add your verification string from https://www.bing.com/webmasters -->
   <meta name="msvalidate.01" content="BING_VERIFICATION_STRING_PLACEHOLDER">
+
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+  </script>
 </head>
 <body>
   <!-- Navigation -->
@@ -299,5 +303,58 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="js/animations.js"></script>
+
+
+  <!-- GDPR cookie consent banner for Google Analytics 4 -->
+  <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1B2D4F;color:#fff;padding:16px 24px;display:none;z-index:1000;font-family:Inter,sans-serif;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+      <p style="margin:0;flex:1 1 300px;">We use cookies to understand how visitors use our site. <a href="/privacy" style="color:#E8A020;">Learn more</a>.</p>
+      <div style="display:flex;gap:8px;">
+        <button id="accept-cookies" style="background:#E8A020;color:#1B2D4F;border:none;padding:8px 16px;font-weight:600;cursor:pointer;border-radius:4px;">Accept</button>
+        <button id="reject-cookies" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.4);padding:8px 16px;cursor:pointer;border-radius:4px;">Reject</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      const MEASUREMENT_ID = 'G-XT17SQ4RRL';
+      const consent = localStorage.getItem('ga_consent');
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('accept-cookies');
+      const rejectBtn = document.getElementById('reject-cookies');
+
+      function loadGA() {
+        if (window.gaLoaded) return;
+        window.gaLoaded = true;
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + MEASUREMENT_ID;
+        document.head.appendChild(script);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', MEASUREMENT_ID);
+      }
+
+      if (consent === 'granted') {
+        loadGA();
+      } else if (consent === null) {
+        banner.style.display = 'block';
+      }
+
+      acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('ga_consent', 'granted');
+        banner.style.display = 'none';
+        loadGA();
+      });
+
+      rejectBtn.addEventListener('click', function() {
+        localStorage.setItem('ga_consent', 'denied');
+        banner.style.display = 'none';
+      });
+    })();
+  </script>
+
 </body>
 </html>
