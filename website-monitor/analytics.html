@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="4-Eyes website analytics dashboard powered by Google Analytics 4 and Looker Studio.">
+  <title>4-Eyes Analytics Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>4-Eyes Analytics Dashboard</h1>
+        <p class="subtitle">Visitor insights from Google Analytics 4. Powered by Looker Studio.</p>
+      </div>
+      <div class="actions">
+        <a href="/monitor/" class="btn">Website monitor</a>
+      </div>
+    </header>
+
+    <div class="notice" id="notice">
+      <p><strong>Waiting for Looker Studio embed URL.</strong> This placeholder will be replaced with the live GA4 report once you share the embed link from Looker Studio.</p>
+    </div>
+
+    <main class="report-frame">
+      <iframe
+        id="looker-iframe"
+        src="about:blank"
+        frameborder="0"
+        style="border:0"
+        allowfullscreen
+        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+        title="Google Analytics 4 dashboard for www.4-eyes.eu">
+      </iframe>
+    </main>
+
+    <footer>
+      <p>GA4 property: <code>4-eyes website</code> · Measurement ID: <code>G-XT17SQ4RRL</code></p>
+    </footer>
+  </div>
+
+  <script src="analytics.js"></script>
+</body>
+</html>

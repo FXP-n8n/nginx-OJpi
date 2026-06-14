@@ -1,0 +1,17 @@
+{
+  "RAILWAY_ENVIRONMENT": "production",
+  "RAILWAY_ENVIRONMENT_ID": "c5375579-d6d9-40ad-bf9e-82d59026a5cf",
+  "RAILWAY_ENVIRONMENT_NAME": "production",
+  "RAILWAY_PRIVATE_DOMAIN": "nginx-ojpi.railway.internal",
+  "RAILWAY_PROJECT_ID": "17c3052d-3f50-4cea-bf05-84c396e7f0fe",
+  "RAILWAY_PROJECT_NAME": "chic-spontaneity",
+  "RAILWAY_PUBLIC_DOMAIN": "dashboard.4-eyes.eu",
+  "RAILWAY_SERVICE_HERMES_AGENT_URL": "agent.4-eyes.eu",
+  "RAILWAY_SERVICE_ID": "05004e9b-c56d-4cfd-9298-d065e9ea32c4",
+  "RAILWAY_SERVICE_N8N_RAILWAY_CUSTOM_URL": "www.n8n.4-eyes.eu",
+  "RAILWAY_SERVICE_NAME": "nginx-4Eyes",
+  "RAILWAY_SERVICE_NGINX_4EYES_URL": "dashboard.4-eyes.eu",
+  "RAILWAY_SERVICE_TWENTY_URL": "crm.4-eyes.eu",
+  "RAILWAY_SERVICE_VIKUNJA_URL": "todo.4-eyes.eu",
+  "RAILWAY_STATIC_URL": "dashboard.4-eyes.eu"
+}
