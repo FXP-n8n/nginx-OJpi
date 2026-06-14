@@ -112,6 +112,9 @@ async function runAll() {
         <td class="message">${checkDetails}</td>
       </tr>`
     });
+
+    // Small stagger to avoid tripping the nginx rate limiter (30r/m) when checks run in sequence.
+    await new Promise(r => setTimeout(r, 250));
   }
 
   tbody.innerHTML = rows.map(r => r.html).join('');
