@@ -29,14 +29,20 @@
     <main class="report-frame">
       <iframe
         id="looker-iframe"
-        src="about:blank"
+        src="https://lookerstudio.google.com/embed/reporting/5a7c2bc6-954e-4ccd-872e-adba5ac3d965/page/z0E1F"
+        width="100%"
+        height="720"
         frameborder="0"
         style="border:0"
         allowfullscreen
-        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-        title="Google Analytics 4 dashboard for www.4-eyes.eu">
-      </iframe>
+        loading="eager"
+        title="Google Analytics 4 dashboard for www.4-eyes.eu"
+      ></iframe>
     </main>
+
+    <div class="fallback" id="fallback" style="display:none;">
+      <p>If the report does not appear above, your browser may be blocking the Looker Studio iframe. <a href="https://datastudio.google.com/reporting/5a7c2bc6-954e-4ccd-872e-adba5ac3d965" target="_blank">Open the report directly</a>.</p>
+    </div>
 
     <footer>
       <p>GA4 property: <code>4-eyes website</code> · Measurement ID: <code>G-XT17SQ4RRL</code></p>
