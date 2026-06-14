@@ -6,45 +6,78 @@
 <meta http-equiv="refresh" content="300">
 <title>4-Eyes Fleet Dashboard</title>
 <style>
-  :root { --bg: #1B2D4F; --surface: #22304D; --text: #FFFFFF; --accent: #E8A020; --green: #34D399; --amber: #E8A020; --red: #D95F4B; }
-  body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; max-width: 680px; margin:0 auto; padding: 16px; }
-  h1 { color: var(--accent); font-size: 1.4rem; margin-bottom: 8px; }
+  :root { --bg: #1B2D4F; --surface: #22304D; --surface-2: #2A3B5E; --text: #FFFFFF; --accent: #E8A020; --green: #34D399; --amber: #E8A020; --red: #D95F4B; --muted: #A0AEC0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; max-width: 760px; margin:0 auto; padding: 16px; }
+  h1 { color: var(--accent); font-size: 1.5rem; margin-bottom: 6px; }
+  .subtitle { color: var(--muted); font-size: 0.78rem; margin-bottom: 18px; }
+  .nav { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+  .nav a { background: var(--surface); color: var(--accent); text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 0.82rem; font-weight: 600; border: 1px solid rgba(232,160,32,0.25); }
+  .nav a:hover { background: var(--surface-2); }
   .section { background: var(--surface); border-radius: 8px; padding: 16px; margin-bottom: 16px; }
-  .label { color: #A0AEC0; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .label { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
   .value { font-size: 2rem; font-weight: 600; color: var(--text); }
   .green { color: var(--green); }
   .amber { color: var(--amber); }
   .red { color: var(--red); }
+  .detail { font-size: 0.78rem; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+  .detail ul { margin: 6px 0 0 18px; padding: 0; }
+  .detail li { margin-bottom: 4px; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+  .links a { display: block; background: var(--surface); color: var(--accent); text-decoration: none; padding: 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
+  .links a:hover { background: var(--surface-2); }
 </style>
 </head>
 <body>
   <h1>4-Eyes Fleet Dashboard</h1>
-  <p style="color: #A0AEC0; font-size: 0.72rem;">Last updated: 2026-06-02 20:05 CET</p>
+  <p class="subtitle">Last updated: 2026-06-14 06:05 CET</p>
 
-  <div class="section">
-    <div class="label">Cron Jobs</div>
-    <div class="value green">21</div>
-    <div style="font-size: 0.72rem; color: #A0AEC0; margin-top: 8px;">
-      Healthy: 18 | Failed: 2 | Stale: 1
-    </div>
+  <div class="nav">
+    <a href="/monitor/">Website monitor</a>
+    <a href="/analytics/">Analytics</a>
+    <a href="https://todo.4-eyes.eu/" target="_blank">Vikunja</a>
+    <a href="https://agent.4-eyes.eu/" target="_blank">Hermes Agent</a>
   </div>
 
   <div class="section">
-    <div class="label">Eval Scenarios</div>
-    <div class="value green">0</div>
+    <div class="label">Cron Jobs</div>
+    <div class="value green">20</div>
+    <div class="detail">
+      Healthy: 20 | Failed: 0 | Stale: 0
+    </div>
   </div>
 
   <div class="section">
     <div class="label">Agent Freshness</div>
-    <div class="value green">7 fresh</div>
-    <div style="font-size: 0.72rem; color: #A0AEC0; margin-top: 8px;">
-      Stale: 0 | Critical: 1
+    <div class="value amber">7 fresh, 1 stale</div>
+    <div class="detail">
+      <ul>
+        <li>orchestration: 24.0h stale (last run 2026-06-13 04:05) — expected, next run at 06:05 CET</li>
+      </ul>
     </div>
   </div>
 
   <div class="section">
-    <div class="label">Dashboard URL</div>
-    <a href="https://dashboard.4-eyes.eu" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; word-break: break-all;">https://dashboard.4-eyes.eu</a>
+    <div class="label">EVAL Data-Source Health (last 7 days)</div>
+    <div class="value green">0 failed runs</div>
+    <div class="detail">Morning Pulse, Evening Wrap-up and Process Orchestration all reported data_sources_ok=true on their latest EVAL footers.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Recent Incidents (last 7 days)</div>
+    <div class="value amber">4 incidents</div>
+    <div class="detail">
+      All 4 are historical <code>log_backup.py upload_failed</code> incidents from 2026-06-06 caused by the Google OAuth <code>quota_project_id</code> setter bug. Fixed the same day by passing <code>quota_project_id</code> to the Credentials constructor. No new incidents since.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Quick Links</div>
+    <div class="links">
+      <a href="https://www.4-eyes.eu/" target="_blank">www.4-eyes.eu</a>
+      <a href="https://chatbot.4-eyes.eu/" target="_blank">chatbot.4-eyes.eu</a>
+      <a href="https://dashboard.4-eyes.eu/monitor/">Website monitor</a>
+      <a href="https://dashboard.4-eyes.eu/analytics/">Analytics dashboard</a>
+    </div>
   </div>
 </body>
 </html>
