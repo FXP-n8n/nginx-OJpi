@@ -17,12 +17,17 @@
   <!-- Search Console verification: add your verification string from https://search.google.com/search-console -->
   <meta name="google-site-verification" content="GOOGLE_SITE_VERIFICATION_STRING_PLACEHOLDER">
   <!-- Bing Webmaster Tools verification: add your verification string from https://www.bing.com/webmasters -->
-  <meta name="msvalidate.01" content="BING_VERIFICATION_STRING_PLACEHOLDER">
-
-  <!-- Google tag (gtag.js) -->
+  <meta name="msvalidate.01" content="BING_VERIFICATION_STRING_PLACEHOLDER">  <!-- Google tag (gtag.js) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Default consent: denied until user accepts the cookie banner
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
   </script>
 </head>
 <body>
@@ -68,7 +73,6 @@
 
   <script src="js/main.js"></script>
 
-
   <!-- GDPR cookie consent banner for Google Analytics 4 -->
   <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1B2D4F;color:#fff;padding:16px 24px;display:none;z-index:1000;font-family:Inter,sans-serif;">
     <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
@@ -87,20 +91,36 @@
       const acceptBtn = document.getElementById('accept-cookies');
       const rejectBtn = document.getElementById('reject-cookies');
 
+      // Initialize dataLayer so gtag() always has a queue to push to
+      window.dataLayer = window.dataLayer || [];
+
+      // Google Analytics is loaded only after consent is granted.
       function loadGA() {
         if (window.gaLoaded) return;
         window.gaLoaded = true;
+
+        // Update consent state to granted for analytics_storage
+        if (window.gtag) {
+          window.gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+
         const script = document.createElement('script');
         script.async = true;
         script.src = 'https://www.googletagmanager.com/gtag/js?id=' + MEASUREMENT_ID;
+        script.onload = function() {
+          // gtag() is provided by the loaded script; ensure window.gtag is defined
+          if (!window.gtag) {
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+          }
+          window.gtag('js', new Date());
+          // Send page_view explicitly to guarantee the hit is recorded
+          window.gtag('config', MEASUREMENT_ID, { send_page_view: true });
+        };
         document.head.appendChild(script);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', MEASUREMENT_ID);
       }
 
+      // If consent was previously granted, load GA immediately.
       if (consent === 'granted') {
         loadGA();
       } else if (consent === null) {
@@ -116,9 +136,11 @@
       rejectBtn.addEventListener('click', function() {
         localStorage.setItem('ga_consent', 'denied');
         banner.style.display = 'none';
+        // Keep analytics_storage denied; no GA loader is created
+        if (window.gtag) {
+          window.gtag('consent', 'update', { analytics_storage: 'denied' });
+        }
       });
     })();
-  </script>
-
-</body>
+  </script></body>
 </html>
