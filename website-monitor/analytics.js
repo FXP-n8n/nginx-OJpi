@@ -7,7 +7,7 @@
   // Replace this with the embed URL from Looker Studio (Share → Embed report).
   // It should look like: https://lookerstudio.google.com/embed/reporting/<report-id>/page/<page-id>
   // ---------------------------------------------------------------------------
-  const LOOKER_EMBED_URL = null;
+  const LOOKER_EMBED_URL = 'https://datastudio.google.com/embed/reporting/5a7c2bc6-954e-4ccd-872e-adba5ac3d965/page/z0E1F';
 
   const notice = document.getElementById('notice');
   const iframe = document.getElementById('looker-iframe');
