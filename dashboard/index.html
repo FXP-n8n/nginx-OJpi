@@ -10,7 +10,9 @@
   body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; max-width: 760px; margin:0 auto; padding: 16px; }
   h1 { color: var(--accent); font-size: 1.5rem; margin-bottom: 6px; }
   .subtitle { color: var(--muted); font-size: 0.78rem; margin-bottom: 18px; }
-  .nav { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+  .nav { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+  .nav-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .nav-label { font-size: 0.68rem; text-transform: uppercase; color: var(--muted); letter-spacing: 0.05em; margin-bottom: 4px; }
   .nav a { background: var(--surface); color: var(--accent); text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 0.82rem; font-weight: 600; border: 1px solid rgba(232,160,32,0.25); }
   .nav a:hover { background: var(--surface-2); }
   .section { background: var(--surface); border-radius: 8px; padding: 16px; margin-bottom: 16px; }
@@ -29,13 +31,26 @@
 </head>
 <body>
   <h1>4-Eyes Fleet Dashboard</h1>
-  <p class="subtitle">Last updated: 2026-06-15 06:17 CET</p>
+  <p class="subtitle">Last updated: 2026-06-15 06:19 CET</p>
 
   <div class="nav">
-    <a href="/monitor/">Website monitor</a>
-    <a href="/analytics/">Analytics</a>
-    <a href="https://todo.4-eyes.eu/" target="_blank">Vikunja</a>
-    <a href="https://agent.4-eyes.eu/" target="_blank">Hermes Agent</a>
+    <div class="nav-label">Services</div>
+    <div class="nav-row">
+      <a href="https://agent.4-eyes.eu/" target="_blank">Hermes Agent</a>
+      <a href="https://todo.4-eyes.eu/" target="_blank">Vikunja</a>
+      <a href="https://www.n8n.4-eyes.eu/" target="_blank">n8n</a>
+      <a href="https://crm.4-eyes.eu/" target="_blank">Twenty CRM</a>
+    </div>
+    <div class="nav-label">4-Eyes Web-Sites</div>
+    <div class="nav-row">
+      <a href="https://www.4-eyes.eu/" target="_blank">www.4-eyes.eu</a>
+      <a href="https://chatbot.4-eyes.eu/" target="_blank">chatbot.4-eyes.eu</a>
+    </div>
+    <div class="nav-label">Monitoring</div>
+    <div class="nav-row">
+      <a href="/monitor/" target="_blank">Website monitor</a>
+      <a href="/analytics/" target="_blank">Analytics</a>
+    </div>
   </div>
 
   <div class="section">
@@ -64,16 +79,6 @@
     <div class="label">Recent Incidents (last 7 days)</div>
     <div class="value red">5 incidents</div>
     <div class="detail">Recent: schema_deprecated_call (5)</div>
-  </div>
-
-  <div class="section">
-    <div class="label">Quick Links</div>
-    <div class="links">
-      <a href="https://www.4-eyes.eu/" target="_blank">www.4-eyes.eu</a>
-      <a href="https://chatbot.4-eyes.eu/" target="_blank">chatbot.4-eyes.eu</a>
-      <a href="https://dashboard.4-eyes.eu/monitor/">Website monitor</a>
-      <a href="https://dashboard.4-eyes.eu/analytics/">Analytics dashboard</a>
-    </div>
   </div>
 </body>
 </html>
