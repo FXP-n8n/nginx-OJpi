@@ -1,382 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Help your policy team use AI safely — without mistakes, without risks, without wasting time. Workshops for European lobbying associations.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://www.4-eyes.eu/">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.4-eyes.eu/sitemap.xml">
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.4-eyes.eu/">
-  <meta property="og:title" content="4-Eyes — Use AI Safely in Your Policy Team">
-  <meta property="og:description" content="GDPR-compliant AI workshops for European lobbying associations. Practical workflows, prompt libraries, and verification protocols.">
-  <meta property="og:site_name" content="4-Eyes">
-  <meta property="og:locale" content="en_GB">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="4-Eyes — Use AI Safely in Your Policy Team">
-  <meta name="twitter:description" content="GDPR-compliant AI workshops for European lobbying associations. Practical workflows, prompt libraries, and verification protocols.">
-  
-  <!-- Structured data: Organization + WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.4-eyes.eu/#organisation",
-        "name": "4-Eyes",
-        "url": "https://www.4-eyes.eu/",
-        "email": "mailto:francois-xavier.peers@4-eyes.eu",
-        "description": "AI infrastructure and GDPR-compliant workshops for European lobbying associations and advocacy organisations.",
-        "sameAs": []
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.4-eyes.eu/#website",
-        "url": "https://www.4-eyes.eu/",
-        "name": "4-Eyes",
-        "publisher": { "@id": "https://www.4-eyes.eu/#organisation" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": { "@type": "EntryPoint", "urlTemplate": "https://www.4-eyes.eu/workshops?q={search_term_string}" },
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
-  }
-  </script>
-  <title>4-Eyes — Use AI Safely in Your Policy Team</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231B2D4F'/><text x='16' y='22' font-family='Inter,sans-serif' font-size='14' font-weight='700' fill='white' text-anchor='middle'>4E</text></svg>">
-
-  <!-- Search Console verification: add your verification string from https://search.google.com/search-console -->
-  <meta name="google-site-verification" content="GOOGLE_SITE_VERIFICATION_STRING_PLACEHOLDER">
-  <!-- Bing Webmaster Tools verification: add your verification string from https://www.bing.com/webmasters -->
-  <meta name="msvalidate.01" content="BING_VERIFICATION_STRING_PLACEHOLDER">  <!-- Google tag (gtag.js) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    // Default consent: denied until user accepts the cookie banner
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      analytics_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied'
-    });
-  </script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>4-Eyes — AI automation your institution can trust</title>
+<meta name="description" content="4-Eyes designs and operates production-grade AI pipelines that replace hours of manual monitoring, triage and reporting with auditable, one-click workflows for Brussels institutions." />
+<meta property="og:title" content="4-Eyes — AI automation your institution can trust" />
+<meta property="og:description" content="Enterprise-grade AI automation for the Brussels institutional world. Every decision explained. Two buttons. Your data stays yours." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.4-eyes.eu/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css?v=1" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="site-nav">
-    <div class="container nav-inner">
-      <a href="/" class="logo">4-Eyes</a>
-      <div class="nav-links">
-        <a href="/workshops">Workshops</a>
-        <a href="/about">About</a>
-        <a href="/resources">Resources</a>
-        <a href="/contact" class="btn btn-primary">Book a Workshop</a>
-      </div>
-      <button class="mobile-menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <span class="document-tag">AI Workshops for European Lobbying Teams</span>
-      <h1>Use AI Safely in Your Policy Team</h1>
-      <p class="hero-subtitle">Your team is already using AI. We help you use it without mistakes, without risks, and without wasting time. GDPR-compliant workflows built for Brussels advocacy organizations.</p>
-      <div class="hero-cta">
-        <a href="/contact" class="btn btn-primary">Book a Workshop</a>
-        <a href="/resources" class="btn btn-secondary">Download AI Adoption Guide</a>
-      </div>
-      <p class="hero-trust">Trusted by policy teams at European industry federations and trade associations</p>
-    </div>
-  </section>
-
-  <!-- Trust Markers -->
-  <section class="trust-bar">
-    <div class="container">
-      <div class="trust-grid">
-        <div class="trust-item animate-on-scroll">
-          <div class="trust-number">53+</div>
-          <div class="trust-label">Companies trained via SAP programs</div>
-        </div>
-        <div class="trust-item animate-on-scroll">
-          <div class="trust-number">100%</div>
-          <div class="trust-label">EU-focused, GDPR-compliant</div>
-        </div>
-        <div class="trust-item animate-on-scroll">
-          <div class="trust-number">90 min</div>
-          <div class="trust-label">Average workshop duration</div>
-        </div>
-        <div class="trust-item animate-on-scroll">
-          <div class="trust-number">0</div>
-          <div class="trust-label">Mistakes left unchecked</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Problem Statement -->
-  <section class="problem-section">
-    <div class="container">
-      <div class="problem-content">
-        <h2>Your policy team is already using AI. The question is: are they using it <em>well</em>?</h2>
-        <div class="problem-grid">
-          <div class="problem-item animate-on-scroll">
-            <div class="problem-icon">⚠️</div>
-            <h3>Embarrassing mistakes</h3>
-            <p>AI errors in policy briefings can damage your credibility with MEPs and Commission officials.</p>
-          </div>
-          <div class="problem-item animate-on-scroll">
-            <div class="problem-icon">⏱️</div>
-            <h3>Wasted time</h3>
-            <p>Staff spend hours experimenting with prompts instead of getting reliable, repeatable results.</p>
-          </div>
-          <div class="problem-item animate-on-scroll">
-            <div class="problem-icon">🔒</div>
-            <h3>Legal worries</h3>
-            <p>Uploading sensitive member data or position papers to unknown AI tools without checking the rules.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Workshops Preview -->
-  <section class="workshops-preview">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <h2>Workshop Catalog</h2>
-        <p>Three core programs designed for policy teams, communications staff, and senior leadership at lobbying associations</p>
-      </div>
-      <div class="workshops-grid">
-        <div class="workshop-card animate-on-scroll">
-          <div class="workshop-number">01</div>
-          <h3>AI Essentials</h3>
-          <p class="workshop-duration">90 minutes · Foundation level</p>
-          <p>Learn the prompt patterns that save hours, spot mistakes before they embarrass you, and understand EU-specific AI considerations.</p>
-          <ul class="workshop-outcomes">
-            <li>3 reusable prompt templates</li>
-            <li>Error detection checklist</li>
-            <li>Safe AI workflows</li>
-          </ul>
-          <a href="/workshops#essentials" class="workshop-link">Learn more →</a>
-        </div>
-        <div class="workshop-card animate-on-scroll">
-          <div class="workshop-number">02</div>
-          <h3>Advanced Prompt Engineering</h3>
-          <p class="workshop-duration">Half-day · Intermediate level</p>
-          <p>Master document analysis, fact-checking workflows, and build a reusable prompt library for your team's specific policy domains.</p>
-          <ul class="workshop-outcomes">
-            <li>Document synthesis at scale</li>
-            <li>Multi-source verification patterns</li>
-            <li>Team prompt library template</li>
-          </ul>
-          <a href="/workshops#advanced" class="workshop-link">Learn more →</a>
-        </div>
-        <div class="workshop-card animate-on-scroll">
-          <div class="workshop-number">03</div>
-          <h3>AI Systems Architecture</h3>
-          <p class="workshop-duration">Half-day · Leadership level</p>
-          <p>For IT directors evaluating multi-agent deployments. Verification protocols, integration roadmaps, and risk mitigation strategies.</p>
-          <ul class="workshop-outcomes">
-            <li>Multi-agent architecture overview</li>
-            <li>Verification protocol design</li>
-            <li>Implementation roadmap</li>
-          </ul>
-          <a href="/workshops#architecture" class="workshop-link">Learn more →</a>
-        </div>
-      </div>
-      <div class="workshops-cta animate-on-scroll">
-        <a href="/workshops" class="btn btn-primary">View all workshops →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why 4-Eyes -->
-  <section class="why-us">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <h2>Why 4-Eyes</h2>
-        <p>We're not a tool vendor. We're systems engineers who understand advocacy.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-item animate-on-scroll">
-          <div class="why-icon">✓</div>
-          <h3>No Mistakes Slip Through</h3>
-          <p>Every important output gets checked by at least two systems. Nothing goes out unverified. This is the "4-Eyes" principle in action.</p>
-        </div>
-        <div class="why-item animate-on-scroll">
-          <div class="why-icon">✓</div>
-          <h3>We Know EU Rules</h3>
-          <p>GDPR, compliance, and Brussels policy context built into every workshop. No generic tech advice — this is European advocacy work.</p>
-        </div>
-        <div class="why-item animate-on-scroll">
-          <div class="why-icon">✓</div>
-          <h3>10+ Hours Saved Weekly</h3>
-          <p>Participants leave with prompts they'll use this week. Not theory — practical workflows that save 10+ hours per person, per week.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Social Proof -->
-  <section class="social-proof">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <h2>Trusted by European Advocacy Organizations</h2>
-        <p>From industry federations to trade associations, we help policy teams work smarter with AI.</p>
-      </div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card animate-on-scroll">
-          <blockquote>"The AI Literacy workshop transformed how our team approaches policy research. We caught three potential hallucinations in our first week alone."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-name">Policy Director</div>
-            <div class="author-org">European Industry Federation</div>
-          </div>
-        </div>
-        <div class="testimonial-card animate-on-scroll">
-          <blockquote>"Finally, AI training that understands the Brussels context. GDPR compliance wasn't an afterthought — it was built into every example."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-name">Communications Manager</div>
-            <div class="author-org">Trade Association</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to equip your team?</h2>
-      <p>Book a 30-minute discovery call to find the right workshop for your organization. No pressure — just a conversation about your needs.</p>
-      <div class="cta-buttons">
-        <a href="/contact" class="btn btn-primary">Schedule Your Call</a>
-        <a href="mailto:francois-xavier.peers@4-eyes.eu" class="btn btn-secondary">Email Francois-Xavier</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">4-Eyes</div>
-          <p>AI infrastructure for European lobbying associations and advocacy organizations. Workshops, multi-agent architecture, and systems engineering.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Workshops</h4>
-          <a href="/workshops#essentials">AI Essentials</a>
-          <a href="/workshops#advanced">Advanced Prompt Engineering</a>
-          <a href="/workshops#architecture">AI Systems Architecture</a>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <a href="/resources">Briefings</a>
-          <a href="/resources">AI Adoption Guide</a>
-          <a href="/resources">Case Studies</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 4-Eyes. All rights reserved. · <a href="/privacy">Privacy Policy</a> · <a href="/imprint">Imprint</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="js/animations.js"></script>
-
-  <!-- GDPR cookie consent banner for Google Analytics 4 -->
-  <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1B2D4F;color:#fff;padding:16px 24px;display:none;z-index:1000;font-family:Inter,sans-serif;">
-    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
-      <p style="margin:0;flex:1 1 300px;">We use cookies to understand how visitors use our site. <a href="/privacy" style="color:#E8A020;">Learn more</a>.</p>
-      <div style="display:flex;gap:8px;">
-        <button id="accept-cookies" style="background:#E8A020;color:#1B2D4F;border:none;padding:8px 16px;font-weight:600;cursor:pointer;border-radius:4px;">Accept</button>
-        <button id="reject-cookies" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.4);padding:8px 16px;cursor:pointer;border-radius:4px;">Reject</button>
-      </div>
+<header class="site">
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="dot">4i</span> 4-Eyes</a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="board-advisory.html">Board Advisory</a>
+      <a href="proof.html">Proof</a>
+      <a href="approach.html">Approach</a>
+      <a href="insights/index.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="contact.html">Ask for a demo</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
     </div>
   </div>
-  <script>
-    (function() {
-      const MEASUREMENT_ID = 'G-XT17SQ4RRL';
-      const consent = localStorage.getItem('ga_consent');
-      const banner = document.getElementById('cookie-banner');
-      const acceptBtn = document.getElementById('accept-cookies');
-      const rejectBtn = document.getElementById('reject-cookies');
+</header>
 
-      // Initialize dataLayer so gtag() always has a queue to push to
-      window.dataLayer = window.dataLayer || [];
+<main id="main">
 
-      // Google Analytics is loaded only after consent is granted.
-      function loadGA() {
-        if (window.gaLoaded) return;
-        window.gaLoaded = true;
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">AI automation your institution can trust</span>
+      <h1>Enterprise-grade AI automation for the Brussels institutional world</h1>
+      <p class="lead">4-Eyes designs and operates production-grade AI pipelines that replace hours of manual monitoring, triage and reporting with auditable, one-click workflows &mdash; built by someone who has run EU projects, taught 200-person enterprise teams, and coached CIOs.</p>
+      <p class="lede" style="margin-bottom:26px"><b>Every decision explained</b> &middot; <b>Two buttons</b> &middot; <b>Your data stays yours</b></p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="contact.html">Ask for a demo</a>
+        <a class="btn" href="services.html">See services</a>
+      </div>
+    </div>
+  </section>
 
-        // Update consent state to granted for analytics_storage
-        if (window.gtag) {
-          window.gtag('consent', 'update', { analytics_storage: 'granted' });
-        }
+  <section class="section-alt">
+    <div class="wrap">
+      <span class="eyebrow">Who this is for</span>
+      <h2 style="margin-top:10px">Built for organisations that drown in monitoring, triage and reporting</h2>
+      <p class="lede">Policy media and intelligence outfits, trade associations and federations, EU-funded projects and networks, NGOs and foundations &mdash; and independently, executive boards and directors who need an AI sparring partner.</p>
 
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + MEASUREMENT_ID;
-        script.onload = function() {
-          // gtag() is provided by the loaded script; ensure window.gtag is defined
-          if (!window.gtag) {
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-          }
-          window.gtag('js', new Date());
-          // Send page_view explicitly to guarantee the hit is recorded
-          window.gtag('config', MEASUREMENT_ID, { send_page_view: true });
-        };
-        document.head.appendChild(script);
-      }
+      <div class="steps" style="margin-top:44px;counter-reset:none">
+        <div class="step" style="border-top-color:var(--brand)">
+          <div class="n">~160</div>
+          <p style="font-size:14.5px;color:var(--muted);margin-top:2px">websites monitored per run</p>
+        </div>
+        <div class="step" style="border-top-color:var(--brand)">
+          <div class="n">2</div>
+          <p style="font-size:14.5px;color:var(--muted);margin-top:2px">buttons: the user&rsquo;s entire workflow</p>
+        </div>
+        <div class="step" style="border-top-color:var(--brand)">
+          <div class="n">100%</div>
+          <p style="font-size:14.5px;color:var(--muted);margin-top:2px">of items accounted for, with a reason</p>
+        </div>
+        <div class="step" style="border-top-color:var(--brand)">
+          <div class="n">0</div>
+          <p style="font-size:14.5px;color:var(--muted);margin-top:2px">data leaves your infrastructure (option)</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      // If consent was previously granted, load GA immediately.
-      if (consent === 'granted') {
-        loadGA();
-      } else if (consent === null) {
-        banner.style.display = 'block';
-      }
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">One discipline, four kinds of build</span>
+      <h2 style="margin-top:10px">This is one of several production systems already running</h2>
+      <p class="lede">Monitoring pipelines, a conversational assistant, multilingual text analytics, and document automation. <a href="proof.html" style="color:var(--brand);font-weight:500">See Proof &rarr;</a></p>
+      <div class="cards">
+        <div class="card">
+          <span class="kicker">01</span>
+          <h3>Monitoring &amp; triage</h3>
+          <p>Hundreds of sources harvested and screened against your own rubric.</p>
+        </div>
+        <div class="card">
+          <span class="kicker">02</span>
+          <h3>Assistants</h3>
+          <p>A conversational layer on top of your monitored content.</p>
+        </div>
+        <div class="card">
+          <span class="kicker">03</span>
+          <h3>Text analytics</h3>
+          <p>Multilingual scoring and classification of written content.</p>
+        </div>
+        <div class="card">
+          <span class="kicker">04</span>
+          <h3>Document automation</h3>
+          <p>Brand-conform documents generated from structured input.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('ga_consent', 'granted');
-        banner.style.display = 'none';
-        loadGA();
-      });
+  <section class="final section-alt">
+    <div class="wrap">
+      <span class="eyebrow">Where to go next</span>
+      <h2 style="margin-top:12px">Three ways in</h2>
+      <div class="proof-grid" style="margin-top:32px;text-align:left">
+        <div class="proof">
+          <h3>Services</h3>
+          <p>Five ways to start, from a fixed-price scan to a monthly retainer.</p>
+          <a href="services.html">View services &rarr;</a>
+        </div>
+        <div class="proof">
+          <h3>Proof</h3>
+          <p>The anchor case and three supporting builds already in production.</p>
+          <a href="proof.html">See the work &rarr;</a>
+        </div>
+        <div class="proof">
+          <h3>Contact</h3>
+          <p>Tell us about your monitoring, triage or reporting problem.</p>
+          <a href="contact.html">Get in touch &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      rejectBtn.addEventListener('click', function() {
-        localStorage.setItem('ga_consent', 'denied');
-        banner.style.display = 'none';
-        // Keep analytics_storage denied; no GA loader is created
-        if (window.gtag) {
-          window.gtag('consent', 'update', { analytics_storage: 'denied' });
-        }
-      });
-    })();
-  </script></body>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-grid">
+    <span>&copy; 2026 4-Eyes bv &middot; Brussels &middot; francois-xavier.peers@4-eyes.eu</span>
+    <div class="foot-links">
+      <a href="services.html">Services</a>
+      <a href="board-advisory.html">Board Advisory</a>
+      <a href="proof.html">Proof</a>
+      <a href="approach.html">Approach</a>
+      <a href="insights/index.html">Insights</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=1"></script>
+</body>
 </html>

@@ -2,32 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.4-eyes.eu/sitemap.xml
-
-# Block AI training bots
-User-agent: GPTBot
-Disallow: /
-
-User-agent: OAI-SearchBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: PetalBot
-Disallow: /
-
-# Sitemap submitted to Google Search Console and Bing Webmaster Tools
-# https://search.google.com/search-console
-# https://www.bing.com/webmasters

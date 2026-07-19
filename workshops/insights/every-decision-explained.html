@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&ldquo;Every decision explained&rdquo;: why audit trails matter more than accuracy — 4-Eyes</title>
+<meta name="description" content="Why 4-Eyes builds pipelines that account for every rejected item with a reason, not just ones that score well on accuracy." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles.css?v=1" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="logo" href="../index.html"><span class="dot">4i</span> 4-Eyes</a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../board-advisory.html">Board Advisory</a>
+      <a href="../proof.html">Proof</a>
+      <a href="../approach.html">Approach</a>
+      <a href="index.html" class="active">Insights</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="../contact.html">Ask for a demo</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <article class="post">
+        <span class="eyebrow"><a href="index.html" style="color:var(--brand)">&larr; Insights</a></span>
+        <h1 style="margin-top:14px">&ldquo;Every decision explained&rdquo;: why audit trails matter more than accuracy</h1>
+        <span class="date">July 2026</span>
+
+        <div class="prose">
+          <p>Most conversations about AI in monitoring start with a question about accuracy: how often does the model get it right? It&rsquo;s the wrong first question. For an institution that has to defend its process &mdash; to a board, a funder, or a regulator &mdash; the more important question is: <i>can you show me why it decided what it decided, for every single item, including the ones it threw away?</i></p>
+
+          <p>That&rsquo;s the design choice behind the pipelines we build. Every item that goes through triage lands in exactly one bucket, and every bucket &mdash; including &ldquo;rejected&rdquo; &mdash; comes with a machine-readable reason. Nothing is silently dropped. If a source website fails to load, it&rsquo;s automatically retried on a second engine before anything is marked as unavailable. If an item is rejected as irrelevant, the reason is logged alongside it, not discarded with it.</p>
+
+          <p>This matters more than raw accuracy for a simple reason: accuracy is a number you have to trust; an audit trail is something you can check. A pipeline that&rsquo;s 95% accurate but tells you nothing about the other 5% is a black box with a good reputation. A pipeline that&rsquo;s honest about every decision &mdash; including its mistakes &mdash; is one your team can actually rely on, because the failure mode is visible instead of silent.</p>
+
+          <p>In practice, this is also what makes the pipeline usable day to day. The reviewer doesn&rsquo;t have to second-guess the system or re-check the raw source list by hand &ldquo;just in case.&rdquo; The ledger of rejections is right there, one click away, in the same dashboard as the shortlist. Trust isn&rsquo;t asked for &mdash; it&rsquo;s built into the interface.</p>
+
+          <p>It&rsquo;s also, not incidentally, the same discipline the EU AI Act is pushing toward: explainability and human oversight for anything that affects real decisions. We didn&rsquo;t add auditability to comply with a regulation that arrived later &mdash; the two turned out to want the same thing.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-grid">
+    <span>&copy; 2026 4-Eyes bv &middot; Brussels &middot; francois-xavier.peers@4-eyes.eu</span>
+    <div class="foot-links">
+      <a href="../services.html">Services</a>
+      <a href="../board-advisory.html">Board Advisory</a>
+      <a href="../proof.html">Proof</a>
+      <a href="../approach.html">Approach</a>
+      <a href="index.html">Insights</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js?v=1"></script>
+</body>
+</html>
