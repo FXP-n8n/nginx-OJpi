@@ -31,7 +31,7 @@
 </head>
 <body>
   <h1>4-Eyes Fleet Dashboard</h1>
-  <p class="subtitle">Last updated: 2026-07-20 20:05 CET</p>
+  <p class="subtitle">Last updated: 2026-07-21 08:05 CET</p>
 
   <div class="nav">
     <div class="nav-label">Services</div>
@@ -63,9 +63,13 @@
 
   <div class="section">
     <div class="label">Agent Freshness</div>
-    <div class="value green">8 fresh</div>
+    <div class="value amber">6 fresh, 2 stale</div>
     <div class="detail">
-      <div class='detail'>All agents are fresh.</div>
+      
+    <ul>
+      <li>system-backup: 33.1h stale (last run 2026-07-19 21:00)</li>
+      <li>offvolume-backup: 32.3h stale (last run 2026-07-19 21:46)</li>
+    </ul>
     </div>
   </div>
 
