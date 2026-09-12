@@ -32,14 +32,17 @@ The `website-monitor/` directory is mounted at `/usr/share/nginx/dashboard/monit
 ### www.4-eyes.eu (`workshops/`)
 
 - Entry point: `workshops/index.html`
-- Multi-page static site: workshops, about, contact, resources, privacy, imprint, thank-you
-- Uses `css/styles.css` + `css/pages.css` + `js/main.js`
-- Form actions point to `/api/contact` and `/api/guide` — these are handled by Railway/n8n in production
-- SEO assets: `sitemap.xml`, `robots.txt`, canonical tags, Open Graph, Twitter Cards, JSON-LD structured data
+- Static multi-page site: index, services, board-advisory, proof, approach, contact, privacy, thank-you, plus `insights/`. Old URLs (`/workshops`, `/about`, `/resources`, `/imprint`) are 301s in `nginx.conf`.
+- Uses `assets/styles.css` + `assets/site.js`. There is no build step.
+- Assets carry a query-string version (`styles.css?v=N`) and nginx serves them `immutable, max-age=31536000`. **Bump `?v=N` in all 12 pages whenever the CSS changes**, or returning visitors keep the old file for a year.
+- `contact.html` posts natively to `https://www.n8n.4-eyes.eu/webhook/website_form`, which replies `303 → https://www.4-eyes.eu/thank-you` (nginx resolves it to `thank-you.html` via `try_files $uri $uri.html`). There is no JS submit handler and none is needed.
+- `assets/site.js` wires only the mobile nav toggle and a first-party pageview ping to `.../webhook/website_analytics`.
+- The hidden `company` field (`.hp-field`, `aria-hidden="true"`) is the spam honeypot.
+- The mobile nav dropdown is `position:absolute` under a sticky 66px header. Keep a `max-height`/`overflow-y` bound on it, otherwise it is unreachable on short (landscape) viewports.
+- SEO assets: `sitemap.xml`, `robots.txt`, canonical tags, Open Graph, Twitter Cards
 - Canonical contact: `francois-xavier.peers@4-eyes.eu`
 - Canonical URL: `https://www.4-eyes.eu`
-- `thank-you.html` is set to `noindex, follow`
-- GA4 is loaded only after cookie consent via the consent banner in each page
+- No GA4 tag or consent banner is present here: the repositioned site replaced the GA4 build, and analytics is now the first-party ping above.
 
 ### dashboard.4-eyes.eu
 
@@ -69,10 +72,10 @@ The `website-monitor/` directory is mounted at `/usr/share/nginx/dashboard/monit
 
 ### Add a new page to `www.4-eyes.eu`
 
-1. Create HTML in `workshops/`
-2. Add nav link in all pages (or update `js/main.js` active-nav logic)
-3. Add page-specific styles in `css/pages.css` if needed
-4. Update `sitemap.xml` and `robots.txt` if relevant
+1. Create HTML in `workshops/`, copying an existing page for the head, header and footer
+2. Add the link to `#nav-links` and the footer on every page, marking the current page with `class="active"`
+3. Add styles to `assets/styles.css` and bump `styles.css?v=N` across all pages
+4. Update `sitemap.xml` if relevant
 
 ### Update the shared design language
 
