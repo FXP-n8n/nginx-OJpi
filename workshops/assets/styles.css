@@ -36,7 +36,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.86);ba
 .nav-cta{display:flex;align-items:center;gap:12px}
 .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;width:40px;height:40px;font-size:20px;cursor:pointer;color:var(--ink)}
 @media(max-width:860px){
-  .nav-links{position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 24px;display:none}
+  .nav-links{position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 24px;display:none;max-height:calc(100vh - 66px);max-height:calc(100dvh - 66px);overflow-y:auto;overscroll-behavior:contain}
   .nav-links.open{display:flex}
   .nav-links a{padding:12px 0;width:100%;border-bottom:1px solid var(--line)}
   .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
